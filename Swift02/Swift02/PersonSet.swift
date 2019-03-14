@@ -2,7 +2,7 @@
 //  PersonSet.swift
 //  Swift02
 //
-//  Created by Theodora-Augustina DRAGAN on 12/03/2019.
+//  Created by Marian Aldescu on 12/03/2019.
 //  Copyright © 2019 Aldescu Marian. All rights reserved.
 //
 
@@ -10,16 +10,21 @@ import Foundation
 
 class PersonSet {
     
-    var persons : [Person] = []
+    var persons : [Person]
 
-    
-    
+
+    typealias Iterator = IndexingIterator<Array<Person>>
+
+    init() {
+        self.persons = []
+    }    
+
     init(set : [Person]) {
         self.persons = set
     }
     
     func isEmpty() -> Bool {
-        return self.persons.isEmpty
+        return self.persons.count == 0
     }
     
     func add(p : Person) {
@@ -27,9 +32,9 @@ class PersonSet {
     }
     
     /*  Search a person with the same firstName, lastName and birthdate
-        and returns its position or nil in case it doesn't exist
+        and returns its indexOf or nil in case it doesn't exist
     */
-    func position(person :Person) -> Int? {
+    func indexOf(person :Person) -> Int? {
         if let date1 = person.birthdate() {
             for i in 0...self.persons.count {
                 if let date2 = self.persons[i].birthdate() {
@@ -45,8 +50,8 @@ class PersonSet {
     }
 
     func remove(p : Person) {
-        if let position = self.position(person : p) {
-            self.persons.remove(at: position)
+        if let indexOf = self.indexOf(person : p) {
+            self.persons.remove(at: indexOf)
         }
     }
     
@@ -55,17 +60,104 @@ class PersonSet {
     }
     
     func contains(p : Person) -> Bool {
-        if let _ = self.position(person : p) {
+        if let _ = self.indexOf(person : p) {
             return true
         }
         return false
     }
 
     func look(p : Person) -> Person? {
-        if let position = self.position(person : p) {
-            return self.persons[position]
+        if let indexOf = self.indexOf(person : p) {
+            return self.persons[indexOf]
         }
         return nil
     }    
-    
+
+    /// Check if a Person with a given firstName exists in the set
+    func contains(firstN : String) -> Bool {
+        if self.persons.contains(where : { $0.firstName == firstN}) {
+            return true 
+        }
+        return false
+    }
+
+    /// Return an array with all the persons with the same
+    /// given firstName
+    func look(firstN : String) -> [Person] {
+        let filtered = self.persons.filter{ $0.firstName == firstN }
+
+        return filtered
+    }
+
+    /// Check if a Person with a given lastName exists in the set
+    func containsLastName(lastN : String) -> Bool {
+        if self.persons.contains(where : { $0.lastName == lastN}) {
+            return true 
+        }
+        return false
+    }
+
+    /// Return an array with all the persons with the same
+    /// given lastName
+    func lookLastName(lastN : String) -> [Person] {
+        let filtered = self.persons.filter{ $0.lastName == lastN }
+
+        return filtered
+    }
+
+    /// Check if a Person with the same firstName and lastName exists in
+    /// the set
+    func contains(firstN : String, lastN : String) -> Bool {
+        if self.persons.contains(where : { $0.firstName == firstN &&
+                $0.lastName == lastN}) {
+            return true 
+        }
+        return false
+    }
+
+    /// Return an array with all the persons with the same
+    /// given firstName and lastName
+    func look(firstN : String, lastN : String) -> [Person] {
+        let filtered = self.persons.filter{
+            $0.firstName == firstN &&
+            $0.lastName == lastN
+        }
+
+        return filtered
+    }
+
+    /// Check if a Person with the same firstName, lastName and 
+    /// birthdate exists in the set
+    func contains(firstN : String, lastN : String, bDate : Date) -> Bool {
+        let filtered = self.persons.filter{
+            $0.birthDate != nil
+        }
+
+        if filtered.contains(where : {
+            $0.firstName == firstN &&
+            $0.lastName == lastN &&
+            $0.birthDate == bDate}) {
+            return true 
+        }
+        return false
+    }
+
+    func look(firstN : String, lastN : String, bDate : Date?) -> Person? {
+        //if let bDate1 = bDate {
+        let pers : Person = Person.init(lastN : lastN, firstN : firstN)
+        //if let indexOf = self.indexOf(Person)
+        pers.birthDate = bDate
+        //}
+
+        if let indexOf = self.indexOf(person : pers) {
+            return self.persons[indexOf]
+        }
+
+        return nil
+    }
+
+    func makeIterator() -> ItPersonSet {
+        let it = ItPersonSet()
+        return it
+    }
 }

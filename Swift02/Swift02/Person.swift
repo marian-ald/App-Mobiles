@@ -2,7 +2,7 @@
 //  Person.swift
 //  Swift02
 //
-//  Created by Theodora-Augustina DRAGAN on 12/03/2019.
+//  Created by Marian Aldescu on 12/03/2019.
 //  Copyright © 2019 Aldescu Marian. All rights reserved.
 //
 
@@ -17,7 +17,7 @@ class Person {
     init(lastN : String, firstN : String) {
         self.firstName = lastN
         self.lastName = firstN
-        self.birthDate = Date()
+        self.birthDate = nil
         self.age_person = 0
     }
     
@@ -35,6 +35,10 @@ class Person {
     
     func birthdate() -> Date? {
         return self.birthDate
+    }
+
+    func birthdate(bDate : Date) {
+        self.birthDate = bDate
     }
     
     func age() -> Int? {
