@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TP0
+//  Pers
 //
-//  Created by Theodora-Augustina DRAGAN on 14/03/2019.
-//  Copyright © 2019 Marian Aldescu. All rights reserved.
+//  Created by Marian ALDESCU on 14/03/2019.
+//  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
 
 import UIKit
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "TP0")
+        let container = NSPersistentContainer(name: "Pers")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

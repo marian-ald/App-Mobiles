@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  TP0
+//  Pers
 //
-//  Created by Theodora-Augustina DRAGAN on 14/03/2019.
-//  Copyright © 2019 Marian Aldescu. All rights reserved.
+//  Created by Marian ALDESCU on 14/03/2019.
+//  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
 
 import UIKit

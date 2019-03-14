@@ -1,9 +1,9 @@
 //
 //  Person.swift
-//  Swift02
+//  Pers
 //
-//  Created by Marian Aldescu on 12/03/2019.
-//  Copyright © 2019 Aldescu Marian. All rights reserved.
+//  Created by Marian ALDESCU on 14/03/2019.
+//  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
 
 import Foundation
@@ -35,7 +35,7 @@ class Person {
     func birthdate() -> Date? {
         return self.birthDate
     }
-
+    
     func birthdate(bDate : Date) {
         self.birthDate = bDate
     }
@@ -54,5 +54,5 @@ class Person {
     static func !=(p1 : Person, p2 : Person) -> Bool {
         return !(p1 == p2)
     }
-
+    
 }

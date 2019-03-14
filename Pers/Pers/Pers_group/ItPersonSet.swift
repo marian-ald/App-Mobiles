@@ -1,12 +1,13 @@
 //
 //  ItPersonSet.swift
-//  Swift02
+//  Pers
 //
-//  Created by Theodora-Augustina DRAGAN on 14/03/2019.
-//  Copyright © 2019 Aldescu Marian. All rights reserved.
+//  Created by Marian ALDESCU on 14/03/2019.
+//  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
 
 import Foundation
+
 
 class ItPersonSet: IteratorProtocol {
     var perSet: PersonSet
@@ -20,7 +21,7 @@ class ItPersonSet: IteratorProtocol {
     func reset() {
         self.index = 0
     }
-
+    
     func next() -> Person? {
         if index < self.perSet.count() {
             let aux : Int = self.index
