@@ -1,31 +1,10 @@
-//
-//  PersTests.swift
-//  PersTests
-//
-//  Created by Marian ALDESCU on 14/03/2019.
-//  Copyright © 2019 Marian ALDESCU. All rights reserved.
-//
-
 import XCTest
-@testable import Pers
+import class Foundation.Bundle
 
-class PersTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+final class swift_tTests: XCTestCase {
 
     /// Test cases for Person class
-    func testName() {
+    func testName() throws {
         let pers = Person.init(lastN : "last", firstN : "first")
 
         XCTAssertEqual(pers.lastname(), "last")
@@ -33,7 +12,7 @@ class PersTests: XCTestCase {
         XCTAssertEqual(pers.fullname(), "first last")
     }
 
-    func testBirthDate() {
+    func testBirthDate() throws {
         let pers: Person = Person.init(lastN : "last", firstN : "first")
         let d1: Date = Date()
         let d2: Date? = nil
@@ -45,7 +24,7 @@ class PersTests: XCTestCase {
         XCTAssertEqual(pers.birthdate(), d1)
     }
 
-    func testAge() {
+    func testAge() throws {
         let pers: Person = Person.init(lastN : "last", firstN : "first")
         let dateString = "25/01/2011"
         let dateFormatter = DateFormatter()
@@ -57,7 +36,7 @@ class PersTests: XCTestCase {
         XCTAssertEqual(pers.age(), 8)
     }
 
-    func testOperators() {
+    func testOperators() throws {
         let pers1: Person = Person.init(lastN : "last", firstN : "first")
         let pers2: Person = Person.init(lastN : "last2", firstN : "first2")
 
@@ -74,7 +53,7 @@ class PersTests: XCTestCase {
 
     /// 3 Tested functions for class PersonSet
     /// isEmpty + add + count
-    func testIsEmpty() {
+    func testIsEmpty() throws {
         let persSet: PersonSet = PersonSet.init()
 
         XCTAssertEqual(persSet.isEmpty(), true)
@@ -86,7 +65,7 @@ class PersTests: XCTestCase {
 
     /// 2 Tested functions for class PersonSet
     /// remove + contains
-    func testRemove() {
+    func testRemove() throws {
         let persSet: PersonSet = PersonSet.init()
         let pers1: Person = Person.init(lastN: "l1", firstN: "f1")
         let pers2: Person = Person.init(lastN: "l2", firstN: "f2")
@@ -107,7 +86,7 @@ class PersTests: XCTestCase {
 
     /// 2 Tested functions for class PersonSet
     /// indexOf + look(Person) 
-    func testIndexOf() {
+    func testIndexOf() throws {
         let persSet: PersonSet = PersonSet.init()
         let pers1: Person? = Person.init(lastN: "l1", firstN: "f1")
         let pers2: Person = Person.init(lastN: "l2", firstN: "f2")
@@ -123,11 +102,26 @@ class PersTests: XCTestCase {
            
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    /// Returns path to the built products directory.
+    var productsDirectory: URL {
+      #if os(macOS)
+        for bundle in Bundle.allBundles where bundle.bundlePath.hasSuffix(".xctest") {
+            return bundle.bundleURL.deletingLastPathComponent()
         }
+        fatalError("couldn't find the products directory")
+      #else
+        return Bundle.main.bundleURL
+      #endif
     }
 
+
+    static var allTests = [
+        ("testName", testName),
+        ("testBirthDate", testBirthDate),
+        ("testAge", testAge),
+        ("testOperators", testOperators),
+        ("testIsEmpty", testIsEmpty),
+        ("testRemove", testRemove),
+        ("testIndexOf", testIndexOf),
+    ]
 }
