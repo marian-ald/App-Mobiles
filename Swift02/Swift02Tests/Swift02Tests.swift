@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Swift02
+//@testable import Swift02
 
 class Swift02Tests: XCTestCase {
     
@@ -21,9 +21,11 @@ class Swift02Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
+    func testLastName() {
+        let p: Person = Person.init(lastN:"last", firstN: "first")
+
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(p.lastname(), "last")
     }
     
     func testPerformanceExample() {

@@ -157,7 +157,7 @@ class PersonSet {
     }
 
     func makeIterator() -> ItPersonSet {
-        let it = ItPersonSet()
+        let it = ItPersonSet.init(set: self)
         return it
     }
 }

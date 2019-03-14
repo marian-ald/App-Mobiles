@@ -18,7 +18,6 @@ class Person {
         self.firstName = lastN
         self.lastName = firstN
         self.birthDate = nil
-        self.age_person = 0
     }
     
     func lastname() -> String {

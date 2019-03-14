@@ -20,7 +20,7 @@ class ItPersonSet: IteratorProtocol {
     func reset() {
         self.index = 0
     }
-    
+
     func next() -> Person? {
         if index < self.perSet.count() {
             let aux : Int = self.index

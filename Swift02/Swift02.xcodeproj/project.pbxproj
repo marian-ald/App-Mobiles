@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D104C5F3223A9DD500319044 /* Swift02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD40022380EAB004B1BAB /* Swift02Tests.swift */; };
+		D104C5F5223A9E3500319044 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104C5F4223A9E3500319044 /* Person.swift */; };
+		D104C5F7223A9F0D00319044 /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104C5F6223A9F0C00319044 /* PersonSet.swift */; };
+		D104C5F9223A9F9300319044 /* ItPersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104C5F8223A9F9300319044 /* ItPersonSet.swift */; };
+		D104C5FA223AA00B00319044 /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104C5F6223A9F0C00319044 /* PersonSet.swift */; };
+		D104C5FB223AA01E00319044 /* ItPersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104C5F8223A9F9300319044 /* ItPersonSet.swift */; };
+		D104C5FC223AA02700319044 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104C5F4223A9E3500319044 /* Person.swift */; };
 		D12CD3E922380EAA004B1BAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD3E822380EAA004B1BAB /* AppDelegate.swift */; };
 		D12CD3EB22380EAA004B1BAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD3EA22380EAA004B1BAB /* ViewController.swift */; };
 		D12CD3EE22380EAA004B1BAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12CD3EC22380EAA004B1BAB /* Main.storyboard */; };
@@ -15,8 +22,6 @@
 		D12CD3F622380EAA004B1BAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12CD3F422380EAA004B1BAB /* LaunchScreen.storyboard */; };
 		D12CD40122380EAB004B1BAB /* Swift02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD40022380EAB004B1BAB /* Swift02Tests.swift */; };
 		D12CD40C22380EAB004B1BAB /* Swift02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD40B22380EAB004B1BAB /* Swift02UITests.swift */; };
-		D12CD41B22380FED004B1BAB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD41A22380FED004B1BAB /* Person.swift */; };
-		D12CD41D22381A41004B1BAB /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CD41C22381A41004B1BAB /* PersonSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D104C5F4223A9E3500319044 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../../../Person.swift; sourceTree = "<group>"; };
+		D104C5F6223A9F0C00319044 /* PersonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSet.swift; sourceTree = SOURCE_ROOT; };
+		D104C5F8223A9F9300319044 /* ItPersonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItPersonSet.swift; sourceTree = "<group>"; };
 		D12CD3E522380EAA004B1BAB /* Swift02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12CD3E822380EAA004B1BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D12CD3EA22380EAA004B1BAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,8 +59,6 @@
 		D12CD40722380EAB004B1BAB /* Swift02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12CD40B22380EAB004B1BAB /* Swift02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift02UITests.swift; sourceTree = "<group>"; };
 		D12CD40D22380EAB004B1BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D12CD41A22380FED004B1BAB /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		D12CD41C22381A41004B1BAB /* PersonSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +89,8 @@
 		D12CD3DC22380EAA004B1BAB = {
 			isa = PBXGroup;
 			children = (
-				D12CD3E722380EAA004B1BAB /* Swift02 */,
+				D12CD41922380F9F004B1BAB /* Person_group */,
+				D12CD3E722380EAA004B1BAB /* Controllers */,
 				D12CD3FF22380EAB004B1BAB /* Swift02Tests */,
 				D12CD40A22380EAB004B1BAB /* Swift02UITests */,
 				D12CD3E622380EAA004B1BAB /* Products */,
@@ -100,19 +107,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D12CD3E722380EAA004B1BAB /* Swift02 */ = {
+		D12CD3E722380EAA004B1BAB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D12CD41922380F9F004B1BAB /* Person_group */,
 				D12CD3E822380EAA004B1BAB /* AppDelegate.swift */,
-				D12CD3EA22380EAA004B1BAB /* ViewController.swift */,
 				D12CD3EC22380EAA004B1BAB /* Main.storyboard */,
+				D12CD3EA22380EAA004B1BAB /* ViewController.swift */,
 				D12CD3F222380EAA004B1BAB /* Assets.xcassets */,
 				D12CD3F422380EAA004B1BAB /* LaunchScreen.storyboard */,
 				D12CD3F722380EAA004B1BAB /* Info.plist */,
 				D12CD3EF22380EAA004B1BAB /* Swift02.xcdatamodeld */,
 			);
-			path = Swift02;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D12CD3FF22380EAB004B1BAB /* Swift02Tests */ = {
@@ -136,10 +142,12 @@
 		D12CD41922380F9F004B1BAB /* Person_group */ = {
 			isa = PBXGroup;
 			children = (
-				D12CD41A22380FED004B1BAB /* Person.swift */,
-				D12CD41C22381A41004B1BAB /* PersonSet.swift */,
+				D104C5F6223A9F0C00319044 /* PersonSet.swift */,
+				D104C5F8223A9F9300319044 /* ItPersonSet.swift */,
+				D104C5F4223A9E3500319044 /* Person.swift */,
 			);
 			name = Person_group;
+			path = Swift02;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,20 +213,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Aldescu Marian";
 				TargetAttributes = {
 					D12CD3E422380EAA004B1BAB = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					D12CD3FB22380EAB004B1BAB = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D12CD3E422380EAA004B1BAB;
 					};
 					D12CD40622380EAB004B1BAB = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D12CD3E422380EAA004B1BAB;
 					};
@@ -276,10 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D12CD41D22381A41004B1BAB /* PersonSet.swift in Sources */,
+				D104C5F3223A9DD500319044 /* Swift02Tests.swift in Sources */,
+				D104C5F9223A9F9300319044 /* ItPersonSet.swift in Sources */,
 				D12CD3EB22380EAA004B1BAB /* ViewController.swift in Sources */,
+				D104C5F7223A9F0D00319044 /* PersonSet.swift in Sources */,
+				D104C5F5223A9E3500319044 /* Person.swift in Sources */,
 				D12CD3E922380EAA004B1BAB /* AppDelegate.swift in Sources */,
-				D12CD41B22380FED004B1BAB /* Person.swift in Sources */,
 				D12CD3F122380EAA004B1BAB /* Swift02.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D104C5FB223AA01E00319044 /* ItPersonSet.swift in Sources */,
 				D12CD40122380EAB004B1BAB /* Swift02Tests.swift in Sources */,
+				D104C5FC223AA02700319044 /* Person.swift in Sources */,
+				D104C5FA223AA00B00319044 /* PersonSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,15 +361,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -396,15 +420,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -413,6 +445,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -438,7 +471,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pas.Swift02;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -450,7 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pas.Swift02;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -463,7 +496,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pas.Swift02Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift02.app/Swift02";
 			};
 			name = Debug;
@@ -477,7 +510,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pas.Swift02Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift02.app/Swift02";
 			};
 			name = Release;
@@ -490,7 +523,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pas.Swift02UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Swift02;
 			};
 			name = Debug;
@@ -503,7 +536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pas.Swift02UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Swift02;
 			};
 			name = Release;
