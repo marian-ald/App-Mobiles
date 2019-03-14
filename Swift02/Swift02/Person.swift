@@ -49,7 +49,7 @@ class Person {
     }
     
     static func !=(p1 : Person, p2 : Person) -> Bool {
-        return !(p1==p2)
+        return !(p1 == p2)
     }
 
 }
