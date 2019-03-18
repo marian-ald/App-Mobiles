@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var pers: [Person] = [Person(lastN : "last1", firstN: "first1"), Person(lastN : "last2", firstN: "first2"), Person(lastN : "last3", firstN: "first3"), Person(lastN : "last4", firstN: "first4"), Person(lastN : "last5", firstN: "first5")]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,21 +25,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personCellId", for: indexPath)
         cell.textLabel?.text = pers[indexPath.row].fullname()
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.row)!")
         
         // get cell label
-        let cell = tableView.cellForRow(at: indexPath as IndexPath)
-        print(cell?.textLabel?.text)
-        print("Got here")
-        
-        //self.valueToPass = cell.formuleLabel.text
+        //let cell = tableView.cellForRow(at: indexPath as IndexPath)
+
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
+    }
+    
+    @IBAction func addPerson(_ sender: Any) {
+        performSegue(withIdentifier: "segueAddPerson", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

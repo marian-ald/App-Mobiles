@@ -10,11 +10,8 @@ import Foundation
 
 class PersonSet {
     
-    var persons : [Person]
-    
-    
-    typealias Iterator = IndexingIterator<Array<Person>>
-    
+    fileprivate var persons : [Person]
+
     init() {
         self.persons = []
     }
@@ -27,8 +24,8 @@ class PersonSet {
         return self.persons.count == 0
     }
     
-    func add(p : Person) {
-        self.persons.append(p)
+    func add(person : Person) {
+        self.persons.append(person)
     }
     
     /*  Search a person with the same firstName, lastName and birthdate
@@ -143,12 +140,9 @@ class PersonSet {
     }
     
     func look(firstN : String, lastN : String, bDate : Date?) -> Person? {
-        //if let bDate1 = bDate {
         let pers : Person = Person.init(lastN : lastN, firstN : firstN)
-        //if let indexOf = self.indexOf(Person)
         pers.birthDate = bDate
-        //}
-        
+
         if let indexOf = self.indexOf(person : pers) {
             return self.persons[indexOf]
         }
@@ -159,5 +153,42 @@ class PersonSet {
     func makeIterator() -> ItPersonSet {
         let it = ItPersonSet.init(set: self)
         return it
+    }
+}
+
+class ItPersonSet: IteratorProtocol {
+    private var perSet: PersonSet
+    private var index: Int
+    
+    init(set : PersonSet) {
+        self.perSet = set
+        self.index = 0
+    }
+    
+    func reset() {
+        self.index = 0
+    }
+    
+    func next() -> Person? {
+        if index < self.perSet.count() {
+            let aux : Int = self.index
+            self.index += 1
+            return self.perSet.persons[aux]
+        }
+        return nil
+    }
+    
+    func current() -> Person? {
+        if index < self.perSet.count() {
+            return self.perSet.persons[self.index]
+        }
+        return nil
+    }
+    
+    func end() -> Bool {
+        if self.index == self.perSet.count() {
+            return true
+        }
+        return false
     }
 }

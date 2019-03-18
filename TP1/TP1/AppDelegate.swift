@@ -11,11 +11,17 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    //var myPersons : [Person] = [Person(lastN : "last1", firstN: "first1"), Person(lastN : "last2", firstN: "first2"), Person(lastN : "last3", firstN: "first3"), Person(lastN : "last4", firstN: "first4"), Person(lastN : "last5", firstN: "first5")]
+    
+    public var pers : PersonSet = PersonSet(set: [Person(lastN : "last1", firstN: "first1"), Person(lastN : "last2", firstN: "first2"), Person(lastN : "last3", firstN: "first3"), Person(lastN : "last4", firstN: "first4"), Person(lastN : "last5", firstN: "first5")])
+    
+    var myIndex = 0
 
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }

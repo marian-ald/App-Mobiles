@@ -15,6 +15,10 @@
 		84FE62E0223BBF0C0008D23D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FE62DE223BBF0C0008D23D /* LaunchScreen.storyboard */; };
 		84FE62EB223BBF0C0008D23D /* TP1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE62EA223BBF0C0008D23D /* TP1Tests.swift */; };
 		84FE62F6223BBF0D0008D23D /* TP1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE62F5223BBF0D0008D23D /* TP1UITests.swift */; };
+		EBCDAB27223F96E000E817EF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDAB26223F96E000E817EF /* Person.swift */; };
+		EBCDAB29223F96E400E817EF /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDAB28223F96E400E817EF /* PersonSet.swift */; };
+		EBCDAB2D223F9BD100E817EF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDAB2C223F9BD100E817EF /* NewViewController.swift */; };
+		EBCDAB2F223FA4DE00E817EF /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDAB2E223FA4DE00E817EF /* AddPersonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		84FE62F1223BBF0D0008D23D /* TP1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TP1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FE62F5223BBF0D0008D23D /* TP1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TP1UITests.swift; sourceTree = "<group>"; };
 		84FE62F7223BBF0D0008D23D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBCDAB26223F96E000E817EF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		EBCDAB28223F96E400E817EF /* PersonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSet.swift; sourceTree = "<group>"; };
+		EBCDAB2C223F9BD100E817EF /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		EBCDAB2E223FA4DE00E817EF /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,12 @@
 		84FE62D1223BBF0C0008D23D /* TP1 */ = {
 			isa = PBXGroup;
 			children = (
+				EBCDAB25223F96C600E817EF /* P_group */,
 				84FE62D2223BBF0C0008D23D /* AppDelegate.swift */,
 				84FE62D4223BBF0C0008D23D /* ViewController.swift */,
+				EBCDAB2C223F9BD100E817EF /* NewViewController.swift */,
 				84FE62D6223BBF0C0008D23D /* Main.storyboard */,
+				EBCDAB2E223FA4DE00E817EF /* AddPersonViewController.swift */,
 				84FE62DC223BBF0C0008D23D /* Assets.xcassets */,
 				84FE62DE223BBF0C0008D23D /* LaunchScreen.storyboard */,
 				84FE62E1223BBF0C0008D23D /* Info.plist */,
@@ -126,6 +137,15 @@
 				84FE62F7223BBF0D0008D23D /* Info.plist */,
 			);
 			path = TP1UITests;
+			sourceTree = "<group>";
+		};
+		EBCDAB25223F96C600E817EF /* P_group */ = {
+			isa = PBXGroup;
+			children = (
+				EBCDAB28223F96E400E817EF /* PersonSet.swift */,
+				EBCDAB26223F96E000E817EF /* Person.swift */,
+			);
+			path = P_group;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,20 +211,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = admin;
 				TargetAttributes = {
 					84FE62CE223BBF0C0008D23D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					84FE62E5223BBF0C0008D23D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84FE62CE223BBF0C0008D23D;
 					};
 					84FE62F0223BBF0D0008D23D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84FE62CE223BBF0C0008D23D;
 					};
@@ -262,9 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCDAB29223F96E400E817EF /* PersonSet.swift in Sources */,
 				84FE62DB223BBF0C0008D23D /* TP1.xcdatamodeld in Sources */,
 				84FE62D5223BBF0C0008D23D /* ViewController.swift in Sources */,
+				EBCDAB2D223F9BD100E817EF /* NewViewController.swift in Sources */,
+				EBCDAB27223F96E000E817EF /* Person.swift in Sources */,
 				84FE62D3223BBF0C0008D23D /* AppDelegate.swift in Sources */,
+				EBCDAB2F223FA4DE00E817EF /* AddPersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +360,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -340,6 +368,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -390,6 +419,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -397,6 +427,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -435,7 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ORG-boss.TP1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -449,7 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ORG-boss.TP1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -464,7 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ORG-boss.TP1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TP1.app/TP1";
 			};
@@ -480,7 +511,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ORG-boss.TP1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TP1.app/TP1";
 			};
@@ -495,7 +526,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ORG-boss.TP1UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TP1;
 			};
@@ -510,7 +541,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ORG-boss.TP1UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TP1;
 			};
