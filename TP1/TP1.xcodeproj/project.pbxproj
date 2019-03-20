@@ -15,6 +15,12 @@
 		84FE62E0223BBF0C0008D23D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FE62DE223BBF0C0008D23D /* LaunchScreen.storyboard */; };
 		84FE62EB223BBF0C0008D23D /* TP1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE62EA223BBF0C0008D23D /* TP1Tests.swift */; };
 		84FE62F6223BBF0D0008D23D /* TP1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE62F5223BBF0D0008D23D /* TP1UITests.swift */; };
+		D1D5489D2242381900B55367 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5489C2242381900B55367 /* PersonViewModel.swift */; };
+		D1D5489E2242381900B55367 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5489C2242381900B55367 /* PersonViewModel.swift */; };
+		D1D5489F2242381900B55367 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5489C2242381900B55367 /* PersonViewModel.swift */; };
+		D1D548A122423DDD00B55367 /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D548A022423DDD00B55367 /* PersonsTableViewController.swift */; };
+		D1D548A222423DDD00B55367 /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D548A022423DDD00B55367 /* PersonsTableViewController.swift */; };
+		D1D548A322423DDD00B55367 /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D548A022423DDD00B55367 /* PersonsTableViewController.swift */; };
 		EBCDAB27223F96E000E817EF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDAB26223F96E000E817EF /* Person.swift */; };
 		EBCDAB29223F96E400E817EF /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDAB28223F96E400E817EF /* PersonSet.swift */; };
 		EBCDAB2D223F9BD100E817EF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDAB2C223F9BD100E817EF /* NewViewController.swift */; };
@@ -53,6 +59,8 @@
 		84FE62F1223BBF0D0008D23D /* TP1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TP1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FE62F5223BBF0D0008D23D /* TP1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TP1UITests.swift; sourceTree = "<group>"; };
 		84FE62F7223BBF0D0008D23D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1D5489C2242381900B55367 /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonViewModel.swift; path = ../../../TP1v2/TP1v2/PersonViewModel.swift; sourceTree = "<group>"; };
+		D1D548A022423DDD00B55367 /* PersonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
 		EBCDAB26223F96E000E817EF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EBCDAB28223F96E400E817EF /* PersonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSet.swift; sourceTree = "<group>"; };
 		EBCDAB2C223F9BD100E817EF /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 				EBCDAB25223F96C600E817EF /* P_group */,
 				84FE62D2223BBF0C0008D23D /* AppDelegate.swift */,
 				84FE62D4223BBF0C0008D23D /* ViewController.swift */,
+				D1D548A022423DDD00B55367 /* PersonsTableViewController.swift */,
 				EBCDAB2C223F9BD100E817EF /* NewViewController.swift */,
 				84FE62D6223BBF0C0008D23D /* Main.storyboard */,
 				EBCDAB2E223FA4DE00E817EF /* AddPersonViewController.swift */,
@@ -142,6 +151,7 @@
 		EBCDAB25223F96C600E817EF /* P_group */ = {
 			isa = PBXGroup;
 			children = (
+				D1D5489C2242381900B55367 /* PersonViewModel.swift */,
 				EBCDAB28223F96E400E817EF /* PersonSet.swift */,
 				EBCDAB26223F96E000E817EF /* Person.swift */,
 			);
@@ -288,10 +298,12 @@
 				EBCDAB29223F96E400E817EF /* PersonSet.swift in Sources */,
 				84FE62DB223BBF0C0008D23D /* TP1.xcdatamodeld in Sources */,
 				84FE62D5223BBF0C0008D23D /* ViewController.swift in Sources */,
+				D1D5489D2242381900B55367 /* PersonViewModel.swift in Sources */,
 				EBCDAB2D223F9BD100E817EF /* NewViewController.swift in Sources */,
 				EBCDAB27223F96E000E817EF /* Person.swift in Sources */,
 				84FE62D3223BBF0C0008D23D /* AppDelegate.swift in Sources */,
 				EBCDAB2F223FA4DE00E817EF /* AddPersonViewController.swift in Sources */,
+				D1D548A122423DDD00B55367 /* PersonsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FE62EB223BBF0C0008D23D /* TP1Tests.swift in Sources */,
+				D1D5489E2242381900B55367 /* PersonViewModel.swift in Sources */,
+				D1D548A222423DDD00B55367 /* PersonsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FE62F6223BBF0D0008D23D /* TP1UITests.swift in Sources */,
+				D1D5489F2242381900B55367 /* PersonViewModel.swift in Sources */,
+				D1D548A322423DDD00B55367 /* PersonsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

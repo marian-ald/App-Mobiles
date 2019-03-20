@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonSet {
+class PersonSet : Sequence {
     
     fileprivate var persons : [Person]
 

@@ -14,8 +14,11 @@ class NewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        selectedCell.text = pers[myIndex].fullname()
+        
+        let pers = (UIApplication.shared.delegate as? AppDelegate)?.indexedPers
+        let myIndex = (UIApplication.shared.delegate as? AppDelegate)?.myIndex
+        
+        selectedCell.text = pers?.myIndexedSet[myIndex!].fullname()
     }
     
 

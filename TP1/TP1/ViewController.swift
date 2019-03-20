@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
+    
+    
     
     
     override func viewDidLoad() {
@@ -16,33 +18,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pers.count
-    }
     
     
-    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personCellId", for: indexPath)
-        cell.textLabel?.text = pers[indexPath.row].fullname()
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You selected cell #\(indexPath.row)!")
-        
-        // get cell label
-        //let cell = tableView.cellForRow(at: indexPath as IndexPath)
-
-        myIndex = indexPath.row
-        performSegue(withIdentifier: "segue", sender: self)
-    }
-    
-    @IBAction func addPerson(_ sender: Any) {
-        performSegue(withIdentifier: "segueAddPerson", sender: self)
+    @IBAction func unwindToMainView(segue: UIStoryboardSegue) {
+        //let controller = segue.source as? AddPersonViewController {
+            
+        //}
     }
     
     override func didReceiveMemoryWarning() {

@@ -18,7 +18,6 @@ class AddPersonViewController: UIViewController {
     }
     
     
-    
     @IBOutlet weak var firstName: UITextField!
     
     @IBOutlet weak var lastName: UITextField!
@@ -30,9 +29,9 @@ class AddPersonViewController: UIViewController {
         if let fN = firstName.text, let lN = lastName.text {
             
             let newPers = Person(lastN: lN, firstN: fN)
-            let pers = (UIApplication.shared.delegate as? AppDelegate)?.pers
+            let pers = (UIApplication.shared.delegate as? AppDelegate)?.indexedPers
             
-            pers?.add(person: newPers)
+            pers?.myIndexedSet.append(newPers)
             performSegue(withIdentifier: "segueBackFromAdd", sender: self)
         }
         
