@@ -9,16 +9,15 @@
 import Foundation
 
 class Voyage {
-    var nomVoyage : String
+    var nameVoyage : String
     var startDate : Date
     var stopDate : Date
     var persons : PersonSet
 
-    init(nomVoyage : String, startDate : Date, stopDate : Date) {
-        self.nomVoyage = nomVoyage
+    init(nameVoyage : String, startDate : Date, stopDate : Date) {
+        self.nameVoyage = nameVoyage
         self.startDate = startDate
         self.stopDate = stopDate
         self.persons = PersonSet()
     }
-
 }

@@ -30,9 +30,14 @@
 		EBDAB57C224506C200624F11 /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB57B224506C200624F11 /* Depense.swift */; };
 		EBDAB57D224506C200624F11 /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB57B224506C200624F11 /* Depense.swift */; };
 		EBDAB57E224506C200624F11 /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB57B224506C200624F11 /* Depense.swift */; };
-		EBDAB58022451ABF00624F11 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB57F22451ABF00624F11 /* Transfer.swift */; };
-		EBDAB58122451ABF00624F11 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB57F22451ABF00624F11 /* Transfer.swift */; };
-		EBDAB58222451ABF00624F11 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB57F22451ABF00624F11 /* Transfer.swift */; };
+		EBDAB589224536A800624F11 /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDAB588224536A800624F11 /* defaultImage.png */; };
+		EBDAB58A224536A800624F11 /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDAB588224536A800624F11 /* defaultImage.png */; };
+		EBDAB58B224536A800624F11 /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDAB588224536A800624F11 /* defaultImage.png */; };
+		EBDAB58D22453A2500624F11 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB58C22453A2500624F11 /* VoyageTableViewCell.swift */; };
+		EBDAB58E22453A2500624F11 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB58C22453A2500624F11 /* VoyageTableViewCell.swift */; };
+		EBDAB58F22453A2500624F11 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB58C22453A2500624F11 /* VoyageTableViewCell.swift */; };
+		EBDAB593224548D700624F11 /* VoyagesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB592224548D700624F11 /* VoyagesTableView.swift */; };
+		EBDAB59522454AB900624F11 /* DetailsVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB59422454AB900624F11 /* DetailsVoyageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +77,10 @@
 		EBDAB5702245044000624F11 /* PersonSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonSet.swift; path = ../../../TP1v2/TP1v2/PersonSet.swift; sourceTree = "<group>"; };
 		EBDAB577224504BD00624F11 /* Voyage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
 		EBDAB57B224506C200624F11 /* Depense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depense.swift; sourceTree = "<group>"; };
-		EBDAB57F22451ABF00624F11 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		EBDAB588224536A800624F11 /* defaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultImage.png; sourceTree = "<group>"; };
+		EBDAB58C22453A2500624F11 /* VoyageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		EBDAB592224548D700624F11 /* VoyagesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoyagesTableView.swift; path = ProjetSwift/Controllers/VoyagesTableView.swift; sourceTree = SOURCE_ROOT; };
+		EBDAB59422454AB900624F11 /* DetailsVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVoyageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +131,10 @@
 		EB2D99AD2244E2C700A679A2 /* ProjetSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EBDAB583224530DA00624F11 /* Controllers */,
 				EBDAB56E224503AF00624F11 /* Models */,
 				EB2D99DF2244EE9A00A679A2 /* Images */,
 				EB2D99AE2244E2C700A679A2 /* AppDelegate.swift */,
-				EB2D99B02244E2C700A679A2 /* ViewController.swift */,
 				EB2D99B22244E2C700A679A2 /* Main.storyboard */,
 				EB2D99B82244E2C900A679A2 /* Assets.xcassets */,
 				EB2D99BA2244E2C900A679A2 /* LaunchScreen.storyboard */,
@@ -157,6 +165,7 @@
 		EB2D99DF2244EE9A00A679A2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EBDAB588224536A800624F11 /* defaultImage.png */,
 				EB2D99E02244EEC800A679A2 /* add.png */,
 			);
 			path = Images;
@@ -169,9 +178,20 @@
 				EBDAB5702245044000624F11 /* PersonSet.swift */,
 				EBDAB577224504BD00624F11 /* Voyage.swift */,
 				EBDAB57B224506C200624F11 /* Depense.swift */,
-				EBDAB57F22451ABF00624F11 /* Transfer.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EBDAB583224530DA00624F11 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB2D99B02244E2C700A679A2 /* ViewController.swift */,
+				EBDAB59422454AB900624F11 /* DetailsVoyageViewController.swift */,
+				EBDAB58C22453A2500624F11 /* VoyageTableViewCell.swift */,
+				EBDAB592224548D700624F11 /* VoyagesTableView.swift */,
+			);
+			name = Controllers;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +301,7 @@
 				EB2D99BC2244E2C900A679A2 /* LaunchScreen.storyboard in Resources */,
 				EB2D99B92244E2C900A679A2 /* Assets.xcassets in Resources */,
 				EB2D99B42244E2C700A679A2 /* Main.storyboard in Resources */,
+				EBDAB589224536A800624F11 /* defaultImage.png in Resources */,
 				EB2D99E12244EEC800A679A2 /* add.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2D99E22244EEC800A679A2 /* add.png in Resources */,
+				EBDAB58A224536A800624F11 /* defaultImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2D99E32244EEC800A679A2 /* add.png in Resources */,
+				EBDAB58B224536A800624F11 /* defaultImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +331,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDAB59522454AB900624F11 /* DetailsVoyageViewController.swift in Sources */,
 				EBDAB578224504BD00624F11 /* Voyage.swift in Sources */,
 				EBDAB5742245044000624F11 /* PersonSet.swift in Sources */,
 				EB2D99B72244E2C700A679A2 /* ProjetSwift.xcdatamodeld in Sources */,
+				EBDAB58D22453A2500624F11 /* VoyageTableViewCell.swift in Sources */,
 				EB2D99B12244E2C700A679A2 /* ViewController.swift in Sources */,
 				EBDAB5712245044000624F11 /* Person.swift in Sources */,
 				EBDAB57C224506C200624F11 /* Depense.swift in Sources */,
-				EBDAB58022451ABF00624F11 /* Transfer.swift in Sources */,
 				EB2D99AF2244E2C700A679A2 /* AppDelegate.swift in Sources */,
+				EBDAB593224548D700624F11 /* VoyagesTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +350,9 @@
 			files = (
 				EBDAB5722245044000624F11 /* Person.swift in Sources */,
 				EBDAB5752245044000624F11 /* PersonSet.swift in Sources */,
+				EBDAB58E22453A2500624F11 /* VoyageTableViewCell.swift in Sources */,
 				EBDAB57D224506C200624F11 /* Depense.swift in Sources */,
 				EBDAB579224504BD00624F11 /* Voyage.swift in Sources */,
-				EBDAB58122451ABF00624F11 /* Transfer.swift in Sources */,
 				EB2D99C72244E2C900A679A2 /* ProjetSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +363,9 @@
 			files = (
 				EBDAB5732245044000624F11 /* Person.swift in Sources */,
 				EBDAB5762245044000624F11 /* PersonSet.swift in Sources */,
+				EBDAB58F22453A2500624F11 /* VoyageTableViewCell.swift in Sources */,
 				EBDAB57E224506C200624F11 /* Depense.swift in Sources */,
 				EBDAB57A224504BD00624F11 /* Voyage.swift in Sources */,
-				EBDAB58222451ABF00624F11 /* Transfer.swift in Sources */,
 				EB2D99D22244E2C900A679A2 /* ProjetSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

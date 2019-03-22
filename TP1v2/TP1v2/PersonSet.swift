@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonSet : Sequence{
+class PersonSet {
     
     fileprivate var persons : [Person]
 
@@ -28,20 +28,15 @@ class PersonSet : Sequence{
         self.persons.append(person)
     }
     
-    /*  Search a person with the same firstName, lastName and birthdate
+    /*  Search a person with the same firstName and lastName
      and returns its indexOf or nil in case it doesn't exist
      */
     func indexOf(person :Person) -> Int? {
-        if let date1 = person.birthdate() {
-            for i in 0...self.persons.count {
-                if let date2 = self.persons[i].birthdate() {
-                    if self.persons[i].firstName == person.firstName &&
-                        self.persons[i].lastName == person.lastName &&
-                        date1 == date2 {
-                        return i
-                    }
+        for i in 0...self.persons.count {
+            if self.persons[i].firstName == person.firstName &&
+                self.persons[i].lastName == person.lastName {
+                    return i
                 }
-            }
         }
         return nil
     }
@@ -123,6 +118,7 @@ class PersonSet : Sequence{
         return filtered
     }
     
+/*
     /// Check if a Person with the same firstName, lastName and
     /// birthdate exists in the set
     func contains(firstN : String, lastN : String, bDate : Date) -> Bool {
@@ -138,7 +134,8 @@ class PersonSet : Sequence{
         }
         return false
     }
-    
+ */
+/*
     func look(firstN : String, lastN : String, bDate : Date?) -> Person? {
         let pers : Person = Person.init(lastN : lastN, firstN : firstN)
         pers.birthDate = bDate
@@ -154,6 +151,7 @@ class PersonSet : Sequence{
         let it = ItPersonSet.init(set: self)
         return it
     }
+*/
 }
 
 class ItPersonSet: IteratorProtocol {

@@ -33,8 +33,8 @@
     </entity>
     <elements>
         <element name="Persons" positionX="829" positionY="274.5390625" width="128" height="193"/>
-        <element name="Voyages" positionX="1182.80859375" positionY="580.0859375" width="128" height="118"/>
-        <element name="Depenses" positionX="475.66796875" positionY="319.44140625" width="128" height="103"/>
-        <element name="Transfer" positionX="1269.54296875" positionY="319.1640625" width="128" height="103"/>
+        <element name="Voyages" positionX="1145.796875" positionY="106.05859375" width="128" height="118"/>
+        <element name="Depenses" positionX="469.484375" positionY="318.86328125" width="128" height="103"/>
+        <element name="Transfer" positionX="1259.62890625" positionY="364.7578125" width="128" height="103"/>
     </elements>
 </model>
