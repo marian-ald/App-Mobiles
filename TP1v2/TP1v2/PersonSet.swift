@@ -33,8 +33,8 @@ class PersonSet {
      */
     func indexOf(person :Person) -> Int? {
         for i in 0...self.persons.count {
-            if self.persons[i].firstName == person.firstName &&
-                self.persons[i].lastName == person.lastName {
+            if self.persons[i].pfirstname == person.pfirstname &&
+                self.persons[i].plastname == person.plastname {
                     return i
                 }
         }
@@ -67,7 +67,7 @@ class PersonSet {
     
     /// Check if a Person with a given firstName exists in the set
     func contains(firstN : String) -> Bool {
-        if self.persons.contains(where : { $0.firstName == firstN}) {
+        if self.persons.contains(where : { $0.pfirstname == firstN}) {
             return true
         }
         return false
@@ -76,14 +76,14 @@ class PersonSet {
     /// Return an array with all the persons with the same
     /// given firstName
     func look(firstN : String) -> [Person] {
-        let filtered = self.persons.filter{ $0.firstName == firstN }
+        let filtered = self.persons.filter{ $0.pfirstname == firstN }
         
         return filtered
     }
     
     /// Check if a Person with a given lastName exists in the set
     func containsLastName(lastN : String) -> Bool {
-        if self.persons.contains(where : { $0.lastName == lastN}) {
+        if self.persons.contains(where : { $0.plastname == lastN}) {
             return true
         }
         return false
@@ -92,7 +92,7 @@ class PersonSet {
     /// Return an array with all the persons with the same
     /// given lastName
     func lookLastName(lastN : String) -> [Person] {
-        let filtered = self.persons.filter{ $0.lastName == lastN }
+        let filtered = self.persons.filter{ $0.plastname == lastN }
         
         return filtered
     }
@@ -100,8 +100,8 @@ class PersonSet {
     /// Check if a Person with the same firstName and lastName exists in
     /// the set
     func contains(firstN : String, lastN : String) -> Bool {
-        if self.persons.contains(where : { $0.firstName == firstN &&
-            $0.lastName == lastN}) {
+        if self.persons.contains(where : { $0.pfirstname == firstN &&
+            $0.plastname == lastN}) {
             return true
         }
         return false
@@ -111,8 +111,8 @@ class PersonSet {
     /// given firstName and lastName
     func look(firstN : String, lastN : String) -> [Person] {
         let filtered = self.persons.filter{
-            $0.firstName == firstN &&
-                $0.lastName == lastN
+            $0.pfirstname == firstN &&
+                $0.plastname == lastN
         }
         
         return filtered

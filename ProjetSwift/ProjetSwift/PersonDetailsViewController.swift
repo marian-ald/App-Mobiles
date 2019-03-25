@@ -1,17 +1,17 @@
 //
-//  DetailsVoyageViewController.swift
+//  PersonDetailsViewController.swift
 //  ProjetSwift
 //
-//  Created by Marian ALDESCU on 22/03/2019.
+//  Created by admin on 25/03/2019.
 //  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
 
 import UIKit
 
-class DetailsVoyageViewController: UIViewController {
-
-    var presenter: PersonPresenter!
+class PersonDetailsViewController: UIViewController {
     
+    var presenter: PersonPresenter!
+
     var person : Person?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,5 +30,5 @@ class DetailsVoyageViewController: UIViewController {
     
     @IBOutlet weak var lastnameLabel: UILabel!
     @IBOutlet weak var firstnameLabel: UILabel!
-    
+
 }

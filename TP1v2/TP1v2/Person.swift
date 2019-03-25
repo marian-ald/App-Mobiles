@@ -7,37 +7,73 @@
 //
 
 import Foundation
+import CoreData
+import UIKit
 
-class Person {
-    var lastName : String
-    var firstName : String
-    var startDate : Date
-    var stopDate : Date
 
-    init(lastN : String, firstN : String, startDate: Date, stopDate : Date) {
-        self.firstName = firstN
-        self.lastName = lastN
-        self.startDate = startDate
-        self.stopDate = stopDate
-    }
+extension Person{
     
-    func lastname() -> String {
-        return self.lastName
-    }
+    // MARK: -
+    /*
+    /// firstname of Person
+    let pfirstname : String
     
-    func firstname() -> String {
-        return self.firstName
-    }
+    /// lastname of Person
+    let plastname  : String
     
-    func fullname() -> String {
-        return self.firstName + " " + self.lastName
+    /// start date of a person
+    var pstartDate : Date
+    
+    /// end date of a person
+    var pstopDate : Date
+    
+    /// path of the image of the person
+    var pimage : String?
+    */
+    
+    /// full name of a person
+    var pfullname: String {
+        return (self.pfirstname ?? "") + " " + (self.plastname ?? "")
     }
 
-    static func ==(p1 : Person, p2 : Person) -> Bool {
-        return p1.firstname() == p2.firstName && p1.lastname() == p2.lastname()
+    
+    /// initialize a `Person`
+    ///
+    /// - Parameters:
+    ///   - firstname: `String` first name of `Person`
+    ///   - lastname:  `String` last name of `Person`
+    convenience init(firstname: String, lastname: String, startDate: Date, stopDate: Date){
+        self.init(context: CoreDataManager.context)
+        self.pfirstname = firstname
+        self.plastname  = lastname
+        self.pstartDate = startDate
+        self.pstopDate = stopDate
     }
     
-    static func !=(p1 : Person, p2 : Person) -> Bool {
-        return !(p1 == p2)
+    /// initialize a `Person`
+    ///
+    /// - Parameters:
+    ///   - firstname: `String` first name of `Person`
+    ///   - lastname:  `String` last name of `Person`
+    convenience init(firstname: String, lastname: String, startDate: Date, stopDate: Date, image: String){
+        self.init(context: CoreDataManager.context)
+        self.pfirstname = firstname
+        self.plastname  = lastname
+        self.pstartDate = startDate
+        self.pstopDate = stopDate
+        self.pimage = image
     }
 }
+
+/* MARK: -
+extension Person : Equatable{
+
+    static func ==(lhs: Person, rhs: Person) -> Bool {
+        return (lhs.firstname == rhs.firstname) && (lhs.lastname == rhs.lastname)
+    }
+    
+    static func != (lhs: Person, rhs: Person) -> Bool {
+        return !(lhs == rhs)
+    }
+ 
+}*/
