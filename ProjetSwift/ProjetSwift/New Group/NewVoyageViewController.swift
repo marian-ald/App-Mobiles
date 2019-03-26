@@ -15,10 +15,8 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     @IBOutlet weak var newNameVoyage: UITextField!
     
-    @IBAction func confirmAddVoyage(_ sender: Any) {
-    }
     
-    var newVoyage : Voyage?
+    //var newVoyage : Voyage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,15 +28,16 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "okNewVoyageSegue" {
-            let nameVoyage: String  = self.newNameVoyage.text!
-            SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: Date(), stopDate:Date(), place: "newPlace", image: "imagePath")
-            // save unde ?
+        print(segue.identifier)
+        if segue.identifier == "exitByConfirmFromNewVoyage" {
+            if let nameVoyage: String  = self.newNameVoyage.text {
+                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: Date(), stopDate:Date(), place: "newPlace")
+            }
         }
         else{
-            self.newVoyage = nil
+            SingletonStore.shared.currentVoyage = nil
         }
+        print(SingletonStore.shared.currentVoyage)
     }
     
     

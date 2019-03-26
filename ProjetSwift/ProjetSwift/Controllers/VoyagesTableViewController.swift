@@ -75,7 +75,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
     private func configure(cell: UITableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell{
         if let voyage = self.voyagesViewModel.get(voyageAt: indexPath.row){
             // cell.textLabel?.text = self.presenter.text(ofVoyage: voyage)
-            cell.textLabel?.text = voyage.nameVoyage
+            // cell.textLabel?.text = voyage.nameVoyage
         }
         return cell
         

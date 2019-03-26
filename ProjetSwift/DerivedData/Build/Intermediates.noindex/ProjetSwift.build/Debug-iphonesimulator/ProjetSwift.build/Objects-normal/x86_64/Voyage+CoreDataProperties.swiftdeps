@@ -24,6 +24,7 @@ provides-dynamic-lookup:
 - "startDate"
 - "stopDate"
 depends-top-level:
+- "Data"
 - "Date"
 - "NSFetchRequest"
 - "NSSet"
@@ -75,6 +76,7 @@ depends-member:
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
 - !private ["So20NSFetchRequestResultP", "NSFetchRequest"]
+- ["So15NSManagedObjectC", "Data"]
 - ["So15NSManagedObjectC", "Date"]
 - ["So15NSManagedObjectC", "NSFetchRequest"]
 - ["So15NSManagedObjectC", "NSSet"]
@@ -90,6 +92,7 @@ depends-member:
 - ["So15NSManagedObjectC", "removeFromContain"]
 - ["So15NSManagedObjectC", "startDate"]
 - ["So15NSManagedObjectC", "stopDate"]
+- ["So8NSObjectC", "Data"]
 - ["So8NSObjectC", "Date"]
 - ["So8NSObjectC", "NSFetchRequest"]
 - ["So8NSObjectC", "NSSet"]
@@ -121,6 +124,7 @@ depends-member:
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- ["11ProjetSwift6VoyageC", "Data"]
 - ["11ProjetSwift6VoyageC", "Date"]
 - ["11ProjetSwift6VoyageC", "NSFetchRequest"]
 - ["11ProjetSwift6VoyageC", "NSSet"]
@@ -222,4 +226,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8e42f424e5ad2d4095f940f96a6be751"
+interface-hash: "6aaf488a21d42ff94962f315ceafb053"

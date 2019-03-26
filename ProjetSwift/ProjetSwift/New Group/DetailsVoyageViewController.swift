@@ -15,7 +15,7 @@ class DetailsVoyageViewController: UIViewController {
     @IBOutlet weak var voyageName: UILabel!
     @IBOutlet weak var voyageImage: UIImageView!
     
-    var voyage: Voyage?
+    //var voyage: Voyage?
     
     override func viewDidLoad() {
         super.viewDidLoad()

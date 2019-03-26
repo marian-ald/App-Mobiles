@@ -17,6 +17,7 @@ depends-top-level:
 - "Int"
 - !private "IntegerLiteralType"
 - "NSFetchedResultsController"
+- !private "SingletonStore"
 - "Voyage"
 - "VoyageSetViewModel"
 - "VoyageSetViewModelDelegate"
@@ -78,10 +79,13 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["ST", "count"]
 - !private ["ST", "init"]
+- !private ["11ProjetSwift14SingletonStoreC", "currentVoyage"]
+- !private ["11ProjetSwift14SingletonStoreC", "shared"]
 - ["11ProjetSwift6VoyageC", "deinit"]
 - !private ["11ProjetSwift18VoyageSetViewModelC", "IndexPath"]
 - ["11ProjetSwift18VoyageSetViewModelC", "Int"]
 - ["11ProjetSwift18VoyageSetViewModelC", "NSFetchedResultsController"]
+- !private ["11ProjetSwift18VoyageSetViewModelC", "SingletonStore"]
 - ["11ProjetSwift18VoyageSetViewModelC", "Voyage"]
 - ["11ProjetSwift18VoyageSetViewModelC", "VoyageSetViewModelDelegate"]
 - ["11ProjetSwift18VoyageSetViewModelC", "add"]
@@ -126,6 +130,7 @@ depends-nominal:
 - !private "Sm"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "ST"
+- !private "11ProjetSwift14SingletonStoreC"
 - "11ProjetSwift6VoyageC"
 - "11ProjetSwift18VoyageSetViewModelC"
 - "11ProjetSwift26VoyageSetViewModelDelegateP"

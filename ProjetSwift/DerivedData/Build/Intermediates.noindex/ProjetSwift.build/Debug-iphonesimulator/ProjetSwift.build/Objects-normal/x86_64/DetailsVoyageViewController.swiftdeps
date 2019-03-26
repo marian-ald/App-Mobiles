@@ -18,7 +18,6 @@ depends-top-level:
 - "UIImageView"
 - "UILabel"
 - "UIViewController"
-- "Voyage"
 depends-member:
 - !private ["SK", "init"]
 - !private ["SK", "init"]
@@ -65,11 +64,9 @@ depends-member:
 - !private ["11ProjetSwift27DetailsVoyageViewControllerC", "SingletonStore"]
 - ["11ProjetSwift27DetailsVoyageViewControllerC", "UIImageView"]
 - ["11ProjetSwift27DetailsVoyageViewControllerC", "UILabel"]
-- ["11ProjetSwift27DetailsVoyageViewControllerC", "Voyage"]
 - ["11ProjetSwift27DetailsVoyageViewControllerC", "didReceiveMemoryWarning"]
 - ["11ProjetSwift27DetailsVoyageViewControllerC", "init"]
 - ["11ProjetSwift27DetailsVoyageViewControllerC", "viewDidLoad"]
-- ["11ProjetSwift27DetailsVoyageViewControllerC", "voyage"]
 - ["11ProjetSwift27DetailsVoyageViewControllerC", "voyageImage"]
 - ["11ProjetSwift27DetailsVoyageViewControllerC", "voyageName"]
 - !private ["SE", "init"]
@@ -124,14 +121,12 @@ depends-member:
 - !private ["So8NSObjectC", "SingletonStore"]
 - ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UILabel"]
-- ["So8NSObjectC", "Voyage"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "nameVoyage"]
 - !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "viewDidLoad"]
-- ["So8NSObjectC", "voyage"]
 - ["So8NSObjectC", "voyageImage"]
 - ["So8NSObjectC", "voyageName"]
 - !private ["So8NSObjectP", "SingletonStore"]
@@ -200,13 +195,11 @@ depends-member:
 - !private ["So11UIResponderC", "SingletonStore"]
 - ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UILabel"]
-- ["So11UIResponderC", "Voyage"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "viewDidLoad"]
-- ["So11UIResponderC", "voyage"]
 - ["So11UIResponderC", "voyageImage"]
 - ["So11UIResponderC", "voyageName"]
 - !private ["So30UIResponderStandardEditActionsP", "SingletonStore"]
@@ -244,13 +237,11 @@ depends-member:
 - !private ["So16UIViewControllerC", "SingletonStore"]
 - ["So16UIViewControllerC", "UIImageView"]
 - ["So16UIViewControllerC", "UILabel"]
-- ["So16UIViewControllerC", "Voyage"]
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "viewDidLoad"]
-- ["So16UIViewControllerC", "voyage"]
 - ["So16UIViewControllerC", "voyageImage"]
 - ["So16UIViewControllerC", "voyageName"]
 - !private ["11ProjetSwift6VoyageC", "nameVoyage"]
@@ -371,4 +362,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0384f688f0c2ad3ea9bf6ede63080296"
+interface-hash: "4b839d552694e59116a82bd8306941d6"

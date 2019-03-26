@@ -28,6 +28,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        print(segue)
+        if segue.identifier == "showDetailsVoyageSegue" {
+            if let indexPath = self.tableView.indexPathForSelectedRow{
+                SingletonStore.shared.currentVoyage = self.tableViewController.voyagesViewModel.get(voyageAt: indexPath.row)
+            }
+//            else {
+//                print("elsePrepare")
+//            }
+        }
+    }
+    
     
     @IBAction func addAction(_ sender: Any) {
         print("hello add action")
@@ -57,12 +69,16 @@ class ViewController: UIViewController {
         print("this was called")
         print(sender.source)
         if let newVoyageController = sender.source as? NewVoyageViewController {
-            print(newVoyageController.newVoyage)
+            //print(newVoyageController.newVoyage)
             //dataRecieved = sourceViewController.dataPassed
-            if let voyage = newVoyageController.newVoyage{
-                print("befire")
-                self.tableViewController.voyagesViewModel.add(voyage: voyage)
-                print("after")
+            if sender.identifier == "exitByConfirmFromNewVoyage" {
+                if let voyage = SingletonStore.shared.currentVoyage {
+                    print("before")
+                    self.tableViewController.voyagesViewModel.add(voyage: voyage)
+                    print("after")
+                    performSegue(withIdentifier: "showDetailsVoyageSegue", sender: self)
+                    print("retour")
+                }
             }
         }
     }

@@ -267,7 +267,6 @@ SWIFT_CLASS("_TtC11ProjetSwift23NewVoyageViewController")
 @interface NewVoyageViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified newImageVoyage;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified newNameVoyage;
-- (IBAction)confirmAddVoyage:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
@@ -389,6 +388,7 @@ SWIFT_CLASS("_TtC11ProjetSwift14ViewController")
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (IBAction)addAction:(id _Nonnull)sender;
 - (IBAction)unwindToThisViewWithSender:(UIStoryboardSegue * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -413,7 +413,7 @@ SWIFT_CLASS_NAMED("Voyage")
 
 
 @interface Voyage (SWIFT_EXTENSION(ProjetSwift))
-@property (nonatomic, copy) NSString * _Nullable image;
+@property (nonatomic, copy) NSData * _Nullable image;
 @property (nonatomic, copy) NSString * _Nullable nameVoyage;
 @property (nonatomic, copy) NSString * _Nullable place;
 @property (nonatomic, copy) NSDate * _Nullable startDate;

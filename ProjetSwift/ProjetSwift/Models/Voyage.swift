@@ -10,9 +10,9 @@ import Foundation
 
 extension Voyage {
 
-    convenience init(nameVoyage : String, startDate : Date, stopDate : Date, place : String, image: String) {
+    convenience init(nameVoyage : String, startDate : Date, stopDate : Date, place : String) {
         self.init(context: CoreDataManager.context)
-        self.image = image
+        self.image = nil
         self.nameVoyage = nameVoyage
         self.place = place
         self.startDate = startDate

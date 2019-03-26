@@ -43,6 +43,8 @@ class VoyageDAO {
         }
     }
     
+    
+    
     /*
      static func count(forFirstname firstname: String) -> Int{
      self.request.predicate = NSPredicate(format: "firstname == %@", firstname)

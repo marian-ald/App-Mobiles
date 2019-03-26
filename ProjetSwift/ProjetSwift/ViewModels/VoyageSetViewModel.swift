@@ -59,7 +59,7 @@ class VoyageSetViewModel{
     public func add(voyage: Voyage){
         if let indexPath = self.voyagesFetched.indexPath(forObject: voyage){
             self.delegate?.voyageAdded(at: indexPath)
-            
+            SingletonStore.shared.currentVoyage = voyage
         } }
     public var count : Int {
         return self.voyagesFetched.fetchedObjects?.count ?? 0

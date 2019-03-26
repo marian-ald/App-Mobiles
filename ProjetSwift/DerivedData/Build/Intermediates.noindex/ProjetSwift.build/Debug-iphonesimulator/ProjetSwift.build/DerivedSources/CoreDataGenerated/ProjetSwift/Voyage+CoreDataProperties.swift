@@ -17,7 +17,7 @@ extension Voyage {
         return NSFetchRequest<Voyage>(entityName: "Voyage")
     }
 
-    @NSManaged public var image: String?
+    @NSManaged public var image: Data?
     @NSManaged public var nameVoyage: String?
     @NSManaged public var place: String?
     @NSManaged public var startDate: Date?

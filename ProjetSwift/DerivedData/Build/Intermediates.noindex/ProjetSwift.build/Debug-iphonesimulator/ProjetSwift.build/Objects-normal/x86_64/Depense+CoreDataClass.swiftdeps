@@ -19,7 +19,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
-- ["11ProjetSwift7DepenseC", "deinit"]
 - ["11ProjetSwift7DepenseC", "init"]
 - ["SQ", ""]
 - !private ["SQ", "init"]
