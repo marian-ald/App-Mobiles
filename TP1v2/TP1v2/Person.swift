@@ -8,10 +8,8 @@
 
 import Foundation
 import CoreData
-import UIKit
 
-
-extension Person{
+extension Person {
     
     // MARK: -
     /*

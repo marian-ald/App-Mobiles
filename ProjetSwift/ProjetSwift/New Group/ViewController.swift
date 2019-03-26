@@ -9,22 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var tableViewController: PersonsTableViewController!
     
-    @IBOutlet weak var label: UILabel!
-    //@IBOutlet weak var titleLabel: UILabel!
-    //@IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleOutlet: UILabel!
+    
+    @IBOutlet weak var nou: UILabel!
+    var tableViewController: VoyagesTableViewController!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //self.tableViewController = PersonsTableViewController(tableView: self.tableView)
+        self.tableViewController = VoyagesTableViewController(tableView: self.tableView)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    /*
     @IBAction func addAction(_ sender: Any) {
         let cf: Person
         let df = DateFormatter()
@@ -37,7 +40,7 @@ class ViewController: UIViewController {
         }
         self.tableViewController.personsViewModel.add(person: cf)
         //self.tableView.reloadData()
-    }
+    }*/
 
     //-------------------------------------------------------------------------------------------------
     // MARK: - Navigation

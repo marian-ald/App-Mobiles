@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class PersonDAO{
+class PersonDAO {
     
     static let request : NSFetchRequest<Person> = Person.fetchRequest()
     
@@ -28,7 +28,10 @@ class PersonDAO{
         }
         catch{
             return nil
-        } }
+        }
+    }
+    
+    
     /// number of elements
     static var count: Int{
         self.request.predicate = nil
@@ -37,7 +40,10 @@ class PersonDAO{
         }
         catch let error as NSError{
             fatalError(error.description)
-        } }
+        }
+    }
+    
+    
     static func count(forFirstname firstname: String) -> Int{
         self.request.predicate = NSPredicate(format: "firstname == %@", firstname)
         do{

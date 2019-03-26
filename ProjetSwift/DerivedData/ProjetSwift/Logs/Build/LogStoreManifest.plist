@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>05337C4A-0F4C-43E0-A7BD-9907A40E4CBA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>05337C4A-0F4C-43E0-A7BD-9907A40E4CBA.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575292018.26915705</real>
+			<key>timeStoppedRecording</key>
+			<real>575292024.79758596</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>05337C4A-0F4C-43E0-A7BD-9907A40E4CBA</string>
+		</dict>
+		<key>06ADD557-7CD2-4FC2-9313-3D395FFFC10A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>06ADD557-7CD2-4FC2-9313-3D395FFFC10A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575292072.594414</real>
+			<key>timeStoppedRecording</key>
+			<real>575292076.14556205</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>06ADD557-7CD2-4FC2-9313-3D395FFFC10A</string>
+		</dict>
+		<key>077C24A1-786E-4F69-A0C7-796C53947D0D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>077C24A1-786E-4F69-A0C7-796C53947D0D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575291929.25819397</real>
+			<key>timeStoppedRecording</key>
+			<real>575291933.475178</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>077C24A1-786E-4F69-A0C7-796C53947D0D</string>
+		</dict>
+		<key>10C1C856-5504-4D1F-9FCE-84F5B92E5700</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>10C1C856-5504-4D1F-9FCE-84F5B92E5700.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575286659.013152</real>
+			<key>timeStoppedRecording</key>
+			<real>575286663.81046796</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>10C1C856-5504-4D1F-9FCE-84F5B92E5700</string>
+		</dict>
+		<key>21215A4B-5CBA-4680-B5CA-8783372DB8DE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>21215A4B-5CBA-4680-B5CA-8783372DB8DE.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575291505.46169996</real>
+			<key>timeStoppedRecording</key>
+			<real>575291508.308357</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>21215A4B-5CBA-4680-B5CA-8783372DB8DE</string>
+		</dict>
+		<key>38BC9F1B-36D9-4036-89A2-BCF287225B8C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>38BC9F1B-36D9-4036-89A2-BCF287225B8C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575292159.54235995</real>
+			<key>timeStoppedRecording</key>
+			<real>575292164.47118497</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>38BC9F1B-36D9-4036-89A2-BCF287225B8C</string>
+		</dict>
+		<key>42C06CAD-85E3-4339-A6C9-57BAADD2B541</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>42C06CAD-85E3-4339-A6C9-57BAADD2B541.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575285182.93980706</real>
+			<key>timeStoppedRecording</key>
+			<real>575285183.42335796</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>42C06CAD-85E3-4339-A6C9-57BAADD2B541</string>
+		</dict>
+		<key>5DB68589-D229-4F0F-B731-4ADF66C6824E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5DB68589-D229-4F0F-B731-4ADF66C6824E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575288269.40170503</real>
+			<key>timeStoppedRecording</key>
+			<real>575288290.05880105</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>5DB68589-D229-4F0F-B731-4ADF66C6824E</string>
+		</dict>
+		<key>642A62C7-AFD4-4108-93C9-9B85E7CED729</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>642A62C7-AFD4-4108-93C9-9B85E7CED729.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575287464.85638702</real>
+			<key>timeStoppedRecording</key>
+			<real>575287484.89005995</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>642A62C7-AFD4-4108-93C9-9B85E7CED729</string>
+		</dict>
+		<key>671914A9-0443-4A66-86C9-7F7FB8E1BEDA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>671914A9-0443-4A66-86C9-7F7FB8E1BEDA.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575291236.45976198</real>
+			<key>timeStoppedRecording</key>
+			<real>575291256.28077996</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>671914A9-0443-4A66-86C9-7F7FB8E1BEDA</string>
+		</dict>
+		<key>67D7F836-B2A7-42DA-BA0A-CA4C8F10CE72</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>67D7F836-B2A7-42DA-BA0A-CA4C8F10CE72.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575290212.95039403</real>
+			<key>timeStoppedRecording</key>
+			<real>575290217.41945696</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>67D7F836-B2A7-42DA-BA0A-CA4C8F10CE72</string>
+		</dict>
+		<key>71428154-CB1E-48C6-91F6-BBF0AB532119</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>71428154-CB1E-48C6-91F6-BBF0AB532119.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Clean ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575289426.75181901</real>
+			<key>timeStoppedRecording</key>
+			<real>575289427.34111595</real>
+			<key>title</key>
+			<string>Clean ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>71428154-CB1E-48C6-91F6-BBF0AB532119</string>
+		</dict>
+		<key>79773198-3155-4390-89B6-1DCE8C4EF5A7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>79773198-3155-4390-89B6-1DCE8C4EF5A7.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575289444.97550702</real>
+			<key>timeStoppedRecording</key>
+			<real>575289499.76445699</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>79773198-3155-4390-89B6-1DCE8C4EF5A7</string>
+		</dict>
+		<key>8A4BEA4D-3F39-428D-84F3-3970D0FE6553</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8A4BEA4D-3F39-428D-84F3-3970D0FE6553.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575288597.12549198</real>
+			<key>timeStoppedRecording</key>
+			<real>575288641.165429</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>8A4BEA4D-3F39-428D-84F3-3970D0FE6553</string>
+		</dict>
+		<key>BECC07EF-7009-4FEA-B493-FE1E54762DA7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BECC07EF-7009-4FEA-B493-FE1E54762DA7.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575285985.73705196</real>
+			<key>timeStoppedRecording</key>
+			<real>575285986.79706597</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>BECC07EF-7009-4FEA-B493-FE1E54762DA7</string>
+		</dict>
+		<key>C05D1CC9-AF6D-498C-8D36-492CF44757A8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C05D1CC9-AF6D-498C-8D36-492CF44757A8.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575289342.19384003</real>
+			<key>timeStoppedRecording</key>
+			<real>575289346.521101</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>C05D1CC9-AF6D-498C-8D36-492CF44757A8</string>
+		</dict>
+		<key>C49BCDDB-9E1C-4D5D-94FD-359B85A5A877</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C49BCDDB-9E1C-4D5D-94FD-359B85A5A877.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575288713.32896495</real>
+			<key>timeStoppedRecording</key>
+			<real>575288735.36374402</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>C49BCDDB-9E1C-4D5D-94FD-359B85A5A877</string>
+		</dict>
+		<key>CA6796D7-6FDC-4308-B4E9-2AABDBE4B8D9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CA6796D7-6FDC-4308-B4E9-2AABDBE4B8D9.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575290140.89817703</real>
+			<key>timeStoppedRecording</key>
+			<real>575290141.32127798</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>CA6796D7-6FDC-4308-B4E9-2AABDBE4B8D9</string>
+		</dict>
+		<key>ED9F8BE7-9372-4F0C-B537-49A3B12625C1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>ED9F8BE7-9372-4F0C-B537-49A3B12625C1.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575286034.67922997</real>
+			<key>timeStoppedRecording</key>
+			<real>575286035.61242902</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>ED9F8BE7-9372-4F0C-B537-49A3B12625C1</string>
+		</dict>
+		<key>F563055C-0BDD-42D3-BDE5-DDCE9BBB8501</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F563055C-0BDD-42D3-BDE5-DDCE9BBB8501.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575287301.13654804</real>
+			<key>timeStoppedRecording</key>
+			<real>575287352.13548994</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>F563055C-0BDD-42D3-BDE5-DDCE9BBB8501</string>
+		</dict>
+		<key>F5C4BBCC-2942-4CB5-B940-9D2D082186BF</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F5C4BBCC-2942-4CB5-B940-9D2D082186BF.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575291584.475335</real>
+			<key>timeStoppedRecording</key>
+			<real>575291588.00382805</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>F5C4BBCC-2942-4CB5-B940-9D2D082186BF</string>
+		</dict>
+		<key>F76969BA-E866-422B-A59E-3BEC2A177504</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F76969BA-E866-422B-A59E-3BEC2A177504.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575291479.76629102</real>
+			<key>timeStoppedRecording</key>
+			<real>575291494.77674401</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>F76969BA-E866-422B-A59E-3BEC2A177504</string>
+		</dict>
+		<key>FFF85F8D-50C7-466A-B899-224EBC1EBD56</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FFF85F8D-50C7-466A-B899-224EBC1EBD56.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>ProjetSwift project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ProjetSwift</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ProjetSwift</string>
+			<key>timeStartedRecording</key>
+			<real>575292114.760252</real>
+			<key>timeStoppedRecording</key>
+			<real>575292118.80669701</real>
+			<key>title</key>
+			<string>Build ProjetSwift</string>
+			<key>uniqueIdentifier</key>
+			<string>FFF85F8D-50C7-466A-B899-224EBC1EBD56</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

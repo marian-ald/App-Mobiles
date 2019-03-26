@@ -8,16 +8,15 @@
 
 import Foundation
 
-class Voyage {
-    var nameVoyage : String
-    var startDate : Date
-    var stopDate : Date
-    var persons : PersonSet
+extension Voyage {
 
-    init(nameVoyage : String, startDate : Date, stopDate : Date) {
+    convenience init(nameVoyage : String, startDate : Date, stopDate : Date, place : String, image: String) {
+        self.init(context: CoreDataManager.context)
+        self.image = image
         self.nameVoyage = nameVoyage
+        self.place = place
         self.startDate = startDate
         self.stopDate = stopDate
-        self.persons = PersonSet()
     }
+    
 }

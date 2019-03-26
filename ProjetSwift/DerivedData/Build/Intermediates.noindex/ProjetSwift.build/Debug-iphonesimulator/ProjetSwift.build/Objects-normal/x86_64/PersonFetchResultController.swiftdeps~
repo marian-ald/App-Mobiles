@@ -1,0 +1,592 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PersonFetchResultController"
+provides-nominal:
+- "11ProjetSwift27PersonFetchResultControllerC"
+provides-member:
+- ["11ProjetSwift27PersonFetchResultControllerC", ""]
+provides-dynamic-lookup:
+- "controller"
+- "controllerDidChangeContent"
+- "controllerWillChangeContent"
+depends-top-level:
+- "Array"
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
+- !private "CoreDataManager"
+- !private "FloatLiteralType"
+- "IndexPath"
+- !private "IntegerLiteralType"
+- !private "NSError"
+- !private "NSFetchRequest"
+- "NSFetchRequestResult"
+- "NSFetchedResultsChangeType"
+- "NSFetchedResultsController"
+- "NSFetchedResultsControllerDelegate"
+- "NSObject"
+- !private "NSSortDescriptor"
+- "Person"
+- "PersonFetchResultController"
+- !private "StringLiteralType"
+- "UITableView"
+- !private "fatalError"
+depends-member:
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "beginUpdates"]
+- !private ["So15CALayerDelegateP", "deleteRows"]
+- !private ["So15CALayerDelegateP", "endUpdates"]
+- !private ["So15CALayerDelegateP", "insertRows"]
+- !private ["So15CALayerDelegateP", "reloadRows"]
+- !private ["s7CVarArgP", "CoreDataManager"]
+- !private ["s7CVarArgP", "NSFetchedResultsController"]
+- !private ["s7CVarArgP", "NSSortDescriptor"]
+- !private ["s7CVarArgP", "Person"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "beginUpdates"]
+- ["s7CVarArgP", "controller"]
+- ["s7CVarArgP", "controllerDidChangeContent"]
+- ["s7CVarArgP", "controllerWillChangeContent"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "deleteRows"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s7CVarArgP", "endUpdates"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "fetchRequest"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "insertRows"]
+- !private ["s7CVarArgP", "performFetch"]
+- !private ["s7CVarArgP", "personsFetched"]
+- !private ["s7CVarArgP", "pfirstname"]
+- !private ["s7CVarArgP", "plastname"]
+- !private ["s7CVarArgP", "reloadRows"]
+- !private ["s7CVarArgP", "sortDescriptors"]
+- !private ["s7CVarArgP", "tableView"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["11ProjetSwift15CoreDataManagerC", "context"]
+- !private ["11ProjetSwift15CoreDataManagerC", "save"]
+- !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
+- !private ["s28CustomDebugStringConvertibleP", "NSFetchedResultsController"]
+- !private ["s28CustomDebugStringConvertibleP", "NSSortDescriptor"]
+- !private ["s28CustomDebugStringConvertibleP", "Person"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "beginUpdates"]
+- ["s28CustomDebugStringConvertibleP", "controller"]
+- ["s28CustomDebugStringConvertibleP", "controllerDidChangeContent"]
+- ["s28CustomDebugStringConvertibleP", "controllerWillChangeContent"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "deleteRows"]
+- !private ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "endUpdates"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "fetchRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insertRows"]
+- !private ["s28CustomDebugStringConvertibleP", "performFetch"]
+- !private ["s28CustomDebugStringConvertibleP", "personsFetched"]
+- !private ["s28CustomDebugStringConvertibleP", "pfirstname"]
+- !private ["s28CustomDebugStringConvertibleP", "plastname"]
+- !private ["s28CustomDebugStringConvertibleP", "reloadRows"]
+- !private ["s28CustomDebugStringConvertibleP", "sortDescriptors"]
+- !private ["s28CustomDebugStringConvertibleP", "tableView"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "CoreDataManager"]
+- !private ["s23CustomStringConvertibleP", "NSFetchedResultsController"]
+- !private ["s23CustomStringConvertibleP", "NSSortDescriptor"]
+- !private ["s23CustomStringConvertibleP", "Person"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "beginUpdates"]
+- ["s23CustomStringConvertibleP", "controller"]
+- ["s23CustomStringConvertibleP", "controllerDidChangeContent"]
+- ["s23CustomStringConvertibleP", "controllerWillChangeContent"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "deleteRows"]
+- !private ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "endUpdates"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "fetchRequest"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "insertRows"]
+- !private ["s23CustomStringConvertibleP", "performFetch"]
+- !private ["s23CustomStringConvertibleP", "personsFetched"]
+- !private ["s23CustomStringConvertibleP", "pfirstname"]
+- !private ["s23CustomStringConvertibleP", "plastname"]
+- !private ["s23CustomStringConvertibleP", "reloadRows"]
+- !private ["s23CustomStringConvertibleP", "sortDescriptors"]
+- !private ["s23CustomStringConvertibleP", "tableView"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SQ", "CoreDataManager"]
+- !private ["SQ", "NSFetchedResultsController"]
+- !private ["SQ", "NSSortDescriptor"]
+- !private ["SQ", "Person"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "automatic"]
+- !private ["SQ", "beginUpdates"]
+- ["SQ", "controller"]
+- ["SQ", "controllerDidChangeContent"]
+- ["SQ", "controllerWillChangeContent"]
+- !private ["SQ", "delegate"]
+- ["SQ", "delete"]
+- !private ["SQ", "deleteRows"]
+- !private ["SQ", "description"]
+- !private ["SQ", "endUpdates"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "fetchRequest"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- ["SQ", "insert"]
+- !private ["SQ", "insertRows"]
+- !private ["SQ", "performFetch"]
+- !private ["SQ", "personsFetched"]
+- !private ["SQ", "pfirstname"]
+- !private ["SQ", "plastname"]
+- !private ["SQ", "reloadRows"]
+- !private ["SQ", "sortDescriptors"]
+- !private ["SQ", "tableView"]
+- ["SQ", "update"]
+- !private ["s5ErrorP", "description"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "CoreDataManager"]
+- !private ["SH", "NSFetchedResultsController"]
+- !private ["SH", "NSSortDescriptor"]
+- !private ["SH", "Person"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "automatic"]
+- !private ["SH", "beginUpdates"]
+- ["SH", "controller"]
+- ["SH", "controllerDidChangeContent"]
+- ["SH", "controllerWillChangeContent"]
+- !private ["SH", "delegate"]
+- ["SH", "delete"]
+- !private ["SH", "deleteRows"]
+- !private ["SH", "description"]
+- !private ["SH", "endUpdates"]
+- !private ["SH", "fatalError"]
+- !private ["SH", "fetchRequest"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- ["SH", "insert"]
+- !private ["SH", "insertRows"]
+- !private ["SH", "performFetch"]
+- !private ["SH", "personsFetched"]
+- !private ["SH", "pfirstname"]
+- !private ["SH", "plastname"]
+- !private ["SH", "reloadRows"]
+- !private ["SH", "sortDescriptors"]
+- !private ["SH", "tableView"]
+- ["SH", "update"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "beginUpdates"]
+- !private ["So8NSCodingP", "deleteRows"]
+- !private ["So8NSCodingP", "description"]
+- !private ["So8NSCodingP", "endUpdates"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "insertRows"]
+- !private ["So8NSCodingP", "reloadRows"]
+- !private ["So8NSCodingP", "sortDescriptors"]
+- !private ["So9NSCopyingP", "description"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "sortDescriptors"]
+- !private ["So7NSErrorC", "description"]
+- !private ["So14NSFetchRequestC", "sortDescriptors"]
+- !private ["So20NSFetchRequestResultP", "fetchRequest"]
+- !private ["So20NSFetchRequestResultP", "pfirstname"]
+- !private ["So20NSFetchRequestResultP", "plastname"]
+- ["So26NSFetchedResultsChangeTypeV", "delete"]
+- ["So26NSFetchedResultsChangeTypeV", "insert"]
+- ["So26NSFetchedResultsChangeTypeV", "update"]
+- !private ["So26NSFetchedResultsControllerC", "delegate"]
+- !private ["So26NSFetchedResultsControllerC", "init"]
+- !private ["So26NSFetchedResultsControllerC", "performFetch"]
+- !private ["So34NSFetchedResultsControllerDelegateP", "CoreDataManager"]
+- !private ["So34NSFetchedResultsControllerDelegateP", "NSFetchedResultsController"]
+- !private ["So34NSFetchedResultsControllerDelegateP", "NSSortDescriptor"]
+- !private ["So34NSFetchedResultsControllerDelegateP", "Person"]
+- ["So34NSFetchedResultsControllerDelegateP", ""]
+- ["So34NSFetchedResultsControllerDelegateP", "controller"]
+- ["So34NSFetchedResultsControllerDelegateP", "controllerDidChangeContent"]
+- ["So34NSFetchedResultsControllerDelegateP", "controllerWillChangeContent"]
+- !private ["So34NSFetchedResultsControllerDelegateP", "fatalError"]
+- !private ["So34NSFetchedResultsControllerDelegateP", "personsFetched"]
+- !private ["So34NSFetchedResultsControllerDelegateP", "tableView"]
+- !private ["So15NSManagedObjectC", "fetchRequest"]
+- !private ["So15NSManagedObjectC", "pfirstname"]
+- !private ["So15NSManagedObjectC", "plastname"]
+- !private ["So8NSObjectC", "CoreDataManager"]
+- ["So8NSObjectC", "IndexPath"]
+- !private ["So8NSObjectC", "NSError"]
+- !private ["So8NSObjectC", "NSFetchRequest"]
+- ["So8NSObjectC", "NSFetchRequestResult"]
+- ["So8NSObjectC", "NSFetchedResultsChangeType"]
+- ["So8NSObjectC", "NSFetchedResultsController"]
+- !private ["So8NSObjectC", "NSSortDescriptor"]
+- ["So8NSObjectC", "Person"]
+- ["So8NSObjectC", "UITableView"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "beginUpdates"]
+- ["So8NSObjectC", "controller"]
+- ["So8NSObjectC", "controllerDidChangeContent"]
+- ["So8NSObjectC", "controllerWillChangeContent"]
+- !private ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "deleteRows"]
+- !private ["So8NSObjectC", "description"]
+- !private ["So8NSObjectC", "endUpdates"]
+- !private ["So8NSObjectC", "fatalError"]
+- !private ["So8NSObjectC", "fetchRequest"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "insertRows"]
+- !private ["So8NSObjectC", "performFetch"]
+- ["So8NSObjectC", "personsFetched"]
+- ["So8NSObjectC", "personsFetched.storage"]
+- !private ["So8NSObjectC", "pfirstname"]
+- !private ["So8NSObjectC", "plastname"]
+- !private ["So8NSObjectC", "reloadRows"]
+- !private ["So8NSObjectC", "sortDescriptors"]
+- ["So8NSObjectC", "tableView"]
+- !private ["So8NSObjectP", "CoreDataManager"]
+- !private ["So8NSObjectP", "NSFetchedResultsController"]
+- !private ["So8NSObjectP", "NSSortDescriptor"]
+- !private ["So8NSObjectP", "Person"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "beginUpdates"]
+- ["So8NSObjectP", "controller"]
+- ["So8NSObjectP", "controllerDidChangeContent"]
+- ["So8NSObjectP", "controllerWillChangeContent"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "deleteRows"]
+- !private ["So8NSObjectP", "description"]
+- !private ["So8NSObjectP", "endUpdates"]
+- !private ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "fetchRequest"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "insertRows"]
+- !private ["So8NSObjectP", "performFetch"]
+- !private ["So8NSObjectP", "personsFetched"]
+- !private ["So8NSObjectP", "pfirstname"]
+- !private ["So8NSObjectP", "plastname"]
+- !private ["So8NSObjectP", "reloadRows"]
+- !private ["So8NSObjectP", "sortDescriptors"]
+- !private ["So8NSObjectP", "tableView"]
+- !private ["So24NSPersistentStoreRequestC", "sortDescriptors"]
+- !private ["So14NSSecureCodingP", "description"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So16NSSortDescriptorC", "init"]
+- ["11ProjetSwift6PersonC", "deinit"]
+- !private ["11ProjetSwift6PersonC", "fetchRequest"]
+- !private ["11ProjetSwift6PersonC", "pfirstname"]
+- !private ["11ProjetSwift6PersonC", "plastname"]
+- !private ["11ProjetSwift27PersonFetchResultControllerC", "CoreDataManager"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "IndexPath"]
+- !private ["11ProjetSwift27PersonFetchResultControllerC", "NSError"]
+- !private ["11ProjetSwift27PersonFetchResultControllerC", "NSFetchRequest"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "NSFetchRequestResult"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "NSFetchedResultsChangeType"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "NSFetchedResultsController"]
+- !private ["11ProjetSwift27PersonFetchResultControllerC", "NSSortDescriptor"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "Person"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "UITableView"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "controller"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "controllerDidChangeContent"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "controllerWillChangeContent"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "deinit"]
+- !private ["11ProjetSwift27PersonFetchResultControllerC", "fatalError"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "init"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "personsFetched"]
+- !private ["11ProjetSwift27PersonFetchResultControllerC", "personsFetched.storage"]
+- ["11ProjetSwift27PersonFetchResultControllerC", "tableView"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["SY", "automatic"]
+- ["SY", "delete"]
+- ["SY", "insert"]
+- ["SY", "update"]
+- !private ["So23UITableViewRowAnimationV", "automatic"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "beginUpdates"]
+- !private ["So29UIAccessibilityIdentificationP", "deleteRows"]
+- !private ["So29UIAccessibilityIdentificationP", "endUpdates"]
+- !private ["So29UIAccessibilityIdentificationP", "insertRows"]
+- !private ["So29UIAccessibilityIdentificationP", "reloadRows"]
+- !private ["So12UIAppearanceP", "beginUpdates"]
+- !private ["So12UIAppearanceP", "deleteRows"]
+- !private ["So12UIAppearanceP", "endUpdates"]
+- !private ["So12UIAppearanceP", "insertRows"]
+- !private ["So12UIAppearanceP", "reloadRows"]
+- !private ["So21UIAppearanceContainerP", "beginUpdates"]
+- !private ["So21UIAppearanceContainerP", "deleteRows"]
+- !private ["So21UIAppearanceContainerP", "endUpdates"]
+- !private ["So21UIAppearanceContainerP", "insertRows"]
+- !private ["So21UIAppearanceContainerP", "reloadRows"]
+- !private ["So17UICoordinateSpaceP", "beginUpdates"]
+- !private ["So17UICoordinateSpaceP", "deleteRows"]
+- !private ["So17UICoordinateSpaceP", "endUpdates"]
+- !private ["So17UICoordinateSpaceP", "insertRows"]
+- !private ["So17UICoordinateSpaceP", "reloadRows"]
+- !private ["So23UIDataSourceTranslatingP", "beginUpdates"]
+- !private ["So23UIDataSourceTranslatingP", "deleteRows"]
+- !private ["So23UIDataSourceTranslatingP", "endUpdates"]
+- !private ["So23UIDataSourceTranslatingP", "insertRows"]
+- !private ["So23UIDataSourceTranslatingP", "reloadRows"]
+- !private ["So13UIDynamicItemP", "beginUpdates"]
+- !private ["So13UIDynamicItemP", "deleteRows"]
+- !private ["So13UIDynamicItemP", "endUpdates"]
+- !private ["So13UIDynamicItemP", "insertRows"]
+- !private ["So13UIDynamicItemP", "reloadRows"]
+- !private ["So18UIFocusEnvironmentP", "beginUpdates"]
+- !private ["So18UIFocusEnvironmentP", "deleteRows"]
+- !private ["So18UIFocusEnvironmentP", "endUpdates"]
+- !private ["So18UIFocusEnvironmentP", "insertRows"]
+- !private ["So18UIFocusEnvironmentP", "reloadRows"]
+- !private ["So11UIFocusItemP", "beginUpdates"]
+- !private ["So11UIFocusItemP", "deleteRows"]
+- !private ["So11UIFocusItemP", "endUpdates"]
+- !private ["So11UIFocusItemP", "insertRows"]
+- !private ["So11UIFocusItemP", "reloadRows"]
+- !private ["So20UIFocusItemContainerP", "beginUpdates"]
+- !private ["So20UIFocusItemContainerP", "deleteRows"]
+- !private ["So20UIFocusItemContainerP", "endUpdates"]
+- !private ["So20UIFocusItemContainerP", "insertRows"]
+- !private ["So20UIFocusItemContainerP", "reloadRows"]
+- !private ["So30UIFocusItemScrollableContainerP", "beginUpdates"]
+- !private ["So30UIFocusItemScrollableContainerP", "deleteRows"]
+- !private ["So30UIFocusItemScrollableContainerP", "endUpdates"]
+- !private ["So30UIFocusItemScrollableContainerP", "insertRows"]
+- !private ["So30UIFocusItemScrollableContainerP", "reloadRows"]
+- !private ["So30UIPasteConfigurationSupportingP", "beginUpdates"]
+- !private ["So30UIPasteConfigurationSupportingP", "deleteRows"]
+- !private ["So30UIPasteConfigurationSupportingP", "endUpdates"]
+- !private ["So30UIPasteConfigurationSupportingP", "insertRows"]
+- !private ["So30UIPasteConfigurationSupportingP", "reloadRows"]
+- !private ["So11UIResponderC", "beginUpdates"]
+- !private ["So11UIResponderC", "deleteRows"]
+- !private ["So11UIResponderC", "endUpdates"]
+- !private ["So11UIResponderC", "insertRows"]
+- !private ["So11UIResponderC", "reloadRows"]
+- !private ["So30UIResponderStandardEditActionsP", "beginUpdates"]
+- !private ["So30UIResponderStandardEditActionsP", "deleteRows"]
+- !private ["So30UIResponderStandardEditActionsP", "endUpdates"]
+- !private ["So30UIResponderStandardEditActionsP", "insertRows"]
+- !private ["So30UIResponderStandardEditActionsP", "reloadRows"]
+- !private ["So12UIScrollViewC", "beginUpdates"]
+- !private ["So12UIScrollViewC", "deleteRows"]
+- !private ["So12UIScrollViewC", "endUpdates"]
+- !private ["So12UIScrollViewC", "insertRows"]
+- !private ["So12UIScrollViewC", "reloadRows"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "beginUpdates"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "deleteRows"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "endUpdates"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "insertRows"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "reloadRows"]
+- !private ["So11UITableViewC", "beginUpdates"]
+- !private ["So11UITableViewC", "deleteRows"]
+- !private ["So11UITableViewC", "endUpdates"]
+- !private ["So11UITableViewC", "insertRows"]
+- !private ["So11UITableViewC", "reloadRows"]
+- !private ["So18UITraitEnvironmentP", "beginUpdates"]
+- !private ["So18UITraitEnvironmentP", "deleteRows"]
+- !private ["So18UITraitEnvironmentP", "endUpdates"]
+- !private ["So18UITraitEnvironmentP", "insertRows"]
+- !private ["So18UITraitEnvironmentP", "reloadRows"]
+- !private ["So23UIUserActivityRestoringP", "beginUpdates"]
+- !private ["So23UIUserActivityRestoringP", "deleteRows"]
+- !private ["So23UIUserActivityRestoringP", "endUpdates"]
+- !private ["So23UIUserActivityRestoringP", "insertRows"]
+- !private ["So23UIUserActivityRestoringP", "reloadRows"]
+- !private ["So6UIViewC", "beginUpdates"]
+- !private ["So6UIViewC", "deleteRows"]
+- !private ["So6UIViewC", "endUpdates"]
+- !private ["So6UIViewC", "insertRows"]
+- !private ["So6UIViewC", "reloadRows"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "beginUpdates"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "deleteRows"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "endUpdates"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "insertRows"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadRows"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSFetchedResultsController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSSortDescriptor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Person"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "beginUpdates"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "controller"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "controllerDidChangeContent"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "controllerWillChangeContent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "deleteRows"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "description"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endUpdates"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fetchRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "insertRows"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "performFetch"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "personsFetched"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pfirstname"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "plastname"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadRows"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sortDescriptors"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "SK"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "11ProjetSwift15CoreDataManagerC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So14NSFetchRequestC"
+- !private "So20NSFetchRequestResultP"
+- "So26NSFetchedResultsChangeTypeV"
+- !private "So26NSFetchedResultsControllerC"
+- "So34NSFetchedResultsControllerDelegateP"
+- !private "So15NSManagedObjectC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So24NSPersistentStoreRequestC"
+- !private "So14NSSecureCodingP"
+- !private "So16NSSortDescriptorC"
+- "11ProjetSwift6PersonC"
+- "11ProjetSwift27PersonFetchResultControllerC"
+- !private "Sm"
+- "SY"
+- !private "So23UITableViewRowAnimationV"
+- !private "ST"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So23UIDataSourceTranslatingP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So12UIScrollViewC"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- !private "So11UITableViewC"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "84f77714bbf314fcf94c9688753dcb95"

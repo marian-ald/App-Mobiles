@@ -8,18 +8,11 @@
 
 import Foundation
 
-class Depense {
-    var nameDepense : String
-    var dateDepense : Date
-    var participants : PersonSet
-    var nonBeneficiants : PersonSet
-    
-    init(nameDepense: String, dateDepense: Date) {
+extension Depense {
+
+    convenience init(nameDepense: String, dateDepense: Date) {
+        self.init(context: CoreDataManager.context)
         self.nameDepense = nameDepense
         self.dateDepense = dateDepense
-        self.participants = PersonSet()
-        self.nonBeneficiants = PersonSet()
     }
-
-
 }

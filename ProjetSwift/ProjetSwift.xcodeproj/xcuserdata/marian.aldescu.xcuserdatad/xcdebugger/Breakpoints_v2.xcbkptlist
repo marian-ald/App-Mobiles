@@ -19,5 +19,98 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjetSwift/New Group/ViewController.swift"
+            timestampString = "575292167.603338"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjetSwift.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProjetSwift.ViewController"
+                  moduleName = "ProjetSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian.aldescu/Documents/App-Mobiles/ProjetSwift/ProjetSwift/New%20Group/ViewController.swift"
+                  timestampString = "575291264.905248"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjetSwift.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProjetSwift.ViewController"
+                  moduleName = "ProjetSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian.aldescu/Documents/App-Mobiles/ProjetSwift/ProjetSwift/New%20Group/ViewController.swift"
+                  timestampString = "575291264.908836"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjetSwift.ViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProjetSwift.ViewController&gt;"
+                  moduleName = "ProjetSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian.aldescu/Documents/App-Mobiles/ProjetSwift/ProjetSwift/New%20Group/ViewController.swift"
+                  timestampString = "575291264.910552"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjetSwift.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProjetSwift.ViewController&gt;"
+                  moduleName = "ProjetSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian.aldescu/Documents/App-Mobiles/ProjetSwift/ProjetSwift/New%20Group/ViewController.swift"
+                  timestampString = "575291264.91219"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjetSwift.ViewController.__deallocating_deinit"
+                  moduleName = "ProjetSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marian.aldescu/Documents/App-Mobiles/ProjetSwift/ProjetSwift/New%20Group/ViewController.swift"
+                  timestampString = "575291264.913839"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

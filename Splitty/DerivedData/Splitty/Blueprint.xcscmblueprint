@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A6767A646CB9E9B9E191A1BD6E042BC461A08484",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A6767A646CB9E9B9E191A1BD6E042BC461A08484" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7BF34E03-4C9B-4864-818D-994C1A249808",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A6767A646CB9E9B9E191A1BD6E042BC461A08484" : "App-Mobiles\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Splitty",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Splitty\/Splitty.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/marian-ald\/App-Mobiles.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A6767A646CB9E9B9E191A1BD6E042BC461A08484"
+    }
+  ]
+}
