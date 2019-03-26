@@ -10,25 +10,25 @@ import UIKit
 
 class DetailsVoyageViewController: UIViewController {
 
-    var presenter: PersonPresenter!
+    //var presenter: PersonPresenter!
     
-    var person : Person?
+    @IBOutlet weak var voyageName: UILabel!
+    @IBOutlet weak var voyageImage: UIImageView!
+    
+    var voyage: Voyage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if let aperson = self.person{
-            self.lastnameLabel.text = aperson.plastname
-            self.firstnameLabel.text = aperson.pfirstname
+        if let voyage = SingletonStore.shared.currentVoyage {
+            self.voyageName.text = voyage.nameVoyage
         } else{
-            self.lastnameLabel.text = ""
-            self.firstnameLabel.text = ""
-        } }
+            self.voyageName.text = "default"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBOutlet weak var lastnameLabel: UILabel!
-    @IBOutlet weak var firstnameLabel: UILabel!
-    
+    }    
 }

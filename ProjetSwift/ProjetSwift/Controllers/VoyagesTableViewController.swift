@@ -37,8 +37,10 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         return self.voyagesViewModel.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VoyageCellId", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VoyageCellId", for: indexPath) as! VoyageCellController
         // Configure the cell...
+        cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.nameVoyage
+        
         return configure(cell: cell, atIndexPath: indexPath)
     }
     //-------------------------------------------------------------------------------------------------

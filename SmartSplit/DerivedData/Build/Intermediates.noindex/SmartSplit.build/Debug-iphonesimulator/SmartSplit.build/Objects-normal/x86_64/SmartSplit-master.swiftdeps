@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "25cd37cb8c89077437ed1de21b790702"
+build_time: [1553592666, 958831000]
+inputs:
+  "/Users/marian.aldescu/Documents/App-Mobiles/SmartSplit/SmartSplit/ViewController.swift": [1553590371, 0]
+  "/Users/marian.aldescu/Documents/App-Mobiles/SmartSplit/SmartSplit/AppDelegate.swift": [1553590371, 0]

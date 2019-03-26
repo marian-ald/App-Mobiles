@@ -47,6 +47,7 @@ depends-member:
 - ["11ProjetSwift15CoreDataManagerC", "String"]
 - ["11ProjetSwift15CoreDataManagerC", "UIApplication"]
 - ["11ProjetSwift15CoreDataManagerC", "context"]
+- ["11ProjetSwift15CoreDataManagerC", "deinit"]
 - ["11ProjetSwift15CoreDataManagerC", "entity"]
 - ["11ProjetSwift15CoreDataManagerC", "exit"]
 - !private ["11ProjetSwift15CoreDataManagerC", "fatalError"]

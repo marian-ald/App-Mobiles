@@ -15,6 +15,7 @@
 		EB6D2AB2224A283B002A8A0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6D2AB0224A283B002A8A0C /* LaunchScreen.storyboard */; };
 		EB6D2ABD224A283B002A8A0C /* SplittyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2ABC224A283B002A8A0C /* SplittyTests.swift */; };
 		EB6D2AC8224A283B002A8A0C /* SplittyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2AC7224A283B002A8A0C /* SplittyUITests.swift */; };
+		EB6D2AD7224A2888002A8A0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2AD6224A2888002A8A0C /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EB6D2AC3224A283B002A8A0C /* SplittyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplittyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6D2AC7224A283B002A8A0C /* SplittyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplittyUITests.swift; sourceTree = "<group>"; };
 		EB6D2AC9224A283B002A8A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6D2AD6224A2888002A8A0C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		EB6D2AA3224A2836002A8A0C /* Splitty */ = {
 			isa = PBXGroup;
 			children = (
+				EB6D2AD5224A2858002A8A0C /* Models */,
 				EB6D2AA4224A2836002A8A0C /* AppDelegate.swift */,
 				EB6D2AA6224A2836002A8A0C /* ViewController.swift */,
 				EB6D2AA8224A2836002A8A0C /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				EB6D2AC9224A283B002A8A0C /* Info.plist */,
 			);
 			path = SplittyUITests;
+			sourceTree = "<group>";
+		};
+		EB6D2AD5224A2858002A8A0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB6D2AD6224A2888002A8A0C /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				EB6D2AA7224A2836002A8A0C /* ViewController.swift in Sources */,
 				EB6D2AAD224A2837002A8A0C /* Splitty.xcdatamodeld in Sources */,
+				EB6D2AD7224A2888002A8A0C /* Person.swift in Sources */,
 				EB6D2AA5224A2836002A8A0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

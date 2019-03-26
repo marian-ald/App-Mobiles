@@ -236,15 +236,16 @@ SWIFT_CLASS_NAMED("Depense")
 @end
 
 @class UILabel;
+@class UIImageView;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC11ProjetSwift27DetailsVoyageViewController")
 @interface DetailsVoyageViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified voyageName;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified voyageImage;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lastnameLabel;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified firstnameLabel;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -254,6 +255,19 @@ SWIFT_CLASS("_TtC11ProjetSwift27DetailsVoyageViewController")
 
 SWIFT_CLASS("_TtC11ProjetSwift23NewPersonViewController")
 @interface NewPersonViewController : UIViewController <UITextFieldDelegate>
+- (void)viewDidLoad;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11ProjetSwift23NewVoyageViewController")
+@interface NewVoyageViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified newImageVoyage;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified newNameVoyage;
+- (IBAction)confirmAddVoyage:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
@@ -375,6 +389,8 @@ SWIFT_CLASS("_TtC11ProjetSwift14ViewController")
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)addAction:(id _Nonnull)sender;
+- (IBAction)unwindToThisViewWithSender:(UIStoryboardSegue * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -408,6 +424,8 @@ SWIFT_CLASS_NAMED("Voyage")
 
 SWIFT_CLASS("_TtC11ProjetSwift20VoyageCellController")
 @interface VoyageCellController : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified nameVoyage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified voyageImage;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);

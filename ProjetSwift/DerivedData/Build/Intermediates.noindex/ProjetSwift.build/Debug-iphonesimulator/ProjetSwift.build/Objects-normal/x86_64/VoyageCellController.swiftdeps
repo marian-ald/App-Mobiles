@@ -7,9 +7,13 @@ provides-member:
 - ["11ProjetSwift20VoyageCellControllerC", ""]
 provides-dynamic-lookup:
 - "awakeFromNib"
+- "nameVoyage"
 - "setSelected"
+- "voyageImage"
 depends-top-level:
 - "Bool"
+- "UIImageView"
+- "UILabel"
 - "UITableViewCell"
 - "VoyageCellController"
 depends-member:
@@ -49,10 +53,14 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "setSelected"]
 - ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "UIImageView"]
+- ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "awakeFromNib"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "nameVoyage"]
 - ["So8NSObjectC", "setSelected"]
+- ["So8NSObjectC", "voyageImage"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "awakeFromNib"]
 - !private ["So8NSObjectP", "init"]
@@ -109,21 +117,29 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
 - ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "UIImageView"]
+- ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "awakeFromNib"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "nameVoyage"]
 - ["So11UIResponderC", "setSelected"]
+- ["So11UIResponderC", "voyageImage"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "setSelected"]
 - ["So15UITableViewCellC", "Bool"]
+- ["So15UITableViewCellC", "UIImageView"]
+- ["So15UITableViewCellC", "UILabel"]
 - ["So15UITableViewCellC", ""]
 - ["So15UITableViewCellC", "awakeFromNib"]
 - ["So15UITableViewCellC", "init"]
 - !private ["So15UITableViewCellC", "init"]
+- ["So15UITableViewCellC", "nameVoyage"]
 - ["So15UITableViewCellC", "setSelected"]
+- ["So15UITableViewCellC", "voyageImage"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "awakeFromNib"]
 - !private ["So18UITraitEnvironmentP", "init"]
@@ -135,14 +151,22 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "setSelected"]
 - ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "UIImageView"]
+- ["So6UIViewC", "UILabel"]
 - ["So6UIViewC", "awakeFromNib"]
 - ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "init"]
+- ["So6UIViewC", "nameVoyage"]
 - ["So6UIViewC", "setSelected"]
+- ["So6UIViewC", "voyageImage"]
 - ["11ProjetSwift20VoyageCellControllerC", "Bool"]
+- ["11ProjetSwift20VoyageCellControllerC", "UIImageView"]
+- ["11ProjetSwift20VoyageCellControllerC", "UILabel"]
 - ["11ProjetSwift20VoyageCellControllerC", "awakeFromNib"]
 - ["11ProjetSwift20VoyageCellControllerC", "init"]
+- ["11ProjetSwift20VoyageCellControllerC", "nameVoyage"]
 - ["11ProjetSwift20VoyageCellControllerC", "setSelected"]
+- ["11ProjetSwift20VoyageCellControllerC", "voyageImage"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
@@ -210,4 +234,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "10c83f70e38efacc76b4168374070277"
+interface-hash: "c3b387f6e12628362519ece48fdd8219"

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleOutlet: UILabel!
@@ -27,20 +28,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
+    
     @IBAction func addAction(_ sender: Any) {
-        let cf: Person
-        let df = DateFormatter()
-        df.dateFormat = "dd-mm-yyyy"
-        if df.date(from: "01-06-1988") != nil{
-            cf = Person(firstname: "Christophe", lastname: "Fiorio", startDate : Date(), stopDate : Date())
-        }
-        else{
-            cf = Person(firstname: "Christophe", lastname: "Fiorio", startDate : Date(), stopDate : Date())
-        }
-        self.tableViewController.personsViewModel.add(person: cf)
-        //self.tableView.reloadData()
-    }*/
+        print("hello add action")
+       //  performSegue(withIdentifier: "addNewVoyageSegue", sender: self)
+    }
 
     //-------------------------------------------------------------------------------------------------
     // MARK: - Navigation
@@ -58,14 +50,20 @@ class ViewController: UIViewController {
             }
 
         } }
-    
+    */
     // segue ViewControllerB -> ViewController
+    
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
-        if let newPersonController = sender.source as? NewPersonViewController {
+        print("this was called")
+        print(sender.source)
+        if let newVoyageController = sender.source as? NewVoyageViewController {
+            print(newVoyageController.newVoyage)
             //dataRecieved = sourceViewController.dataPassed
-            if let person = newPersonController.newPerson{
-                self.tableViewController.personsViewModel.add(person: person)
-            } }
+            if let voyage = newVoyageController.newVoyage{
+                print("befire")
+                self.tableViewController.voyagesViewModel.add(voyage: voyage)
+                print("after")
+            }
+        }
     }
-  */
  }

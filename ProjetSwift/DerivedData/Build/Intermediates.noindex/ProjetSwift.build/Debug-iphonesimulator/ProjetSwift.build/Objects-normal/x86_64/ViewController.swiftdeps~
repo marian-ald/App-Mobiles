@@ -6,63 +6,121 @@ provides-nominal:
 provides-member:
 - ["11ProjetSwift14ViewControllerC", ""]
 provides-dynamic-lookup:
+- "addAction"
 - "didReceiveMemoryWarning"
+- "nou"
 - "tableView"
 - "titleOutlet"
+- "unwindToThisView"
 - "viewDidLoad"
 depends-top-level:
 - "AssignmentPrecedence"
+- "CastingPrecedence"
+- !private "NewVoyageViewController"
+- !private "StringLiteralType"
 - "UILabel"
+- "UIStoryboardSegue"
 - "UITableView"
 - "UIViewController"
 - "ViewController"
 - "VoyagesTableViewController"
+- !private "print"
 depends-member:
+- !private ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["s7CVarArgP", "VoyagesTableViewController"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "newVoyage"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "source"]
 - !private ["s7CVarArgP", "tableView"]
 - !private ["s7CVarArgP", "tableViewController"]
 - !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "voyagesViewModel"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "VoyagesTableViewController"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "newVoyage"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "source"]
 - !private ["s28CustomDebugStringConvertibleP", "tableView"]
 - !private ["s28CustomDebugStringConvertibleP", "tableViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "voyagesViewModel"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "voyagesViewModel"]
 - !private ["s23CustomStringConvertibleP", "VoyagesTableViewController"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "newVoyage"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "source"]
 - !private ["s23CustomStringConvertibleP", "tableView"]
 - !private ["s23CustomStringConvertibleP", "tableViewController"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "voyagesViewModel"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "voyagesViewModel"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "voyagesViewModel"]
 - !private ["SQ", "VoyagesTableViewController"]
 - ["SQ", ""]
 - !private ["SQ", "didReceiveMemoryWarning"]
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
+- !private ["SQ", "newVoyage"]
+- !private ["SQ", "print"]
+- !private ["SQ", "source"]
 - !private ["SQ", "tableView"]
 - !private ["SQ", "tableViewController"]
 - !private ["SQ", "viewDidLoad"]
+- !private ["SQ", "voyagesViewModel"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "voyagesViewModel"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["SH", "VoyagesTableViewController"]
 - ["SH", ""]
 - !private ["SH", "didReceiveMemoryWarning"]
 - !private ["SH", "init"]
 - !private ["SH", "init"]
+- !private ["SH", "newVoyage"]
+- !private ["SH", "print"]
+- !private ["SH", "source"]
 - !private ["SH", "tableView"]
 - !private ["SH", "tableViewController"]
 - !private ["SH", "viewDidLoad"]
+- !private ["SH", "voyagesViewModel"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "VoyagesTableViewController"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "newVoyage"]
+- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "tableView"]
 - !private ["So8NSCodingP", "tableViewController"]
 - !private ["So8NSCodingP", "viewDidLoad"]
@@ -71,32 +129,63 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "newVoyage"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "tableView"]
 - !private ["So26NSExtensionRequestHandlingP", "tableViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So8NSObjectC", "NewVoyageViewController"]
 - ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UIStoryboardSegue"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "VoyagesTableViewController"]
+- ["So8NSObjectC", "addAction"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "newVoyage"]
+- ["So8NSObjectC", "nou"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "source"]
 - ["So8NSObjectC", "tableView"]
 - ["So8NSObjectC", "tableViewController"]
 - ["So8NSObjectC", "titleOutlet"]
+- ["So8NSObjectC", "unwindToThisView"]
 - ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectC", "voyagesViewModel"]
 - !private ["So8NSObjectP", "VoyagesTableViewController"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "didReceiveMemoryWarning"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "newVoyage"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "source"]
 - !private ["So8NSObjectP", "tableView"]
 - !private ["So8NSObjectP", "tableViewController"]
 - !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So8NSObjectP", "voyagesViewModel"]
+- !private ["11ProjetSwift23NewVoyageViewControllerC", "newVoyage"]
+- !private ["Sq", "voyagesViewModel"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["So21UIAppearanceContainerP", "VoyagesTableViewController"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "newVoyage"]
+- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "tableView"]
 - !private ["So21UIAppearanceContainerP", "tableViewController"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
@@ -105,6 +194,8 @@ depends-member:
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "newVoyage"]
+- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "tableView"]
 - !private ["So18UIContentContainerP", "tableViewController"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
@@ -113,6 +204,8 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "newVoyage"]
+- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "tableView"]
 - !private ["So18UIFocusEnvironmentP", "tableViewController"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
@@ -121,24 +214,35 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "newVoyage"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableView"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So11UIResponderC", "NewVoyageViewController"]
 - ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UIStoryboardSegue"]
 - ["So11UIResponderC", "UITableView"]
 - ["So11UIResponderC", "VoyagesTableViewController"]
+- ["So11UIResponderC", "addAction"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "newVoyage"]
+- ["So11UIResponderC", "nou"]
+- !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "tableView"]
 - ["So11UIResponderC", "tableViewController"]
 - ["So11UIResponderC", "titleOutlet"]
+- ["So11UIResponderC", "unwindToThisView"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "VoyagesTableViewController"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "newVoyage"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "tableView"]
 - !private ["So30UIResponderStandardEditActionsP", "tableViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
@@ -147,15 +251,22 @@ depends-member:
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "newVoyage"]
+- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "tableView"]
 - !private ["So16UIStateRestoringP", "tableViewController"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So17UIStoryboardSegueC", "source"]
 - !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "voyagesViewModel"]
+- !private ["So19UITextFieldDelegateP", "newVoyage"]
 - !private ["So18UITraitEnvironmentP", "VoyagesTableViewController"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "newVoyage"]
+- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "tableView"]
 - !private ["So18UITraitEnvironmentP", "tableViewController"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
@@ -164,49 +275,107 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "didReceiveMemoryWarning"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "newVoyage"]
+- !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "tableView"]
 - !private ["So23UIUserActivityRestoringP", "tableViewController"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So16UIViewControllerC", "NewVoyageViewController"]
 - ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UIStoryboardSegue"]
 - ["So16UIViewControllerC", "UITableView"]
 - ["So16UIViewControllerC", "VoyagesTableViewController"]
 - ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "addAction"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "newVoyage"]
+- ["So16UIViewControllerC", "nou"]
+- !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "tableView"]
 - ["So16UIViewControllerC", "tableViewController"]
 - ["So16UIViewControllerC", "titleOutlet"]
+- ["So16UIViewControllerC", "unwindToThisView"]
 - ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["11ProjetSwift14ViewControllerC", "NewVoyageViewController"]
 - ["11ProjetSwift14ViewControllerC", "UILabel"]
+- ["11ProjetSwift14ViewControllerC", "UIStoryboardSegue"]
 - ["11ProjetSwift14ViewControllerC", "UITableView"]
 - ["11ProjetSwift14ViewControllerC", "VoyagesTableViewController"]
+- ["11ProjetSwift14ViewControllerC", "addAction"]
 - ["11ProjetSwift14ViewControllerC", "didReceiveMemoryWarning"]
 - ["11ProjetSwift14ViewControllerC", "init"]
+- ["11ProjetSwift14ViewControllerC", "nou"]
+- !private ["11ProjetSwift14ViewControllerC", "print"]
 - ["11ProjetSwift14ViewControllerC", "tableView"]
 - ["11ProjetSwift14ViewControllerC", "tableViewController"]
 - ["11ProjetSwift14ViewControllerC", "titleOutlet"]
+- ["11ProjetSwift14ViewControllerC", "unwindToThisView"]
 - ["11ProjetSwift14ViewControllerC", "viewDidLoad"]
+- !private ["11ProjetSwift18VoyageSetViewModelC", "add"]
 - !private ["11ProjetSwift26VoyageSetViewModelDelegateP", "init"]
+- !private ["11ProjetSwift26VoyageSetViewModelDelegateP", "voyagesViewModel"]
 - !private ["11ProjetSwift26VoyagesTableViewControllerC", "init"]
+- !private ["11ProjetSwift26VoyagesTableViewControllerC", "voyagesViewModel"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "VoyagesTableViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "newVoyage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "source"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tableViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "voyagesViewModel"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "voyagesViewModel"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "SK"
 - "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
 - "SQ"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "11ProjetSwift23NewVoyageViewControllerC"
+- !private "Sq"
+- !private "Sm"
+- !private "ST"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "So21UIAppearanceContainerP"
 - "So18UIContentContainerP"
 - "So18UIFocusEnvironmentP"
@@ -214,14 +383,24 @@ depends-nominal:
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So16UIStateRestoringP"
+- !private "So17UIStoryboardSegueC"
 - !private "So21UITableViewDataSourceP"
+- !private "So19UITextFieldDelegateP"
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So16UIViewControllerC"
 - "11ProjetSwift14ViewControllerC"
+- !private "11ProjetSwift18VoyageSetViewModelC"
 - !private "11ProjetSwift26VoyageSetViewModelDelegateP"
 - !private "11ProjetSwift26VoyagesTableViewControllerC"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -250,4 +429,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "579b8edc67b953db75dc75616ebc7429"
+interface-hash: "903233d0fc4840d61b9a12443dc1b048"

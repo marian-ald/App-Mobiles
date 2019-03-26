@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "0fa5231f9efd15d73f2ff34e5d7caf34"
+build_time: [1553592585, 871507000]
+inputs:
+  "/Users/marian.aldescu/Documents/App-Mobiles/Splitty/Splitty/ViewController.swift": [1553592502, 0]
+  "/Users/marian.aldescu/Documents/App-Mobiles/Splitty/Splitty/Models/Person.swift": [9223372036, 854775807]
+  "/Users/marian.aldescu/Documents/App-Mobiles/Splitty/Splitty/AppDelegate.swift": [1553592502, 0]

@@ -11,6 +11,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
+- "CastingPrecedence"
 - !private "FloatLiteralType"
 - "IndexPath"
 - "Int"
@@ -20,6 +21,7 @@ depends-top-level:
 - "UITableView"
 - "UITableViewCell"
 - "UITableViewDataSource"
+- !private "VoyageCellController"
 - "VoyageFetchResultController"
 - "VoyageSetViewModel"
 - "VoyageSetViewModelDelegate"
@@ -222,6 +224,7 @@ depends-member:
 - !private ["So8NSObjectC", "ScrollPosition"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
+- !private ["So8NSObjectC", "VoyageCellController"]
 - ["So8NSObjectC", "VoyageFetchResultController"]
 - ["So8NSObjectC", "VoyageSetViewModel"]
 - ["So8NSObjectC", ""]
@@ -461,6 +464,7 @@ depends-member:
 - ["11ProjetSwift26VoyagesTableViewControllerC", "Int"]
 - ["11ProjetSwift26VoyagesTableViewControllerC", "UITableView"]
 - ["11ProjetSwift26VoyagesTableViewControllerC", "UITableViewCell"]
+- !private ["11ProjetSwift26VoyagesTableViewControllerC", "VoyageCellController"]
 - ["11ProjetSwift26VoyagesTableViewControllerC", "VoyageFetchResultController"]
 - ["11ProjetSwift26VoyagesTableViewControllerC", "VoyageSetViewModel"]
 - !private ["11ProjetSwift26VoyagesTableViewControllerC", "configure"]

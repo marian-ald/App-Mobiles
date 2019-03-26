@@ -11,6 +11,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
+- "CastingPrecedence"
 - !private "FloatLiteralType"
 - "IndexPath"
 - "Int"
@@ -20,6 +21,7 @@ depends-top-level:
 - "UITableView"
 - "UITableViewCell"
 - "UITableViewDataSource"
+- !private "VoyageCellController"
 - "VoyageFetchResultController"
 - "VoyageSetViewModel"
 - "VoyageSetViewModelDelegate"
@@ -27,10 +29,12 @@ depends-top-level:
 depends-member:
 - !private ["SK", "init"]
 - !private ["SK", "init"]
+- !private ["SK", "item"]
 - !private ["SK", "row"]
 - !private ["So15CALayerDelegateP", "ScrollPosition"]
 - !private ["So15CALayerDelegateP", "dataSource"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCell"]
+- !private ["So15CALayerDelegateP", "nameVoyage"]
 - !private ["So15CALayerDelegateP", "reloadData"]
 - !private ["So15CALayerDelegateP", "selectRow"]
 - !private ["So15CALayerDelegateP", "text"]
@@ -64,9 +68,11 @@ depends-member:
 - !private ["s7CVarArgP", "voyagesViewModel"]
 - !private ["Sl", "init"]
 - !private ["Sl", "init"]
+- !private ["Sl", "item"]
 - !private ["Sl", "row"]
 - !private ["SL", "init"]
 - !private ["SL", "init"]
+- !private ["SL", "item"]
 - !private ["SL", "row"]
 - !private ["s28CustomDebugStringConvertibleP", "ScrollPosition"]
 - !private ["s28CustomDebugStringConvertibleP", "UITableView"]
@@ -80,6 +86,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "fetchResultController"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "item"]
 - !private ["s28CustomDebugStringConvertibleP", "nameVoyage"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSections"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSectionsInTableView"]
@@ -100,7 +107,9 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "item"]
 - !private ["s17CustomReflectableP", "row"]
+- !private ["s17CustomReflectableP", "text"]
 - !private ["s23CustomStringConvertibleP", "ScrollPosition"]
 - !private ["s23CustomStringConvertibleP", "UITableView"]
 - !private ["s23CustomStringConvertibleP", "VoyageFetchResultController"]
@@ -113,6 +122,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "fetchResultController"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "item"]
 - !private ["s23CustomStringConvertibleP", "nameVoyage"]
 - ["s23CustomStringConvertibleP", "numberOfSections"]
 - ["s23CustomStringConvertibleP", "numberOfSectionsInTableView"]
@@ -131,10 +141,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "voyagesViewModel"]
 - !private ["Se", "init"]
 - !private ["Se", "init"]
+- !private ["Se", "item"]
 - !private ["Se", "row"]
+- !private ["Se", "text"]
 - !private ["SE", "init"]
 - !private ["SE", "init"]
+- !private ["SE", "item"]
 - !private ["SE", "row"]
+- !private ["SE", "text"]
 - !private ["SQ", "ScrollPosition"]
 - !private ["SQ", "UITableView"]
 - !private ["SQ", "VoyageFetchResultController"]
@@ -147,6 +161,7 @@ depends-member:
 - !private ["SQ", "fetchResultController"]
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
+- !private ["SQ", "item"]
 - !private ["SQ", "middle"]
 - !private ["SQ", "nameVoyage"]
 - ["SQ", "numberOfSections"]
@@ -164,9 +179,11 @@ depends-member:
 - ["SQ", "voyageUpdated"]
 - !private ["SQ", "voyagesFetched"]
 - !private ["SQ", "voyagesViewModel"]
+- !private ["s25ExpressibleByArrayLiteralP", "item"]
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
@@ -183,6 +200,7 @@ depends-member:
 - !private ["SH", "fetchResultController"]
 - !private ["SH", "init"]
 - !private ["SH", "init"]
+- !private ["SH", "item"]
 - !private ["SH", "middle"]
 - !private ["SH", "nameVoyage"]
 - ["SH", "numberOfSections"]
@@ -200,15 +218,18 @@ depends-member:
 - ["SH", "voyageUpdated"]
 - !private ["SH", "voyagesFetched"]
 - !private ["SH", "voyagesViewModel"]
+- !private ["10Foundation9IndexPathV", "item"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["SM", "item"]
 - !private ["SM", "row"]
 - !private ["So8NSCodingP", "ScrollPosition"]
 - !private ["So8NSCodingP", "dataSource"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
+- !private ["So8NSCodingP", "nameVoyage"]
 - !private ["So8NSCodingP", "reloadData"]
 - !private ["So8NSCodingP", "selectRow"]
 - !private ["So8NSCodingP", "text"]
@@ -222,6 +243,7 @@ depends-member:
 - !private ["So8NSObjectC", "ScrollPosition"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
+- !private ["So8NSObjectC", "VoyageCellController"]
 - ["So8NSObjectC", "VoyageFetchResultController"]
 - ["So8NSObjectC", "VoyageSetViewModel"]
 - ["So8NSObjectC", ""]
@@ -272,14 +294,18 @@ depends-member:
 - ["So8NSObjectP", "voyageUpdated"]
 - !private ["So8NSObjectP", "voyagesFetched"]
 - !private ["So8NSObjectP", "voyagesViewModel"]
+- !private ["Sq", "text"]
+- !private ["Sk", "item"]
 - !private ["Sk", "row"]
 - !private ["Sm", "init"]
 - !private ["Sm", "init"]
 - !private ["SY", "middle"]
+- !private ["10Foundation20ReferenceConvertibleP", "item"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["So25UITableViewScrollPositionV", "middle"]
 - !private ["ST", "init"]
 - !private ["ST", "init"]
+- !private ["ST", "item"]
 - !private ["ST", "row"]
 - !private ["s12StaticStringV", "init"]
 - !private ["s12StaticStringV", "init"]
@@ -294,6 +320,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "ScrollPosition"]
 - !private ["So29UIAccessibilityIdentificationP", "dataSource"]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCell"]
+- !private ["So29UIAccessibilityIdentificationP", "nameVoyage"]
 - !private ["So29UIAccessibilityIdentificationP", "reloadData"]
 - !private ["So29UIAccessibilityIdentificationP", "selectRow"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
@@ -301,6 +328,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "ScrollPosition"]
 - !private ["So12UIAppearanceP", "dataSource"]
 - !private ["So12UIAppearanceP", "dequeueReusableCell"]
+- !private ["So12UIAppearanceP", "nameVoyage"]
 - !private ["So12UIAppearanceP", "reloadData"]
 - !private ["So12UIAppearanceP", "selectRow"]
 - !private ["So12UIAppearanceP", "text"]
@@ -308,6 +336,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "ScrollPosition"]
 - !private ["So21UIAppearanceContainerP", "dataSource"]
 - !private ["So21UIAppearanceContainerP", "dequeueReusableCell"]
+- !private ["So21UIAppearanceContainerP", "nameVoyage"]
 - !private ["So21UIAppearanceContainerP", "reloadData"]
 - !private ["So21UIAppearanceContainerP", "selectRow"]
 - !private ["So21UIAppearanceContainerP", "text"]
@@ -316,6 +345,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "ScrollPosition"]
 - !private ["So17UICoordinateSpaceP", "dataSource"]
 - !private ["So17UICoordinateSpaceP", "dequeueReusableCell"]
+- !private ["So17UICoordinateSpaceP", "nameVoyage"]
 - !private ["So17UICoordinateSpaceP", "reloadData"]
 - !private ["So17UICoordinateSpaceP", "selectRow"]
 - !private ["So17UICoordinateSpaceP", "text"]
@@ -328,6 +358,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "ScrollPosition"]
 - !private ["So13UIDynamicItemP", "dataSource"]
 - !private ["So13UIDynamicItemP", "dequeueReusableCell"]
+- !private ["So13UIDynamicItemP", "nameVoyage"]
 - !private ["So13UIDynamicItemP", "reloadData"]
 - !private ["So13UIDynamicItemP", "selectRow"]
 - !private ["So13UIDynamicItemP", "text"]
@@ -335,6 +366,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "ScrollPosition"]
 - !private ["So18UIFocusEnvironmentP", "dataSource"]
 - !private ["So18UIFocusEnvironmentP", "dequeueReusableCell"]
+- !private ["So18UIFocusEnvironmentP", "nameVoyage"]
 - !private ["So18UIFocusEnvironmentP", "reloadData"]
 - !private ["So18UIFocusEnvironmentP", "selectRow"]
 - !private ["So18UIFocusEnvironmentP", "text"]
@@ -342,6 +374,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "ScrollPosition"]
 - !private ["So11UIFocusItemP", "dataSource"]
 - !private ["So11UIFocusItemP", "dequeueReusableCell"]
+- !private ["So11UIFocusItemP", "nameVoyage"]
 - !private ["So11UIFocusItemP", "reloadData"]
 - !private ["So11UIFocusItemP", "selectRow"]
 - !private ["So11UIFocusItemP", "text"]
@@ -349,6 +382,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "ScrollPosition"]
 - !private ["So20UIFocusItemContainerP", "dataSource"]
 - !private ["So20UIFocusItemContainerP", "dequeueReusableCell"]
+- !private ["So20UIFocusItemContainerP", "nameVoyage"]
 - !private ["So20UIFocusItemContainerP", "reloadData"]
 - !private ["So20UIFocusItemContainerP", "selectRow"]
 - !private ["So20UIFocusItemContainerP", "text"]
@@ -358,11 +392,13 @@ depends-member:
 - !private ["So30UIFocusItemScrollableContainerP", "dequeueReusableCell"]
 - !private ["So30UIFocusItemScrollableContainerP", "reloadData"]
 - !private ["So30UIFocusItemScrollableContainerP", "selectRow"]
+- !private ["So27UIGestureRecognizerDelegateP", "nameVoyage"]
 - !private ["So27UIGestureRecognizerDelegateP", "textLabel"]
 - !private ["So7UILabelC", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "ScrollPosition"]
 - !private ["So30UIPasteConfigurationSupportingP", "dataSource"]
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
+- !private ["So30UIPasteConfigurationSupportingP", "nameVoyage"]
 - !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
 - !private ["So30UIPasteConfigurationSupportingP", "selectRow"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
@@ -370,6 +406,7 @@ depends-member:
 - !private ["So11UIResponderC", "ScrollPosition"]
 - !private ["So11UIResponderC", "dataSource"]
 - !private ["So11UIResponderC", "dequeueReusableCell"]
+- !private ["So11UIResponderC", "nameVoyage"]
 - !private ["So11UIResponderC", "reloadData"]
 - !private ["So11UIResponderC", "selectRow"]
 - !private ["So11UIResponderC", "text"]
@@ -377,6 +414,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "ScrollPosition"]
 - !private ["So30UIResponderStandardEditActionsP", "dataSource"]
 - !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCell"]
+- !private ["So30UIResponderStandardEditActionsP", "nameVoyage"]
 - !private ["So30UIResponderStandardEditActionsP", "reloadData"]
 - !private ["So30UIResponderStandardEditActionsP", "selectRow"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
@@ -396,6 +434,7 @@ depends-member:
 - !private ["So11UITableViewC", "dequeueReusableCell"]
 - !private ["So11UITableViewC", "reloadData"]
 - !private ["So11UITableViewC", "selectRow"]
+- !private ["So15UITableViewCellC", "nameVoyage"]
 - !private ["So15UITableViewCellC", "textLabel"]
 - !private ["So21UITableViewDataSourceP", "UITableView"]
 - !private ["So21UITableViewDataSourceP", "VoyageFetchResultController"]
@@ -416,6 +455,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "ScrollPosition"]
 - !private ["So18UITraitEnvironmentP", "dataSource"]
 - !private ["So18UITraitEnvironmentP", "dequeueReusableCell"]
+- !private ["So18UITraitEnvironmentP", "nameVoyage"]
 - !private ["So18UITraitEnvironmentP", "reloadData"]
 - !private ["So18UITraitEnvironmentP", "selectRow"]
 - !private ["So18UITraitEnvironmentP", "text"]
@@ -423,6 +463,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "ScrollPosition"]
 - !private ["So23UIUserActivityRestoringP", "dataSource"]
 - !private ["So23UIUserActivityRestoringP", "dequeueReusableCell"]
+- !private ["So23UIUserActivityRestoringP", "nameVoyage"]
 - !private ["So23UIUserActivityRestoringP", "reloadData"]
 - !private ["So23UIUserActivityRestoringP", "selectRow"]
 - !private ["So23UIUserActivityRestoringP", "text"]
@@ -430,11 +471,13 @@ depends-member:
 - !private ["So6UIViewC", "ScrollPosition"]
 - !private ["So6UIViewC", "dataSource"]
 - !private ["So6UIViewC", "dequeueReusableCell"]
+- !private ["So6UIViewC", "nameVoyage"]
 - !private ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "selectRow"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "textLabel"]
 - !private ["11ProjetSwift6VoyageC", "nameVoyage"]
+- !private ["11ProjetSwift20VoyageCellControllerC", "nameVoyage"]
 - !private ["11ProjetSwift27VoyageFetchResultControllerC", "init"]
 - !private ["11ProjetSwift27VoyageFetchResultControllerC", "voyagesFetched"]
 - !private ["11ProjetSwift18VoyageSetViewModelC", "count"]
@@ -461,6 +504,7 @@ depends-member:
 - ["11ProjetSwift26VoyagesTableViewControllerC", "Int"]
 - ["11ProjetSwift26VoyagesTableViewControllerC", "UITableView"]
 - ["11ProjetSwift26VoyagesTableViewControllerC", "UITableViewCell"]
+- !private ["11ProjetSwift26VoyagesTableViewControllerC", "VoyageCellController"]
 - ["11ProjetSwift26VoyagesTableViewControllerC", "VoyageFetchResultController"]
 - ["11ProjetSwift26VoyagesTableViewControllerC", "VoyageSetViewModel"]
 - !private ["11ProjetSwift26VoyagesTableViewControllerC", "configure"]
@@ -480,6 +524,7 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "ScrollPosition"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dataSource"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dequeueReusableCell"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "nameVoyage"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadData"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "selectRow"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
@@ -522,7 +567,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "voyagesViewModel"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "item"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
 - !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
@@ -540,6 +587,7 @@ depends-nominal:
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
@@ -553,6 +601,7 @@ depends-nominal:
 - !private "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "Sq"
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
@@ -589,6 +638,7 @@ depends-nominal:
 - !private "So23UIUserActivityRestoringP"
 - !private "So6UIViewC"
 - !private "11ProjetSwift6VoyageC"
+- !private "11ProjetSwift20VoyageCellControllerC"
 - !private "11ProjetSwift27VoyageFetchResultControllerC"
 - !private "11ProjetSwift18VoyageSetViewModelC"
 - "11ProjetSwift26VoyageSetViewModelDelegateP"
