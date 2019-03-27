@@ -15,7 +15,6 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     @IBOutlet weak var newNameVoyage: UITextField!
     
-    
     //var newVoyage : Voyage?
     
     override func viewDidLoad() {
