@@ -12,14 +12,23 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     
     @IBOutlet weak var newImageVoyage: UIImageView!
-    
     @IBOutlet weak var newNameVoyage: UITextField!
+
+    @IBOutlet weak var startTripDate: UITextField!
+    @IBOutlet weak var stopTripDate: UITextField!
+    
+    private var datePicker: UIDatePicker?
+    
     
     //var newVoyage : Voyage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+
+        
     }
     
     // MARK: - Navigation

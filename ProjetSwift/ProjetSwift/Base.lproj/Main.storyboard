@@ -119,29 +119,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sYi-M9-92o">
-                                <rect key="frame" x="16" y="84" width="94" height="84"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h13-lO-0I5">
+                                <rect key="frame" x="134" y="71" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY9-x3-T5X">
+                                <rect key="frame" x="134" y="228" width="124" height="30"/>
+                                <state key="normal" title="Show participants"/>
+                                <connections>
+                                    <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="668-Qc-uui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Da-kH-8Wj">
+                                <rect key="frame" x="329" y="228" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editVoyage:" destination="0xF-7E-XKI" eventType="touchUpInside" id="Wgb-Ra-7tW"/>
+                                    <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="NZI-3Y-8Y4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-K4-MQs">
+                                <rect key="frame" x="16" y="228" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VoyageName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-ow-fCR">
-                                <rect key="frame" x="118" y="116" width="245" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Expense"/>
+                                <connections>
+                                    <action selector="addExpense:" destination="0xF-7E-XKI" eventType="touchUpInside" id="wNb-L5-t8Z"/>
+                                    <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="naT-8j-1Hw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-ow-fCR">
+                                <rect key="frame" x="139" y="135" width="226" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Da-kH-8Wj" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="5RR-L3-776"/>
+                            <constraint firstItem="qkw-ow-fCR" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="139" id="Dnc-vh-2U6"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="117" id="EJb-ah-vak"/>
+                            <constraint firstItem="h13-lO-0I5" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="7" id="Evb-ov-Fup"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="qkw-ow-fCR" secondAttribute="bottom" constant="72" id="FDZ-OA-xaG"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="h13-lO-0I5" secondAttribute="trailing" constant="134" id="H72-kK-ByV"/>
+                            <constraint firstItem="9Da-kH-8Wj" firstAttribute="leading" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="71" id="IgX-ko-pe0"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="9Da-kH-8Wj" secondAttribute="bottom" constant="409" id="TKK-IR-Bbi"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="WEW-J0-qDk"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="qkw-ow-fCR" secondAttribute="trailing" constant="10" id="bCm-la-hF7"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="9Da-kH-8Wj" secondAttribute="trailing" constant="16" id="dBd-Wy-eZy"/>
+                            <constraint firstItem="qkw-ow-fCR" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="43" id="eQn-Mq-kxG"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="ZY9-x3-T5X" secondAttribute="bottom" constant="409" id="hxx-sd-hzS"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="l9C-kA-8Hx"/>
+                            <constraint firstItem="qkw-ow-fCR" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="71" id="pJD-f9-hhw"/>
+                            <constraint firstItem="h13-lO-0I5" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="pd6-2S-aWC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mux-ej-0Vm"/>
                     </view>
                     <connections>
-                        <outlet property="voyageImage" destination="sYi-M9-92o" id="oam-go-AxZ"/>
                         <outlet property="voyageName" destination="qkw-ow-fCR" id="Ove-BT-wLb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQQ-Kw-XVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="-901"/>
+            <point key="canvasLocation" x="197.59999999999999" y="-901.79910044977521"/>
         </scene>
         <!--New Voyage View Controller-->
         <scene sceneID="jKh-gd-AIX">
@@ -192,6 +234,9 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4j-fx-knd">
                                 <rect key="frame" x="131" y="166" width="228" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="5P7-x0-4z9"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -215,12 +260,12 @@
                                     <segue destination="J3h-01-oKM" kind="unwind" identifier="exitByConfirmFromNewVoyage" unwindAction="unwindToThisViewWithSender:" id="Mna-dc-4qE"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wT0-ZO-3oJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wT0-ZO-3oJ">
                                 <rect key="frame" x="16" y="289" width="343" height="330"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="47" id="bR6-oG-ojd">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="47"/>
+                                        <rect key="frame" x="0.0" y="1" width="343" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bR6-oG-ojd" id="PVJ-NV-oRm">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="46.5"/>
@@ -284,6 +329,9 @@
                     <connections>
                         <outlet property="newImageVoyage" destination="cQ7-wa-14Z" id="FhM-dE-l2l"/>
                         <outlet property="newNameVoyage" destination="xcG-NB-5E9" id="3eO-VX-NHf"/>
+                        <outlet property="startDateTrip" destination="CoP-iE-ZDI" id="OXM-GB-iL9"/>
+                        <outlet property="startTripDate" destination="U4j-fx-knd" id="pQ4-nq-4Zs"/>
+                        <outlet property="stopTripDate" destination="pYv-cX-Wpf" id="cj6-Ng-5K7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6y-5J-4ZS" userLabel="First Responder" sceneMemberID="firstResponder"/>

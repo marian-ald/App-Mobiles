@@ -13,9 +13,19 @@ class DetailsVoyageViewController: UIViewController {
     //var presenter: PersonPresenter!
     
     @IBOutlet weak var voyageName: UILabel!
-    @IBOutlet weak var voyageImage: UIImageView!
+ //   @IBOutlet weak var voyageImage: UIImageView!
     
     //var voyage: Voyage?
+    
+    
+    @IBAction func showTripParticipants(_ sender: Any) {
+    }
+    
+    @IBAction func editTrip(_ sender: Any) {
+    }
+    
+    @IBAction func addExpense(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
