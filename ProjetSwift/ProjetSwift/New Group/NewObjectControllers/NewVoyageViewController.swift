@@ -13,9 +13,9 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     @IBOutlet weak var newImageVoyage: UIImageView!
     @IBOutlet weak var newNameVoyage: UITextField!
-
-    @IBOutlet weak var startTripDate: UITextField!
-    @IBOutlet weak var stopTripDate: UITextField!
+    
+    @IBOutlet weak var dateDebut: UITextField!
+    @IBOutlet weak var dateFin: UITextField!
     
     private var datePicker: UIDatePicker?
     
