@@ -36,8 +36,6 @@
 		EB6D2AE6224A594F002A8A0C /* VoyageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */; };
 		EB6D2AE8224A5DAB002A8A0C /* NewVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2AE7224A5DAB002A8A0C /* NewVoyageViewController.swift */; };
 		EB6D2AEA224A78AB002A8A0C /* SingletonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2AE9224A78AB002A8A0C /* SingletonStore.swift */; };
-		EBDAB5712245044000624F11 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB56F2245044000624F11 /* Person.swift */; };
-		EBDAB5742245044000624F11 /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB5702245044000624F11 /* PersonSet.swift */; };
 		EBDAB578224504BD00624F11 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB577224504BD00624F11 /* Voyage.swift */; };
 		EBDAB57C224506C200624F11 /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB57B224506C200624F11 /* Depense.swift */; };
 		EBDAB589224536A800624F11 /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDAB588224536A800624F11 /* defaultImage.png */; };
@@ -45,6 +43,8 @@
 		EBDAB58B224536A800624F11 /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDAB588224536A800624F11 /* defaultImage.png */; };
 		EBDAB593224548D700624F11 /* VoyagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB592224548D700624F11 /* VoyagesTableViewController.swift */; };
 		EBDAB59522454AB900624F11 /* DetailsVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB59422454AB900624F11 /* DetailsVoyageViewController.swift */; };
+		EBF64BC4224CB9B9007C1314 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF64BC3224CB9B9007C1314 /* Person.swift */; };
+		EBF64BC6224CB9E6007C1314 /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF64BC5224CB9E6007C1314 /* PersonSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,13 +98,13 @@
 		EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoyageCellController.swift; path = ProjetSwift/Controllers/VoyageCellController.swift; sourceTree = SOURCE_ROOT; };
 		EB6D2AE7224A5DAB002A8A0C /* NewVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVoyageViewController.swift; sourceTree = "<group>"; };
 		EB6D2AE9224A78AB002A8A0C /* SingletonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonStore.swift; sourceTree = "<group>"; };
-		EBDAB56F2245044000624F11 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../../../TP1v2/TP1v2/Person.swift; sourceTree = "<group>"; };
-		EBDAB5702245044000624F11 /* PersonSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonSet.swift; path = ../../../TP1v2/TP1v2/PersonSet.swift; sourceTree = "<group>"; };
 		EBDAB577224504BD00624F11 /* Voyage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
 		EBDAB57B224506C200624F11 /* Depense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depense.swift; sourceTree = "<group>"; };
 		EBDAB588224536A800624F11 /* defaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultImage.png; sourceTree = "<group>"; };
 		EBDAB592224548D700624F11 /* VoyagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoyagesTableViewController.swift; path = "ProjetSwift/New Group/TableControllers/VoyagesTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		EBDAB59422454AB900624F11 /* DetailsVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVoyageViewController.swift; sourceTree = "<group>"; };
+		EBF64BC3224CB9B9007C1314 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		EBF64BC5224CB9E6007C1314 /* PersonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,9 +275,9 @@
 		EBDAB56E224503AF00624F11 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EBF64BC3224CB9B9007C1314 /* Person.swift */,
+				EBF64BC5224CB9E6007C1314 /* PersonSet.swift */,
 				EB6D2AD8224A2DD1002A8A0C /* Transfer.swift */,
-				EBDAB56F2245044000624F11 /* Person.swift */,
-				EBDAB5702245044000624F11 /* PersonSet.swift */,
 				EBDAB577224504BD00624F11 /* Voyage.swift */,
 				EBDAB57B224506C200624F11 /* Depense.swift */,
 				EB6D2ADA224A3640002A8A0C /* VoyageSet.swift */,
@@ -446,19 +446,19 @@
 				849B35AE2248DE4D00C634F8 /* PersonDAO.swift in Sources */,
 				EB6D2AE8224A5DAB002A8A0C /* NewVoyageViewController.swift in Sources */,
 				EB6D2AD9224A2DD1002A8A0C /* Transfer.swift in Sources */,
+				EBF64BC4224CB9B9007C1314 /* Person.swift in Sources */,
 				849B35AA2248DBD000C634F8 /* PersonCoreData.swift in Sources */,
 				EBDAB578224504BD00624F11 /* Voyage.swift in Sources */,
 				849B35C022492D8000C634F8 /* PersonPresenter.swift in Sources */,
 				849B35B222490AEE00C634F8 /* PersonFetchResultController.swift in Sources */,
-				EBDAB5742245044000624F11 /* PersonSet.swift in Sources */,
 				EB6D2AE6224A594F002A8A0C /* VoyageCellController.swift in Sources */,
 				EB2D99B72244E2C700A679A2 /* ProjetSwift.xcdatamodeld in Sources */,
 				849B35BB22490C0D00C634F8 /* PersonsTableViewController.swift in Sources */,
 				EB6D2AE2224A3C06002A8A0C /* VoyageFetchResultController.swift in Sources */,
 				EB2D99B12244E2C700A679A2 /* ViewController.swift in Sources */,
-				EBDAB5712245044000624F11 /* Person.swift in Sources */,
 				EBDAB57C224506C200624F11 /* Depense.swift in Sources */,
 				EB2D99AF2244E2C700A679A2 /* AppDelegate.swift in Sources */,
+				EBF64BC6224CB9E6007C1314 /* PersonSet.swift in Sources */,
 				849B35B722490B9400C634F8 /* PersonSetViewModel.swift in Sources */,
 				EB6D2ADF224A3A25002A8A0C /* VoyageDAO.swift in Sources */,
 				EBDAB593224548D700624F11 /* VoyagesTableViewController.swift in Sources */,

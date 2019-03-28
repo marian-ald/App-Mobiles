@@ -133,14 +133,6 @@
                                     <segue destination="yZx-WQ-jh5" kind="show" identifier="showParticipantsFromListTo" id="ola-au-FKh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Da-kH-8Wj">
-                                <rect key="frame" x="329" y="228" width="30" height="30"/>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <action selector="editVoyage:" destination="0xF-7E-XKI" eventType="touchUpInside" id="Wgb-Ra-7tW"/>
-                                    <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="NZI-3Y-8Y4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-K4-MQs">
                                 <rect key="frame" x="16" y="228" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -156,20 +148,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-fN-vCj">
+                                <rect key="frame" x="321" y="228" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editTrip:" destination="0xF-7E-XKI" eventType="touchUpInside" id="sgc-jS-JzE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9Da-kH-8Wj" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="5RR-L3-776"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="SJg-fN-vCj" secondAttribute="trailing" constant="24" id="5X5-zq-QNW"/>
+                            <constraint firstItem="SJg-fN-vCj" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="9ot-E8-T4J"/>
                             <constraint firstItem="qkw-ow-fCR" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="139" id="Dnc-vh-2U6"/>
                             <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="117" id="EJb-ah-vak"/>
                             <constraint firstItem="h13-lO-0I5" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="7" id="Evb-ov-Fup"/>
                             <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="qkw-ow-fCR" secondAttribute="bottom" constant="72" id="FDZ-OA-xaG"/>
                             <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="h13-lO-0I5" secondAttribute="trailing" constant="134" id="H72-kK-ByV"/>
-                            <constraint firstItem="9Da-kH-8Wj" firstAttribute="leading" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="71" id="IgX-ko-pe0"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="9Da-kH-8Wj" secondAttribute="bottom" constant="409" id="TKK-IR-Bbi"/>
                             <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="WEW-J0-qDk"/>
+                            <constraint firstItem="SJg-fN-vCj" firstAttribute="leading" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="63" id="XDl-5b-pDx"/>
                             <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="qkw-ow-fCR" secondAttribute="trailing" constant="10" id="bCm-la-hF7"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="9Da-kH-8Wj" secondAttribute="trailing" constant="16" id="dBd-Wy-eZy"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="SJg-fN-vCj" secondAttribute="bottom" constant="409" id="bNi-ih-oyC"/>
                             <constraint firstItem="qkw-ow-fCR" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="43" id="eQn-Mq-kxG"/>
                             <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="ZY9-x3-T5X" secondAttribute="bottom" constant="409" id="hxx-sd-hzS"/>
                             <constraint firstItem="ZY9-x3-T5X" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="l9C-kA-8Hx"/>

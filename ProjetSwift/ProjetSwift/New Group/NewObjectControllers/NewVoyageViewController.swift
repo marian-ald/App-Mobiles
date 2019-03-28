@@ -28,6 +28,13 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
 
+        datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
+
+        
+        dateDebut.inputView = datePicker
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
         
     }
     

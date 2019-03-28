@@ -20,11 +20,12 @@ class DetailsVoyageViewController: UIViewController {
     
     @IBAction func showTripParticipants(_ sender: Any) {
     }
-    
+
     @IBAction func editTrip(_ sender: Any) {
     }
     
     @IBAction func addExpense(_ sender: Any) {
+        
     }
     
     override func viewDidLoad() {
