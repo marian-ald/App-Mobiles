@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 // Extension for UIView to get the active text field
 extension UIView {
@@ -49,9 +50,20 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var dateFin: UITextField!
     
     private var datePicker: UIDatePicker?
+    private var startDateTrip: Date? = nil
+    private var stopDateTrip: Date? = nil
 
     //var newVoyage : Voyage?
 
+    @IBAction func confirmButton(_ sender: Any) {
+        if self.newNameVoyage.text == "" || self.dateDebut.text == "" || self.dateFin.text == "" {
+            print("ar trebui sa fac un pop up")
+        } else {
+            print("intru aici")
+            performSegue(withIdentifier: "confirmedSave", sender: self)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -88,16 +100,28 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        print(segue.identifier)
-        if segue.identifier == "exitByConfirmFromNewVoyage" {
-            if let nameVoyage: String  = self.newNameVoyage.text {
-                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: Date(), stopDate:Date(), place: "newPlace")
+        
+        //if self.newNameVoyage.text == "" || self.dateDebut.text == "" || self.dateFin.text == "" {
+        //    print("ar trebui sa fac un pop up")
+        //}
+        //if segue.identifier == "exitByConfirmFromNewVoyage" {
+        if segue.identifier == "confirmedSave" {
+
+            if let nameVoyage: String  = self.newNameVoyage.text, let startDate: String = self.dateDebut.text, let stopDate: String = self.dateFin.text {
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy"
+                
+                let objStartDate = dateFormatter.date(from: startDate)
+                let objStopDate = dateFormatter.date(from: stopDate)
+                //print(date)
+                
+                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
             }
         }
         else{
             SingletonStore.shared.currentVoyage = nil
         }
-        print(SingletonStore.shared.currentVoyage)
     }
     
     

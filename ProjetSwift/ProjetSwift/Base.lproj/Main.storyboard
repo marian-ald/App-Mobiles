@@ -420,7 +420,7 @@
                                 <rect key="frame" x="312" y="627" width="55" height="30"/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
-                                    <segue destination="J3h-01-oKM" kind="unwind" identifier="exitByConfirmFromNewVoyage" unwindAction="unwindToThisViewWithSender:" id="Mna-dc-4qE"/>
+                                    <action selector="confirmButton:" destination="2BA-Z3-poz" eventType="touchUpInside" id="ueA-WY-Lmx"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wT0-ZO-3oJ">
@@ -494,6 +494,7 @@
                         <outlet property="dateFin" destination="pYv-cX-Wpf" id="1BH-yA-mv8"/>
                         <outlet property="newImageVoyage" destination="cQ7-wa-14Z" id="FhM-dE-l2l"/>
                         <outlet property="newNameVoyage" destination="xcG-NB-5E9" id="3eO-VX-NHf"/>
+                        <segue destination="J3h-01-oKM" kind="unwind" identifier="confirmedSave" unwindAction="unwindToThisViewWithSender:" id="u71-gx-fY2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6y-5J-4ZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
