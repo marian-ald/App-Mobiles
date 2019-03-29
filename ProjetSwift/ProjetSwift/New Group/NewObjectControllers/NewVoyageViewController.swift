@@ -35,7 +35,12 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     }
     
     @objc func dateChanged(datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         
+        dateDebut.text = dateFormatter.string(from: datePicker.date)
+        view.endEditing(true)
+
     }
     
     // MARK: - Navigation
