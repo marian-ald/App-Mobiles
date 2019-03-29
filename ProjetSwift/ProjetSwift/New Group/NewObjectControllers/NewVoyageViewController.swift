@@ -8,6 +8,37 @@
 
 import UIKit
 
+// Extension for UIView to get the active text field
+extension UIView {
+    
+    // Get the only active text field from the viwew
+    func getSelectedTextField() -> UITextField? {
+        
+        let totalTextFields = getTextFieldsInView(view: self)
+        
+        for textField in totalTextFields{
+            if textField.isFirstResponder{
+                return textField
+            }
+        }
+        return nil
+    }
+    
+    // Get all the text fields in the view
+    func getTextFieldsInView(view: UIView) -> [UITextField] {
+        
+        var totalTextFields = [UITextField]()
+        
+        for subview in view.subviews as [UIView] {
+            if let textField = subview as? UITextField {
+                totalTextFields += [textField]
+            } else {
+                totalTextFields += getTextFieldsInView(view: subview)
+            }
+        }
+        return totalTextFields
+    }}
+
 class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     
@@ -18,10 +49,9 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var dateFin: UITextField!
     
     private var datePicker: UIDatePicker?
-    
-    
+
     //var newVoyage : Voyage?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,17 +60,27 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
 
         datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
 
-        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewVoyageViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(gestureRecognizer)
+
         dateDebut.inputView = datePicker
+        dateFin.inputView = datePicker
+    }
+    
+    @objc func viewTapped (gestureRecognizer : UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     @objc func dateChanged(datePicker: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         
-        dateDebut.text = dateFormatter.string(from: datePicker.date)
-        view.endEditing(true)
-
+        // Pentru memorare date, se poate folosi " datePicker.date "
+        //print(datePicker.date)
+        
+        if let activeTextField = view.getSelectedTextField() {
+            activeTextField.text = dateFormatter.string(from: datePicker.date)
+        }
     }
     
     // MARK: - Navigation
