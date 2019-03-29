@@ -17,6 +17,7 @@
 		849B35C4224937A600C634F8 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35C3224937A600C634F8 /* PersonDetailsViewController.swift */; };
 		849B35C8224937E500C634F8 /* NewPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35C7224937E500C634F8 /* NewPersonViewController.swift */; };
 		D1A32744224BCCE900646638 /* PersonListMainControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A32743224BCCE900646638 /* PersonListMainControllerViewController.swift */; };
+		D1C1CEE8224E876F003C961A /* PersonsForVoyageFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1CEE7224E876F003C961A /* PersonsForVoyageFetchResultController.swift */; };
 		EB2D99AF2244E2C700A679A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D99AE2244E2C700A679A2 /* AppDelegate.swift */; };
 		EB2D99B12244E2C700A679A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D99B02244E2C700A679A2 /* ViewController.swift */; };
 		EB2D99B42244E2C700A679A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2D99B22244E2C700A679A2 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		849B35C3224937A600C634F8 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonDetailsViewController.swift; path = "ProjetSwift/New Group/DetailsControllers/PersonDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		849B35C7224937E500C634F8 /* NewPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewPersonViewController.swift; path = "ProjetSwift/New Group/NewObjectControllers/NewPersonViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D1A32743224BCCE900646638 /* PersonListMainControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListMainControllerViewController.swift; sourceTree = "<group>"; };
+		D1C1CEE7224E876F003C961A /* PersonsForVoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsForVoyageFetchResultController.swift; sourceTree = "<group>"; };
 		EB2D99AB2244E2C700A679A2 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2D99AE2244E2C700A679A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB2D99B02244E2C700A679A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				849B35B122490AEE00C634F8 /* PersonFetchResultController.swift */,
+				D1C1CEE7224E876F003C961A /* PersonsForVoyageFetchResultController.swift */,
 				EB6D2AE1224A3C06002A8A0C /* VoyageFetchResultController.swift */,
 			);
 			path = FetchControllers;
@@ -451,6 +454,7 @@
 				EBDAB578224504BD00624F11 /* Voyage.swift in Sources */,
 				849B35C022492D8000C634F8 /* PersonPresenter.swift in Sources */,
 				849B35B222490AEE00C634F8 /* PersonFetchResultController.swift in Sources */,
+				D1C1CEE8224E876F003C961A /* PersonsForVoyageFetchResultController.swift in Sources */,
 				EB6D2AE6224A594F002A8A0C /* VoyageCellController.swift in Sources */,
 				EB2D99B72244E2C700A679A2 /* ProjetSwift.xcdatamodeld in Sources */,
 				849B35BB22490C0D00C634F8 /* PersonsTableViewController.swift in Sources */,

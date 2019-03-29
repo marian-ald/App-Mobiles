@@ -1,57 +1,61 @@
 //
-//  VoyageFetchResultController.swift
+//  PersonsForVoyageFetchResultController.swift
 //  ProjetSwift
 //
-//  Created by Marian ALDESCU on 26/03/2019.
+//  Created by Theodora-Augustina DRAGAN on 29/03/2019.
 //  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
+
+
 
 import UIKit
 import CoreData
 
 
-
-class VoyageFetchResultController: NSObject, NSFetchedResultsControllerDelegate {
+class PersonsForVoyageFetchResultController: NSObject, NSFetchedResultsControllerDelegate{//}, PersonSetViewModelDelegate{
     
     let tableView  : UITableView
     //
     //
-    //let voyagesSet : VoyageSetViewModel
     
-    init(view : UITableView){//}, model : VoyageSetViewModel){
+    //let personsSet : PersonSetViewModel
+    
+    init(view : UITableView){//}, model : PersonSetViewModel){
         self.tableView  = view
-        // self.voyagesSet = model
+        // self.personsSet = model
         super.init()
         do{
-            try self.voyagesFetched.performFetch()
+            try self.personsFetched.performFetch()
         }
         catch let error as NSError{
+            print("hehehehehehehehheh got here")
             fatalError(error.description)
         } }
     //-------------------------------------------------------------------------------------------------
     // MARK: - FetchResultController
-    lazy var voyagesFetched : NSFetchedResultsController<Voyage> = {
+    lazy var personsFetched : NSFetchedResultsController<Person> = {
         // prepare a request
-        let request : NSFetchRequest<Voyage> = Voyage.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Voyage.vname), ascending:true)]
+        let request : NSFetchRequest<Person> = Person.fetchRequest()
+        print(SingletonStore.shared.currentVoyage!.name)
         
+        request.predicate = NSPredicate(format: "voyage.vname == " + SingletonStore.shared.currentVoyage!.name)
+        
+        request.sortDescriptors =
+            [NSSortDescriptor(key:#keyPath(Person.plastname),ascending:true),NSSortDescriptor(key:#keyPath(Person.pfirstname)
+                ,ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext:
             CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
-        
         fetchResultController.delegate = self
         return fetchResultController
     }()
     
-    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>){
         self.tableView.beginUpdates()
     }
-    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>){
         self.tableView.endUpdates()
         CoreDataManager.save()
     }
-    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at
         indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
@@ -70,4 +74,3 @@ class VoyageFetchResultController: NSObject, NSFetchedResultsControllerDelegate 
             break
         } }
 }
-

@@ -32,7 +32,7 @@ class DetailsVoyageViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         if let voyage = SingletonStore.shared.currentVoyage {
-            self.voyageName.text = voyage.nameVoyage
+            self.voyageName.text = voyage.name
         } else{
             self.voyageName.text = "default"
         }

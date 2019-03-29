@@ -43,6 +43,19 @@ class PersonDAO {
         }
     }
     
+    static func fetchByVoyage(forVoyageName vname : String) -> [Person]? {
+        print("I searched for a voyage with :")
+        print(vname)
+        self.request.predicate = NSPredicate(format: "voyage.vname == %@")
+        do{
+            return try CoreDataManager.context.fetch(self.request)
+        }
+        catch let error as NSError{
+            fatalError(error.description)
+        }
+    }
+    
+    /*
     
     static func count(forFirstname firstname: String) -> Int{
         self.request.predicate = NSPredicate(format: "firstname == %@", firstname)
@@ -155,4 +168,5 @@ class PersonDAO {
             return nil
         } }
   */
+ */
 }

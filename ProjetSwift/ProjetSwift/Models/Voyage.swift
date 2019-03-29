@@ -10,10 +10,30 @@ import Foundation
 
 extension Voyage {
 
+    var name: String {
+        get { return self.vname ?? "" }
+        set { self.vname = newValue }
+    }
+    
+    var place: String {
+        get { return self.vplace ?? "" }
+        set { self.vplace = newValue }
+    }
+    
+    var startDate: Date {
+        get { return self.vstartDate ?? Date() }
+        set { self.vstartDate = newValue }
+    }
+    
+    var stopDate: Date {
+        get { return self.vstopDate ?? Date() }
+        set { self.vstopDate = newValue }
+    }
+    
     convenience init(nameVoyage : String, startDate : Date, stopDate : Date, place : String) {
         self.init(context: CoreDataManager.context)
-        self.image = nil
-        self.nameVoyage = nameVoyage
+        self.vimage = nil
+        self.name = nameVoyage
         self.place = place
         self.startDate = startDate
         self.stopDate = stopDate

@@ -12,10 +12,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleOutlet: UILabel!
-    
-    @IBOutlet weak var nou: UILabel!
     var tableViewController: VoyagesTableViewController!
-    
     @IBOutlet weak var tableView: UITableView!
     
     var shouldGoToNextScreen : Bool = false
@@ -77,7 +74,7 @@ class ViewController: UIViewController {
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
         print("this was called")
         print(sender.source)
-        if let newVoyageController = sender.source as? NewVoyageViewController {
+        if sender.source is NewVoyageViewController {
             //print(newVoyageController.newVoyage)
             //dataRecieved = sourceViewController.dataPassed
             if sender.identifier == "exitByConfirmFromNewVoyage" {

@@ -15,16 +15,19 @@ class PersonsTableViewController: NSObject, UITableViewDataSource, PersonSetView
     var personsViewModel : PersonSetViewModel
 
     
-    let fetchResultController : PersonFetchResultController
+    let fetchResultController : PersonsForVoyageFetchResultController
     init(tableView: UITableView) {
         self.tableView        = tableView
 //        self.presenter        = SimplePersonPresenter()
 //       self.fetchResultController = PersonFetchResultController(view : tableView)
 
-        
-        self.fetchResultController = PersonFetchResultController(view : tableView)
+        print("got here now 1")
+        self.fetchResultController = PersonsForVoyageFetchResultController(view : tableView)
+        print("got here now 2")
         self.personsViewModel = PersonSetViewModel(data: self.fetchResultController.personsFetched)
+        print("got here now 3")
 //        self.personsViewModel = PersonSetViewModel(data : tableView)//, model : self.personsViewModel)
+        
         super.init()
         self.tableView.dataSource      = self
         self.personsViewModel.delegate = self

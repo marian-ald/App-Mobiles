@@ -10,7 +10,6 @@ import UIKit
 
 class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
-    
     @IBOutlet weak var newImageVoyage: UIImageView!
     @IBOutlet weak var newNameVoyage: UITextField!
     
@@ -20,11 +19,16 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     private var datePicker: UIDatePicker?
     
     
+    //var tableViewController: PersonsTableViewController!
+    
+    @IBOutlet weak var tableView: UITableView!
     //var newVoyage : Voyage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //tableViewController = PersonsTableViewController(tableView: self.tableView)
+        
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
 
@@ -44,11 +48,11 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         print(segue.identifier)
-        if segue.identifier == "exitByConfirmFromNewVoyage" {
+        //if segue.identifier == "exitByConfirmFromNewVoyage" {
             if let nameVoyage: String  = self.newNameVoyage.text {
                 SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: Date(), stopDate:Date(), place: "newPlace")
             }
-        }
+        // }
         else{
             SingletonStore.shared.currentVoyage = nil
         }
