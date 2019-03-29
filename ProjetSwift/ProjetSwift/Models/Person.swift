@@ -30,10 +30,13 @@ extension Person {
      /// path of the image of the person
      var pimage : String?
      */
-    
+    var lastname : String{
+        get { return self.plastname ?? "" }
+        set { self.plastname = newValue }
+    }
     /// full name of a person
     var pfullname: String {
-        return (self.pfirstname ?? "") + " " + (self.plastname ?? "")
+        return (self.pfirstname ?? "") + " " + self.lastname
     }
     
     
@@ -45,7 +48,7 @@ extension Person {
     convenience init(firstname: String, lastname: String, startDate: Date, stopDate: Date){
         self.init(context: CoreDataManager.context)
         self.pfirstname = firstname
-        self.plastname  = lastname
+        self.lastname  = lastname
         self.pstartDate = startDate
         self.pstopDate = stopDate
     }
@@ -61,7 +64,7 @@ extension Person {
         self.plastname  = lastname
         self.pstartDate = startDate
         self.pstopDate = stopDate
-        self.pimage = image
+        // self.pimage = image
     }
 }
 

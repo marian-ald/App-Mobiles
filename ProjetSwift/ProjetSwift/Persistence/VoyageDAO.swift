@@ -31,6 +31,17 @@ class VoyageDAO {
         }
     }
     
+    static func fetchByName(name: String) -> [Voyage]?{
+        let predicate = NSPredicate(format: "pname == %@", name)
+        self.request.predicate = predicate
+        do{
+            return try CoreDataManager.context.fetch(self.request)
+        }
+        catch{
+            return nil
+        }
+    }
+    
     
     /// number of elements
     static var count: Int{

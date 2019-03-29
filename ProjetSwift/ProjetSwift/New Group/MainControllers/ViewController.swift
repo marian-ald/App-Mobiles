@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var shouldGoToNextScreen : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,6 +42,13 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.shouldGoToNextScreen{
+            self.shouldGoToNextScreen = false
+            self.performSegue(withIdentifier: "showDetailsVoyageSegue", sender: self)
+        }
+    }
     
     @IBAction func addAction(_ sender: Any) {
         print("hello add action")
@@ -76,7 +85,8 @@ class ViewController: UIViewController {
                     print("before")
                     self.tableViewController.voyagesViewModel.add(voyage: voyage)
                     print("after")
-                    performSegue(withIdentifier: "showDetailsVoyageSegue", sender: self)
+                    self.shouldGoToNextScreen = true
+                    //performSegue(withIdentifier: "showDetailsVoyageSegue", sender: self)
                     print("retour")
                 }
             }

@@ -8,7 +8,7 @@
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
         <attribute name="pfirstname" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pimage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pimage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="plastname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pstartDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pstopDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -35,7 +35,7 @@
     </entity>
     <elements>
         <element name="Depense" positionX="467.04296875" positionY="383.203125" width="128" height="103"/>
-        <element name="Person" positionX="832.1953125" positionY="269.9921875" width="128" height="193"/>
+        <element name="Person" positionX="832.1953125" positionY="269.9921875" width="128" height="195"/>
         <element name="Transfer" positionX="1259.62890625" positionY="364.7578125" width="128" height="118"/>
         <element name="Voyage" positionX="1145.796875" positionY="106.05859375" width="128" height="133"/>
     </elements>

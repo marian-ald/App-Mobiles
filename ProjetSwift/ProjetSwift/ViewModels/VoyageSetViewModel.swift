@@ -50,6 +50,10 @@ class VoyageSetViewModel{
         self.voyagesFetched = data
     }
     
+    func get(VoyageWithName name: String) -> [Voyage]?{
+        return VoyageDAO.fetchByName(name: name)
+    }
+    
     //-------------------------------------------------------------------------------------------------
     // MARK: View Model functions
     /// add a new voyage in set of Voyages
@@ -67,5 +71,7 @@ class VoyageSetViewModel{
     public func get(voyageAt index: Int) -> Voyage?{
         return self.voyagesFetched.object(at: IndexPath(row: index, section: 0))
     }
+    
+    
 }
 
