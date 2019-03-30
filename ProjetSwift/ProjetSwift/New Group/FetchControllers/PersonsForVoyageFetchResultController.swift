@@ -28,17 +28,22 @@ class PersonsForVoyageFetchResultController: NSObject, NSFetchedResultsControlle
             try self.personsFetched.performFetch()
         }
         catch let error as NSError{
-            print("hehehehehehehehheh got here")
             fatalError(error.description)
-        } }
+        }
+        
+    }
     //-------------------------------------------------------------------------------------------------
     // MARK: - FetchResultController
     lazy var personsFetched : NSFetchedResultsController<Person> = {
         // prepare a request
         let request : NSFetchRequest<Person> = Person.fetchRequest()
+ /*       print("sunt in PFV ??")
         print(SingletonStore.shared.currentVoyage!.name)
+        let myFormat : String = String("participate.vname == %@" + SingletonStore.shared.currentVoyage!.name)
+        print("this is my format : ")
+        print(myFormat)*/
         
-        request.predicate = NSPredicate(format: "voyage.vname == " + SingletonStore.shared.currentVoyage!.name)
+        request.predicate = NSPredicate(format: "participate.vname == %@", SingletonStore.shared.currentVoyage!.name)
         
         request.sortDescriptors =
             [NSSortDescriptor(key:#keyPath(Person.plastname),ascending:true),NSSortDescriptor(key:#keyPath(Person.pfirstname)

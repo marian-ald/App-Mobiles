@@ -26,12 +26,17 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         //tableViewController = PersonsTableViewController(tableView: self.tableView)
         
+        // self.newImageVoyage.delegate = self
+        self.newNameVoyage.delegate = self
+        self.dateDebut.delegate = self
+        self.dateFin.delegate = self
+        
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
-
         datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
 
         
@@ -61,14 +66,19 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     
     // MARK: - TextFieldDelegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text{
             if text != ""{
                 textField.resignFirstResponder()
                 return true
             } }
         return false
-    }
+    }*/
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("this was called yippie")
+        textField.resignFirstResponder()
+        return true
+    }
 }
 

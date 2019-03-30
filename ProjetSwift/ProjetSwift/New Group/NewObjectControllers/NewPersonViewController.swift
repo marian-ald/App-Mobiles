@@ -12,12 +12,8 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
     
     
     @IBOutlet weak var personImage: UIImageView!
-    
     @IBOutlet weak var firstNameTextField: UITextField!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
-    
     @IBOutlet weak var dateDebut: UITextField!
     @IBOutlet weak var dateFin: UITextField!
     
@@ -27,6 +23,10 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.firstNameTextField.delegate = self
+        self.lastNameTextField.delegate = self
+        self.dateDebut.delegate = self
+        self.dateFin.delegate = self
     }
     
     // MARK: - Navigation
@@ -59,13 +59,19 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         
     }
     // MARK: - TextFieldDelegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text{
             if text != ""{
                 textField.resignFirstResponder()
                 return true
             } }
         return false
+    }*/
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("THIS WAS CQALEED OR NOT ????")
+        textField.resignFirstResponder()
+        return true
     }
     
 }

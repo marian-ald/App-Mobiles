@@ -20,12 +20,9 @@ class PersonsTableViewController: NSObject, UITableViewDataSource, PersonSetView
         self.tableView        = tableView
 //        self.presenter        = SimplePersonPresenter()
 //       self.fetchResultController = PersonFetchResultController(view : tableView)
-
-        print("got here now 1")
         self.fetchResultController = PersonsForVoyageFetchResultController(view : tableView)
-        print("got here now 2")
-        self.personsViewModel = PersonSetViewModel(data: self.fetchResultController.personsFetched)
-        print("got here now 3")
+        self.personsViewModel = PersonSetViewModel(data:
+            self.fetchResultController.personsFetched)
 //        self.personsViewModel = PersonSetViewModel(data : tableView)//, model : self.personsViewModel)
         
         super.init()
@@ -80,7 +77,7 @@ class PersonsTableViewController: NSObject, UITableViewDataSource, PersonSetView
         
         if let person = self.personsViewModel.get(personAt: indexPath.row){
             // cell.textLabel?.text = self.presenter.text(ofPerson: person)
-            cell.textLabel?.text = person.pfirstname
+            cell.textLabel?.text = person.fullname
         }
         
         return cell

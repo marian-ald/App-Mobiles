@@ -23,6 +23,6 @@ class PersonPresenter : PersonPresenterProtocol {
     
     
     func text(ofPerson person:  Person) -> String{
-            return person.pfullname
+            return person.fullname
     }
 }

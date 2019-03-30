@@ -268,8 +268,8 @@
 		EB6D2AE0224A3BDA002A8A0C /* FetchControllers */ = {
 			isa = PBXGroup;
 			children = (
-				849B35B122490AEE00C634F8 /* PersonFetchResultController.swift */,
 				D1C1CEE7224E876F003C961A /* PersonsForVoyageFetchResultController.swift */,
+				849B35B122490AEE00C634F8 /* PersonFetchResultController.swift */,
 				EB6D2AE1224A3C06002A8A0C /* VoyageFetchResultController.swift */,
 			);
 			path = FetchControllers;

@@ -81,5 +81,11 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         return cell
         
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
 
