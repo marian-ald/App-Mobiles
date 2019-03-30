@@ -9,40 +9,10 @@
 import UIKit
 import Foundation
 
-// Extension for UIView to get the active text field
-extension UIView {
-    
-    // Get the only active text field from the viwew
-    func getSelectedTextField() -> UITextField? {
-        
-        let totalTextFields = getTextFieldsInView(view: self)
-        
-        for textField in totalTextFields{
-            if textField.isFirstResponder{
-                return textField
-            }
-        }
-        return nil
-    }
-    
-    // Get all the text fields in the view
-    func getTextFieldsInView(view: UIView) -> [UITextField] {
-        
-        var totalTextFields = [UITextField]()
-        
-        for subview in view.subviews as [UIView] {
-            if let textField = subview as? UITextField {
-                totalTextFields += [textField]
-            } else {
-                totalTextFields += getTextFieldsInView(view: subview)
-            }
-        }
-        return totalTextFields
-    }}
 
-class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
+class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-    @IBOutlet weak var newImageVoyage: UIImageView!
+    @IBOutlet weak var newImageVoyage: UIImageView? = nil
     @IBOutlet weak var newNameVoyage: UITextField!
     
     @IBOutlet weak var dateDebut: UITextField!
@@ -51,13 +21,29 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     private var datePicker: UIDatePicker?
     
     //var tableViewController: PersonsTableViewController!
-    
     //@IBOutlet weak var tableView: UITableView!
+
     
     private var startDateTrip: Date? = nil
     private var stopDateTrip: Date? = nil
+
+    let imagePicker = UIImagePickerController()
     
     //var newVoyage : Voyage?
+    
+    @IBAction func addImage(_ sender: Any) {
+        print("adaug imagine")
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum  // sau .photolibrary
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage? {
+            self.newImageVoyage?.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func confirmButton(_ sender: Any) {
         if self.newNameVoyage.text == "" || self.dateDebut.text == "" || self.dateFin.text == "" {
@@ -112,17 +98,7 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        //<<<<<<< HEAD
-        //        print(segue.identifier)
-        //        //if segue.identifier == "exitByConfirmFromNewVoyage" {
-        //           if let nameVoyage: String  = self.newNameVoyage.text {
-        //                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: Date(), stopDate:Date(), place: "newPlace")
-        //=======
         
-        //if self.newNameVoyage.text == "" || self.dateDebut.text == "" || self.dateFin.text == "" {
-        //    print("ar trebui sa fac un pop up")
-        //}
-        //if segue.identifier == "exitByConfirmFromNewVoyage" {
         if segue.identifier == "confirmedSave" {
             
             if let nameVoyage: String  = self.newNameVoyage.text, let startDate: String = self.dateDebut.text, let stopDate: String = self.dateFin.text {
@@ -132,10 +108,17 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
                 
                 let objStartDate = dateFormatter.date(from: startDate)
                 let objStopDate = dateFormatter.date(from: stopDate)
-                //print(date)
-                
+
+                // Allocate the new trip object
                 SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
-                //>>>>>>> master
+                
+                // If the user choose an image, add it in the current trip
+                if self.newImageVoyage != nil {
+                    // Convert the image in jpeg format
+                    if  let data = self.newImageVoyage?.image?.jpegData(compressionQuality: 1.0) {
+                        SingletonStore.shared.currentVoyage?.image = data
+                    }
+                }
             }
         }
         else{

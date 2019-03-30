@@ -30,6 +30,12 @@ extension Voyage {
         set { self.vstopDate = newValue }
     }
     
+    var image: Data {
+        get { return self.vimage ?? Data() }
+        set { self.vimage = newValue }
+    }
+    
+    
     convenience init(nameVoyage : String, startDate : Date, stopDate : Date, place : String) {
         self.init(context: CoreDataManager.context)
         self.vimage = nil
@@ -38,5 +44,6 @@ extension Voyage {
         self.startDate = startDate
         self.stopDate = stopDate
     }
+    
     
 }

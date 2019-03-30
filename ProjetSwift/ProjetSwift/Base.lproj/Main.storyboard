@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="NcD-HE-GUY">
             <objects>
-                <viewController id="qXS-if-RYC" customClass="ViewController" customModule="ProjetSwift_02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qXS-if-RYC" customClass="ViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="II8-fr-ghq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="127" width="375" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoyageCellId" id="1U2-Ia-NhF" customClass="VoyageCellController" customModule="ProjetSwift_02" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VoyageCellId" id="1U2-Ia-NhF" customClass="VoyageCellController" customModule="ProjetSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1U2-Ia-NhF" id="dMv-D9-8KW">
@@ -114,7 +114,7 @@
         <!--Details Voyage View Controller-->
         <scene sceneID="NYR-2P-qE8">
             <objects>
-                <viewController id="0xF-7E-XKI" customClass="DetailsVoyageViewController" customModule="ProjetSwift_02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0xF-7E-XKI" customClass="DetailsVoyageViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5e-PK-w8M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,7 +198,7 @@
         <!--Person List Main Controller View Controller-->
         <scene sceneID="VlD-6g-GU9">
             <objects>
-                <viewController id="yZx-WQ-jh5" customClass="PersonListMainControllerViewController" customModule="ProjetSwift_02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yZx-WQ-jh5" customClass="PersonListMainControllerViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U9U-FD-xUq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,7 +264,7 @@
         <!--New Person View Controller-->
         <scene sceneID="acz-KC-kvW">
             <objects>
-                <viewController id="sJL-0e-iKQ" customClass="NewPersonViewController" customModule="ProjetSwift_02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sJL-0e-iKQ" customClass="NewPersonViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L4p-R9-VrJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,7 +379,7 @@
         <!--New Voyage View Controller-->
         <scene sceneID="jKh-gd-AIX">
             <objects>
-                <viewController id="2BA-Z3-poz" customClass="NewVoyageViewController" customModule="ProjetSwift_02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2BA-Z3-poz" customClass="NewVoyageViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CoP-iE-ZDI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,6 +457,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MAf-BL-mCD">
                                 <rect key="frame" x="13" y="98" width="94" height="89"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRc-E7-u9P">
+                                <rect key="frame" x="16" y="99" width="91" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="addImage:" destination="2BA-Z3-poz" eventType="touchUpInside" id="Kko-1e-5mX"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzU-wO-KlJ">
                                 <rect key="frame" x="309" y="627" width="55" height="30"/>
                                 <state key="normal" title="Confirm"/>
