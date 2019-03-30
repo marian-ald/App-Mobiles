@@ -42,7 +42,6 @@ extension UIView {
 
 class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
-    
     @IBOutlet weak var newImageVoyage: UIImageView!
     @IBOutlet weak var newNameVoyage: UITextField!
     
@@ -50,6 +49,11 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var dateFin: UITextField!
     
     private var datePicker: UIDatePicker?
+    
+    //var tableViewController: PersonsTableViewController!
+    
+    //@IBOutlet weak var tableView: UITableView!
+
     private var startDateTrip: Date? = nil
     private var stopDateTrip: Date? = nil
 
@@ -66,10 +70,17 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        //tableViewController = PersonsTableViewController(tableView: self.tableView)
+        
+        // self.newImageVoyage.delegate = self
+        //self.newNameVoyage.delegate = self
+        //self.dateDebut.delegate = self
+        //self.dateFin.delegate = self
+        
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
-
         datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
 
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewVoyageViewController.viewTapped(gestureRecognizer:)))
@@ -100,6 +111,12 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+//<<<<<<< HEAD
+//        print(segue.identifier)
+//        //if segue.identifier == "exitByConfirmFromNewVoyage" {
+//           if let nameVoyage: String  = self.newNameVoyage.text {
+//                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: Date(), stopDate:Date(), place: "newPlace")
+//=======
         
         //if self.newNameVoyage.text == "" || self.dateDebut.text == "" || self.dateFin.text == "" {
         //    print("ar trebui sa fac un pop up")
@@ -117,8 +134,9 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
                 //print(date)
                 
                 SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
+//>>>>>>> master
             }
-        }
+         }
         else{
             SingletonStore.shared.currentVoyage = nil
         }
@@ -126,14 +144,19 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     
     // MARK: - TextFieldDelegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text{
             if text != ""{
                 textField.resignFirstResponder()
                 return true
             } }
         return false
-    }
+    }*/
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("this was called yippie")
+        textField.resignFirstResponder()
+        return true
+    }
 }
 

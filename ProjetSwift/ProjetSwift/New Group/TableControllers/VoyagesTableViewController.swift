@@ -40,7 +40,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VoyageCellId", for: indexPath) as! VoyageCellController
         // Configure the cell...
-        cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.nameVoyage
+        cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.vname
         
         return configure(cell: cell, atIndexPath: indexPath)
     }
@@ -81,5 +81,11 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         return cell
         
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
 

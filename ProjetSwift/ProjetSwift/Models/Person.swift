@@ -30,13 +30,20 @@ extension Person {
      /// path of the image of the person
      var pimage : String?
      */
+    
+    var firstname : String{
+        get { return self.pfirstname ?? "" }
+        set { self.pfirstname = newValue }
+    }
+    
     var lastname : String{
         get { return self.plastname ?? "" }
         set { self.plastname = newValue }
     }
+    
     /// full name of a person
-    var pfullname: String {
-        return (self.pfirstname ?? "") + " " + self.lastname
+    var fullname: String {
+        return self.firstname + " " + self.lastname
     }
     
     

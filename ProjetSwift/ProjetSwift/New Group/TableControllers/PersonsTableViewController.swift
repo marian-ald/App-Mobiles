@@ -15,16 +15,16 @@ class PersonsTableViewController: NSObject, UITableViewDataSource, PersonSetView
     var personsViewModel : PersonSetViewModel
 
     
-    let fetchResultController : PersonFetchResultController
+    let fetchResultController : PersonsForVoyageFetchResultController
     init(tableView: UITableView) {
         self.tableView        = tableView
 //        self.presenter        = SimplePersonPresenter()
 //       self.fetchResultController = PersonFetchResultController(view : tableView)
-
-        
-        self.fetchResultController = PersonFetchResultController(view : tableView)
-        self.personsViewModel = PersonSetViewModel(data: self.fetchResultController.personsFetched)
+        self.fetchResultController = PersonsForVoyageFetchResultController(view : tableView)
+        self.personsViewModel = PersonSetViewModel(data:
+            self.fetchResultController.personsFetched)
 //        self.personsViewModel = PersonSetViewModel(data : tableView)//, model : self.personsViewModel)
+        
         super.init()
         self.tableView.dataSource      = self
         self.personsViewModel.delegate = self
@@ -77,7 +77,7 @@ class PersonsTableViewController: NSObject, UITableViewDataSource, PersonSetView
         
         if let person = self.personsViewModel.get(personAt: indexPath.row){
             // cell.textLabel?.text = self.presenter.text(ofPerson: person)
-            cell.textLabel?.text = person.pfirstname
+            cell.textLabel?.text = person.fullname
         }
         
         return cell

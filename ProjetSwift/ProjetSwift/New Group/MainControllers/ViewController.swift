@@ -12,10 +12,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleOutlet: UILabel!
-    
-    @IBOutlet weak var nou: UILabel!
     var tableViewController: VoyagesTableViewController!
-    
     @IBOutlet weak var tableView: UITableView!
     
     var shouldGoToNextScreen : Bool = false
@@ -25,6 +22,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.tableViewController = VoyagesTableViewController(tableView: self.tableView)
     }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -77,7 +76,7 @@ class ViewController: UIViewController {
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
         print("this was called")
         print(sender.source)
-        if let newVoyageController = sender.source as? NewVoyageViewController {
+        if sender.source is NewVoyageViewController {
             //print(newVoyageController.newVoyage)
             //dataRecieved = sourceViewController.dataPassed
             if sender.identifier == "exitByConfirmFromNewVoyage" {
@@ -92,4 +91,10 @@ class ViewController: UIViewController {
             }
         }
     }
- }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}

@@ -32,7 +32,7 @@ class VoyageDAO {
     }
     
     static func fetchByName(name: String) -> [Voyage]?{
-        let predicate = NSPredicate(format: "pname == %@", name)
+        let predicate = NSPredicate(format: "vname == %@", name)
         self.request.predicate = predicate
         do{
             return try CoreDataManager.context.fetch(self.request)
