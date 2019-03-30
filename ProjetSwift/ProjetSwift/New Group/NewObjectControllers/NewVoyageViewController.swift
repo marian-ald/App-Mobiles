@@ -53,12 +53,12 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     //var tableViewController: PersonsTableViewController!
     
     //@IBOutlet weak var tableView: UITableView!
-
+    
     private var startDateTrip: Date? = nil
     private var stopDateTrip: Date? = nil
-
+    
     //var newVoyage : Voyage?
-
+    
     @IBAction func confirmButton(_ sender: Any) {
         if self.newNameVoyage.text == "" || self.dateDebut.text == "" || self.dateFin.text == "" {
             print("ar trebui sa fac un pop up")
@@ -67,6 +67,7 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
             performSegue(withIdentifier: "confirmedSave", sender: self)
         }
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,10 +83,10 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
-
+        
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewVoyageViewController.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(gestureRecognizer)
-
+        
         dateDebut.inputView = datePicker
         dateFin.inputView = datePicker
     }
@@ -111,19 +112,19 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-//<<<<<<< HEAD
-//        print(segue.identifier)
-//        //if segue.identifier == "exitByConfirmFromNewVoyage" {
-//           if let nameVoyage: String  = self.newNameVoyage.text {
-//                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: Date(), stopDate:Date(), place: "newPlace")
-//=======
+        //<<<<<<< HEAD
+        //        print(segue.identifier)
+        //        //if segue.identifier == "exitByConfirmFromNewVoyage" {
+        //           if let nameVoyage: String  = self.newNameVoyage.text {
+        //                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: Date(), stopDate:Date(), place: "newPlace")
+        //=======
         
         //if self.newNameVoyage.text == "" || self.dateDebut.text == "" || self.dateFin.text == "" {
         //    print("ar trebui sa fac un pop up")
         //}
         //if segue.identifier == "exitByConfirmFromNewVoyage" {
         if segue.identifier == "confirmedSave" {
-
+            
             if let nameVoyage: String  = self.newNameVoyage.text, let startDate: String = self.dateDebut.text, let stopDate: String = self.dateFin.text {
                 
                 let dateFormatter = DateFormatter()
@@ -134,9 +135,9 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
                 //print(date)
                 
                 SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
-//>>>>>>> master
+                //>>>>>>> master
             }
-         }
+        }
         else{
             SingletonStore.shared.currentVoyage = nil
         }
@@ -145,13 +146,13 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate  {
     
     // MARK: - TextFieldDelegate
     /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text{
-            if text != ""{
-                textField.resignFirstResponder()
-                return true
-            } }
-        return false
-    }*/
+     if let text = textField.text{
+     if text != ""{
+     textField.resignFirstResponder()
+     return true
+     } }
+     return false
+     }*/
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("this was called yippie")

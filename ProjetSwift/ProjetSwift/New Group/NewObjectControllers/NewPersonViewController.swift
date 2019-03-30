@@ -42,12 +42,12 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         print("new person is : ")
         print(newPerson)
         print("my current voyage is : ")
-        print(SingletonStore.shared.currentVoyage?.vname)
+        print(SingletonStore.shared.currentVoyage?.name)
             
-            if let v  = VoyageDAO.fetchByName(name: SingletonStore.shared.currentVoyage?.vname ?? ""){
+            if let v  = VoyageDAO.fetchByName(name: SingletonStore.shared.currentVoyage?.name ?? ""){
                 let myVoy = v[0]
                 if let p = newPerson{
-                    print(myVoy.vname)
+                    print(myVoy.name)
                     myVoy.addToContain(p)
     
                 }

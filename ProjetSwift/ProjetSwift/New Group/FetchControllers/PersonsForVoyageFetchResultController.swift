@@ -43,7 +43,7 @@ class PersonsForVoyageFetchResultController: NSObject, NSFetchedResultsControlle
         print("this is my format : ")
         print(myFormat)*/
         
-        request.predicate = NSPredicate(format: "participate.vname == %@", (SingletonStore.shared.currentVoyage!.vname ?? nil)!)
+        request.predicate = NSPredicate(format: "participate.vname == %@", SingletonStore.shared.currentVoyage!.name)
         
         request.sortDescriptors =
             [NSSortDescriptor(key:#keyPath(Person.plastname),ascending:true),NSSortDescriptor(key:#keyPath(Person.pfirstname)
