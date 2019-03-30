@@ -1,0 +1,185 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "VoyageDAO"
+provides-nominal:
+- "11ProjetSwift9VoyageDAOC"
+provides-member:
+- ["11ProjetSwift9VoyageDAOC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "CoreDataManager"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "NSError"
+- "NSFetchRequest"
+- !private "StringLiteralType"
+- "Voyage"
+- "VoyageDAO"
+- !private "fatalError"
+depends-member:
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "delete"]
+- !private ["s7CVarArgP", "description"]
+- !private ["s7CVarArgP", "fetch"]
+- ["s7CVarArgP", "fetchRequest"]
+- !private ["s7CVarArgP", "predicate"]
+- !private ["11ProjetSwift15CoreDataManagerC", "context"]
+- !private ["11ProjetSwift15CoreDataManagerC", "save"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "delete"]
+- !private ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "fetch"]
+- ["s28CustomDebugStringConvertibleP", "fetchRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "predicate"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "delete"]
+- !private ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "fetch"]
+- ["s23CustomStringConvertibleP", "fetchRequest"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "predicate"]
+- !private ["SQ", "count"]
+- !private ["SQ", "delete"]
+- !private ["SQ", "description"]
+- !private ["SQ", "fetch"]
+- ["SQ", "fetchRequest"]
+- !private ["SQ", "predicate"]
+- !private ["s5ErrorP", "description"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SH", "count"]
+- !private ["SH", "delete"]
+- !private ["SH", "description"]
+- !private ["SH", "fetch"]
+- ["SH", "fetchRequest"]
+- !private ["SH", "predicate"]
+- !private ["So8NSCodingP", "count"]
+- !private ["So8NSCodingP", "delete"]
+- !private ["So8NSCodingP", "description"]
+- !private ["So8NSCodingP", "fetch"]
+- !private ["So8NSCodingP", "predicate"]
+- !private ["So9NSCopyingP", "description"]
+- !private ["So9NSCopyingP", "predicate"]
+- !private ["So7NSErrorC", "description"]
+- !private ["So14NSFetchRequestC", "predicate"]
+- ["So20NSFetchRequestResultP", "fetchRequest"]
+- !private ["So9NSLockingP", "count"]
+- !private ["So9NSLockingP", "delete"]
+- !private ["So9NSLockingP", "fetch"]
+- ["So15NSManagedObjectC", "fetchRequest"]
+- !private ["So22NSManagedObjectContextC", "count"]
+- !private ["So22NSManagedObjectContextC", "delete"]
+- !private ["So22NSManagedObjectContextC", "fetch"]
+- !private ["So8NSObjectC", "count"]
+- !private ["So8NSObjectC", "delete"]
+- !private ["So8NSObjectC", "description"]
+- !private ["So8NSObjectC", "fetch"]
+- ["So8NSObjectC", "fetchRequest"]
+- !private ["So8NSObjectC", "predicate"]
+- !private ["So8NSObjectP", "count"]
+- !private ["So8NSObjectP", "delete"]
+- !private ["So8NSObjectP", "description"]
+- !private ["So8NSObjectP", "fetch"]
+- ["So8NSObjectP", "fetchRequest"]
+- !private ["So8NSObjectP", "predicate"]
+- !private ["So24NSPersistentStoreRequestC", "predicate"]
+- !private ["So14NSSecureCodingP", "description"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- ["11ProjetSwift6VoyageC", "deinit"]
+- ["11ProjetSwift6VoyageC", "fetchRequest"]
+- !private ["11ProjetSwift9VoyageDAOC", "CoreDataManager"]
+- ["11ProjetSwift9VoyageDAOC", "Int"]
+- !private ["11ProjetSwift9VoyageDAOC", "NSError"]
+- ["11ProjetSwift9VoyageDAOC", "NSFetchRequest"]
+- ["11ProjetSwift9VoyageDAOC", "Voyage"]
+- ["11ProjetSwift9VoyageDAOC", "count"]
+- ["11ProjetSwift9VoyageDAOC", "delete"]
+- !private ["11ProjetSwift9VoyageDAOC", "fatalError"]
+- ["11ProjetSwift9VoyageDAOC", "fetchAll"]
+- ["11ProjetSwift9VoyageDAOC", "init"]
+- ["11ProjetSwift9VoyageDAOC", "request"]
+- ["11ProjetSwift9VoyageDAOC", "save"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delete"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "description"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fetch"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "fetchRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "predicate"]
+depends-nominal:
+- "s7CVarArgP"
+- !private "11ProjetSwift15CoreDataManagerC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So14NSFetchRequestC"
+- "So20NSFetchRequestResultP"
+- !private "So9NSLockingP"
+- "So15NSManagedObjectC"
+- !private "So22NSManagedObjectContextC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So24NSPersistentStoreRequestC"
+- !private "So14NSSecureCodingP"
+- !private "s12StaticStringV"
+- "11ProjetSwift6VoyageC"
+- "11ProjetSwift9VoyageDAOC"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "02a6dfefab05a4bc53a3f92245fb3898"
