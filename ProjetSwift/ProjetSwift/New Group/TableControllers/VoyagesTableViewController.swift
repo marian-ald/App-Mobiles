@@ -40,7 +40,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VoyageCellId", for: indexPath) as! VoyageCellController
         // Configure the cell...
-        cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.name
+        cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.vname
         
         return configure(cell: cell, atIndexPath: indexPath)
     }

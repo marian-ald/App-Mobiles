@@ -33,7 +33,8 @@ class VoyageFetchResultController: NSObject, NSFetchedResultsControllerDelegate 
     lazy var voyagesFetched : NSFetchedResultsController<Voyage> = {
         // prepare a request
         let request : NSFetchRequest<Voyage> = Voyage.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Voyage.vname), ascending:true)]
+        //request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Voyage.vname), ascending:true)]
+        request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Voyage.vname), ascending: true)]
         
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext:
             CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
