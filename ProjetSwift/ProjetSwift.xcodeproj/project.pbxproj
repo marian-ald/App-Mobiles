@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251CBE822501F2200967080 /* ExtensionUIView.swift */; };
+		332DF9DF2250E47700FCAF29 /* AssociationDepensePayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */; };
+		332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */; };
 		849B35A62248DB6300C634F8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35A52248DB6300C634F8 /* CoreDataManager.swift */; };
 		849B35AA2248DBD000C634F8 /* PersonCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35A92248DBD000C634F8 /* PersonCoreData.swift */; };
 		849B35AE2248DE4D00C634F8 /* PersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35AD2248DE4D00C634F8 /* PersonDAO.swift */; };
@@ -68,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		0251CBE822501F2200967080 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociationDepensePayer.swift; sourceTree = "<group>"; };
+		332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDepenseViewController.swift; sourceTree = "<group>"; };
 		849B35A52248DB6300C634F8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		849B35A92248DBD000C634F8 /* PersonCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCoreData.swift; sourceTree = "<group>"; };
 		849B35AD2248DE4D00C634F8 /* PersonDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDAO.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				849B35C7224937E500C634F8 /* NewPersonViewController.swift */,
+				332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */,
 				EB6D2AE7224A5DAB002A8A0C /* NewVoyageViewController.swift */,
 			);
 			path = NewObjectControllers;
@@ -295,6 +300,7 @@
 				EBDAB577224504BD00624F11 /* Voyage.swift */,
 				EBDAB57B224506C200624F11 /* Depense.swift */,
 				EB6D2ADA224A3640002A8A0C /* VoyageSet.swift */,
+				332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				EB6D2AEA224A78AB002A8A0C /* SingletonStore.swift in Sources */,
 				EB6D2ADB224A3640002A8A0C /* VoyageSet.swift in Sources */,
 				EB6D2ADD224A38CF002A8A0C /* VoyageSetViewModel.swift in Sources */,
+				332DF9DF2250E47700FCAF29 /* AssociationDepensePayer.swift in Sources */,
 				EBDAB59522454AB900624F11 /* DetailsVoyageViewController.swift in Sources */,
 				0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */,
 				849B35C4224937A600C634F8 /* PersonDetailsViewController.swift in Sources */,
@@ -475,6 +482,7 @@
 				EBDAB57C224506C200624F11 /* Depense.swift in Sources */,
 				EB2D99AF2244E2C700A679A2 /* AppDelegate.swift in Sources */,
 				EBF64BC6224CB9E6007C1314 /* PersonSet.swift in Sources */,
+				332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */,
 				849B35B722490B9400C634F8 /* PersonSetViewModel.swift in Sources */,
 				EB6D2ADF224A3A25002A8A0C /* VoyageDAO.swift in Sources */,
 				EBDAB593224548D700624F11 /* VoyagesTableViewController.swift in Sources */,

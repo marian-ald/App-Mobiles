@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AssociationDepensePayer" representedClassName="AssociationDepensePayer" syncable="YES" codeGenerationType="class">
+        <attribute name="firstnamePayer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastnamePayer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameDepense" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sumPaid" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="Depense" representedClassName="Depense" syncable="YES" codeGenerationType="class">
         <attribute name="dateDepense" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="imageDepense" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nameDepense" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="noBenefitBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="noBenefit" inverseEntity="Person" syncable="YES"/>
         <relationship name="paidBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="paid" inverseEntity="Person" syncable="YES"/>
@@ -34,9 +41,10 @@
         <relationship name="contain" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="participate" inverseEntity="Person" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Depense" positionX="467.04296875" positionY="383.203125" width="128" height="103"/>
-        <element name="Person" positionX="832.1953125" positionY="269.9921875" width="128" height="195"/>
+        <element name="Person" positionX="832.1953125" positionY="269.9921875" width="128" height="193"/>
         <element name="Transfer" positionX="1259.62890625" positionY="364.7578125" width="128" height="118"/>
         <element name="Voyage" positionX="1145.796875" positionY="106.05859375" width="128" height="135"/>
+        <element name="AssociationDepensePayer" positionX="688" positionY="158" width="128" height="103"/>
+        <element name="Depense" positionX="990" positionY="261" width="128" height="120"/>
     </elements>
 </model>

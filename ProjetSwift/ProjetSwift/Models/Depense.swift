@@ -7,12 +7,29 @@
 //
 
 import Foundation
+import UIKit
 
 extension Depense {
+    
+    var nameD : String {
+        get { return self.nameDepense ?? "" }
+        set { self.nameDepense = newValue }
+    }
 
-    convenience init(nameDepense: String, dateDepense: Date) {
+    var dateD : Date {
+        get { return self.dateDepense! }
+        set { self.dateDepense = newValue }
+    }
+    
+    var imageD : Data {
+        get { return self.imageDepense! }
+        set { self.imageDepense = newValue }
+    }
+    
+    convenience init(nameDepense: String, dateDepense: Date, imageDepense: Data) {
         self.init(context: CoreDataManager.context)
-        self.nameDepense = nameDepense
-        self.dateDepense = dateDepense
+        self.nameD = nameDepense
+        self.dateD = dateDepense
+        self.imageD = imageDepense
     }
 }
