@@ -126,7 +126,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY9-x3-T5X">
-                                <rect key="frame" x="134" y="228" width="124" height="30"/>
+                                <rect key="frame" x="134" y="228" width="124" height="16"/>
                                 <state key="normal" title="Show participants"/>
                                 <connections>
                                     <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="668-Qc-uui"/>
@@ -134,55 +134,52 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-K4-MQs">
-                                <rect key="frame" x="16" y="228" width="90" height="30"/>
+                                <rect key="frame" x="16" y="228" width="90" height="17"/>
                                 <state key="normal" title="Add Expense"/>
                                 <connections>
                                     <action selector="addExpense:" destination="0xF-7E-XKI" eventType="touchUpInside" id="wNb-L5-t8Z"/>
                                     <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="naT-8j-1Hw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-ow-fCR">
-                                <rect key="frame" x="139" y="135" width="226" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-ow-fCR">
+                                <rect key="frame" x="202" y="108" width="165" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="Iee-FG-O3M">
+                                <rect key="frame" x="16" y="100" width="163" height="106"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-fN-vCj">
-                                <rect key="frame" x="321" y="228" width="30" height="30"/>
+                                <rect key="frame" x="319" y="228" width="30" height="17"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <action selector="editTrip:" destination="0xF-7E-XKI" eventType="touchUpInside" id="sgc-jS-JzE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iee-FG-O3M">
-                                <rect key="frame" x="16" y="100" width="169" height="106"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Iee-FG-O3M" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="16" id="0Bk-Rq-KzQ"/>
                             <constraint firstItem="BgR-K4-MQs" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="0sV-6l-7kD"/>
-                            <constraint firstItem="Iee-FG-O3M" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="8" id="3Cv-A4-EnO"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="SJg-fN-vCj" secondAttribute="trailing" constant="24" id="5X5-zq-QNW"/>
-                            <constraint firstItem="SJg-fN-vCj" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="9ot-E8-T4J"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="ZY9-x3-T5X" secondAttribute="bottom" constant="423" id="8SS-yO-8s7"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="SJg-fN-vCj" secondAttribute="bottom" constant="422" id="9hS-qU-6me"/>
                             <constraint firstItem="BgR-K4-MQs" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="16" id="AFk-jg-cuv"/>
-                            <constraint firstItem="qkw-ow-fCR" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="139" id="Dnc-vh-2U6"/>
                             <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="117" id="EJb-ah-vak"/>
-                            <constraint firstItem="h13-lO-0I5" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="7" id="Evb-ov-Fup"/>
-                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="qkw-ow-fCR" secondAttribute="bottom" constant="72" id="FDZ-OA-xaG"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="BgR-K4-MQs" secondAttribute="bottom" constant="422" id="FGL-AP-eUz"/>
                             <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="h13-lO-0I5" secondAttribute="trailing" constant="134" id="H72-kK-ByV"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="SJg-fN-vCj" secondAttribute="trailing" constant="26" id="K64-Jo-aYL"/>
+                            <constraint firstItem="SJg-fN-vCj" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="OA9-7Q-21k"/>
+                            <constraint firstItem="SJg-fN-vCj" firstAttribute="leading" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="61" id="RvI-ct-KXy"/>
                             <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="WEW-J0-qDk"/>
-                            <constraint firstItem="SJg-fN-vCj" firstAttribute="leading" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="63" id="XDl-5b-pDx"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="qkw-ow-fCR" secondAttribute="trailing" constant="10" id="bCm-la-hF7"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="SJg-fN-vCj" secondAttribute="bottom" constant="409" id="bNi-ih-oyC"/>
-                            <constraint firstItem="qkw-ow-fCR" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="43" id="eQn-Mq-kxG"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="Iee-FG-O3M" secondAttribute="trailing" constant="190" id="f1L-9W-U5j"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="ZY9-x3-T5X" secondAttribute="bottom" constant="409" id="hxx-sd-hzS"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="BgR-K4-MQs" secondAttribute="bottom" constant="409" id="jiM-x3-cLU"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="Iee-FG-O3M" secondAttribute="trailing" constant="196" id="XiN-YK-WVG"/>
+                            <constraint firstItem="h13-lO-0I5" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="7" id="ghe-3H-XRo"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="136" id="guj-bh-Hpk"/>
                             <constraint firstItem="ZY9-x3-T5X" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="l9C-kA-8Hx"/>
-                            <constraint firstItem="qkw-ow-fCR" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="71" id="pJD-f9-hhw"/>
                             <constraint firstItem="h13-lO-0I5" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="pd6-2S-aWC"/>
                             <constraint firstItem="ZY9-x3-T5X" firstAttribute="leading" secondItem="BgR-K4-MQs" secondAttribute="trailing" constant="28" id="xum-34-K0w"/>
+                            <constraint firstItem="Iee-FG-O3M" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="8" id="xzm-DY-eCU"/>
                             <constraint firstItem="BgR-K4-MQs" firstAttribute="top" secondItem="Iee-FG-O3M" secondAttribute="bottom" constant="22" id="zLw-2X-a4Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mux-ej-0Vm"/>
@@ -455,11 +452,11 @@
                                     <segue destination="sJL-0e-iKQ" kind="show" identifier="addNewParticipantFromNewVoyage" id="gTH-x0-2l2"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MAf-BL-mCD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="MAf-BL-mCD">
                                 <rect key="frame" x="13" y="98" width="94" height="89"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRc-E7-u9P">
-                                <rect key="frame" x="16" y="99" width="91" height="85"/>
+                                <rect key="frame" x="16" y="99" width="91" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="addImage:" destination="2BA-Z3-poz" eventType="touchUpInside" id="Kko-1e-5mX"/>

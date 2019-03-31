@@ -31,7 +31,7 @@ extension Voyage {
     }
     
     var image: Data? {
-        get { return self.vimage ?? Data() }
+        get { return self.vimage }
         set { self.vimage = newValue }
     }
     

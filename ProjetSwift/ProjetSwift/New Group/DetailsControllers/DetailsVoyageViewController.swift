@@ -38,10 +38,9 @@ class DetailsVoyageViewController: UIViewController {
             if let image = UIImage(data: voyage.image!) {
                 self.voyageImage.image = image
 
-            } else {
-                print("imagine nil in core data => adaug o iamgine by default")
-                self.voyageImage.image = UIImage(named: "defaultImage.png")
-            }
+            } //else {
+              //  self.voyageImage.image = UIImage(named: "defaultImage.png")
+            //}
         } else{
             self.voyageName.text = "default"
         }

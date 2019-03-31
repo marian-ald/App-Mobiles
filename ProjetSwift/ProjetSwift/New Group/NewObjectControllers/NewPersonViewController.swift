@@ -17,6 +17,12 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var dateDebut: UITextField!
     @IBOutlet weak var dateFin: UITextField!
     
+    ///////////////////////////////////
+    // Date picker attributes
+    private var datePicker: UIDatePicker?
+    private var startDateTrip: Date? = nil
+    private var stopDateTrip: Date? = nil
+
     
     var newPerson : Person?
     
@@ -27,6 +33,33 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         self.lastNameTextField.delegate = self
         self.dateDebut.delegate = self
         self.dateFin.delegate = self
+        
+        
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewVoyageViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(gestureRecognizer)
+        
+        dateDebut.inputView = datePicker
+        dateFin.inputView = datePicker
+    }
+    
+    @objc func viewTapped (gestureRecognizer : UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        // Pentru memorare date, se poate folosi " datePicker.date "
+        //print(datePicker.date)
+        
+        if let activeTextField = view.getSelectedTextField() {
+            activeTextField.text = dateFormatter.string(from: datePicker.date)
+        }
     }
     
     // MARK: - Navigation
@@ -35,9 +68,27 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         //if segue.identifier == "addNewParticipantFromNewVoyage" || segue.identifier == "addNewParticipantFromOldVoyage" {
-            let firstname : String  = self.firstNameTextField.text!
-            let lastname  : String  = self.lastNameTextField.text!
-            self.newPerson = Person(firstname: firstname, lastname: lastname, startDate : Date(), stopDate : Date())
+        let firstname : String  = self.firstNameTextField.text!
+        let lastname  : String  = self.lastNameTextField.text!
+        
+        var objStartDate: Date?
+        var objStopDate: Date?
+        
+        // If the user has added fin/debout date, store it, else
+        // the default values are those from the current voyage
+        if let startDate: String = self.dateDebut.text, let stopDate: String = self.dateFin.text{
+                
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+            objStartDate = dateFormatter.date(from: startDate)
+            objStopDate = dateFormatter.date(from: stopDate)
+        } else {
+            objStartDate = (SingletonStore.shared.currentVoyage?.startDate)!
+            objStopDate = (SingletonStore.shared.currentVoyage?.stopDate)!
+        }
+        
+        self.newPerson = Person(firstname: firstname, lastname: lastname, startDate : objStartDate!, stopDate : objStopDate!)
         
         print("new person is : ")
         print(newPerson)

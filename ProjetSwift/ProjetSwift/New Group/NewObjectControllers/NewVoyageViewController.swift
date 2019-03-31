@@ -18,19 +18,20 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
     @IBOutlet weak var dateDebut: UITextField!
     @IBOutlet weak var dateFin: UITextField!
     
-    private var datePicker: UIDatePicker?
     
     //var tableViewController: PersonsTableViewController!
     //@IBOutlet weak var tableView: UITableView!
 
-    
+    private var datePicker: UIDatePicker?
     private var startDateTrip: Date? = nil
     private var stopDateTrip: Date? = nil
 
+    
     let imagePicker = UIImagePickerController()
     
     //var newVoyage : Voyage?
     
+  
     @IBAction func addImage(_ sender: Any) {
         print("adaug imagine")
         imagePicker.delegate = self
