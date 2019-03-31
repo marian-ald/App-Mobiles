@@ -10,6 +10,7 @@
 		0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251CBE822501F2200967080 /* ExtensionUIView.swift */; };
 		332DF9DF2250E47700FCAF29 /* AssociationDepensePayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */; };
 		332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */; };
+		332DF9E6225181C600FCAF29 /* PayerCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9E5225181C600FCAF29 /* PayerCellController.swift */; };
 		849B35A62248DB6300C634F8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35A52248DB6300C634F8 /* CoreDataManager.swift */; };
 		849B35AA2248DBD000C634F8 /* PersonCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35A92248DBD000C634F8 /* PersonCoreData.swift */; };
 		849B35AE2248DE4D00C634F8 /* PersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35AD2248DE4D00C634F8 /* PersonDAO.swift */; };
@@ -72,6 +73,7 @@
 		0251CBE822501F2200967080 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociationDepensePayer.swift; sourceTree = "<group>"; };
 		332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDepenseViewController.swift; sourceTree = "<group>"; };
+		332DF9E5225181C600FCAF29 /* PayerCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerCellController.swift; sourceTree = "<group>"; };
 		849B35A52248DB6300C634F8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		849B35A92248DBD000C634F8 /* PersonCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCoreData.swift; sourceTree = "<group>"; };
 		849B35AD2248DE4D00C634F8 /* PersonDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDAO.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				D1A32745224BCD1F00646638 /* MainControllers */,
 				EB6D2AE0224A3BDA002A8A0C /* FetchControllers */,
 				EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */,
+				332DF9E5225181C600FCAF29 /* PayerCellController.swift */,
 			);
 			name = Controllers;
 			path = "New Group";
@@ -481,6 +484,7 @@
 				EB2D99B12244E2C700A679A2 /* ViewController.swift in Sources */,
 				EBDAB57C224506C200624F11 /* Depense.swift in Sources */,
 				EB2D99AF2244E2C700A679A2 /* AppDelegate.swift in Sources */,
+				332DF9E6225181C600FCAF29 /* PayerCellController.swift in Sources */,
 				EBF64BC6224CB9E6007C1314 /* PersonSet.swift in Sources */,
 				332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */,
 				849B35B722490B9400C634F8 /* PersonSetViewModel.swift in Sources */,

@@ -11,7 +11,14 @@ import Foundation
 
 
 class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
-
+    
+    
+    @IBOutlet var payers: UIView!
+    
+    @IBOutlet var nonbeneficiaries: UIView!
+    @IBOutlet weak var newImageDepense: UIImageView!
+    @IBOutlet weak var newNameDepense: UITextField!
+    @IBOutlet weak var dateDepense: UITextField!
     
     private var datePicker: UIDatePicker?
     let imagePicker = UIImagePickerController()
@@ -33,7 +40,8 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
     }
     
     @IBAction func confirmButton(_ sender: Any) {
-        if self.newNameDepense.text == "" || self.dateDepense.text == "" {
+        if self.newNameDepense.text == "" // || self.dateDepense.text == ""
+        {
             print("ar trebui sa fac un pop up")
         } else {
             print("intru aici")
@@ -48,11 +56,6 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         // Do any additional setup after loading the view.
         //tableViewController = PersonsTableViewController(tableView: self.tableView)
         
-        // self.newImageVoyage.delegate = self
-        //self.newNameVoyage.delegate = self
-        //self.dateDebut.delegate = self
-        //self.dateFin.delegate = self
-        
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
@@ -60,8 +63,8 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewVoyageViewController.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(gestureRecognizer)
         
-        dateDebut.inputView = datePicker
-        dateFin.inputView = datePicker
+         dateDepense.inputView = datePicker
+        
     }
     
     @objc func viewTapped (gestureRecognizer : UITapGestureRecognizer) {
@@ -85,10 +88,11 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
+        /*
         if segue.identifier == "confirmedSave" {
             
-            if let nameVoyage: String  = self.newNameVoyage.text, let startDate: String = self.dateDebut.text, let stopDate: String = self.dateFin.text {
+            if let nameVoyage: String  = self.newNameDepense.text, let depenseDate: String = self.depenseDate.text
+            {
                 
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd/MM/yyyy"
@@ -110,7 +114,7 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         }
         else{
             SingletonStore.shared.currentVoyage = nil
-        }
+        }*/
     }
     
     
