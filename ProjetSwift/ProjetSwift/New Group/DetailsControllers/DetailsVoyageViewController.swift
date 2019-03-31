@@ -13,8 +13,9 @@ class DetailsVoyageViewController: UIViewController {
     //var presenter: PersonPresenter!
     
     @IBOutlet weak var voyageName: UILabel!
- //   @IBOutlet weak var voyageImage: UIImageView!
+    //@IBOutlet weak var voyageImage: UIImageView!
     
+    @IBOutlet weak var voyageImage: UIImageView!
     //var voyage: Voyage?
     
     
@@ -33,6 +34,14 @@ class DetailsVoyageViewController: UIViewController {
         // Do any additional setup after loading the view.
         if let voyage = SingletonStore.shared.currentVoyage {
             self.voyageName.text = voyage.name
+
+            if let image = UIImage(data: voyage.image!) {
+                self.voyageImage.image = image
+
+            } else {
+                print("imagine nil in core data => adaug o iamgine by default")
+                self.voyageImage.image = UIImage(named: "defaultImage.png")
+            }
         } else{
             self.voyageName.text = "default"
         }

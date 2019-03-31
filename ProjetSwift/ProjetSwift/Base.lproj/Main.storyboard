@@ -188,6 +188,7 @@
                         <viewLayoutGuide key="safeArea" id="mux-ej-0Vm"/>
                     </view>
                     <connections>
+                        <outlet property="voyageImage" destination="Iee-FG-O3M" id="9Xa-bW-3Nf"/>
                         <outlet property="voyageName" destination="qkw-ow-fCR" id="Ove-BT-wLb"/>
                     </connections>
                 </viewController>
