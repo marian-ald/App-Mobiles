@@ -529,18 +529,122 @@
         <!--Transferts-->
         <scene sceneID="OLh-Nk-6VH">
             <objects>
-                <viewController id="C9w-Ok-OAl" sceneMemberID="viewController">
+                <viewController id="C9w-Ok-OAl" customClass="TransfersViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BPq-cF-62D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Wd-n8-44y">
+                                <rect key="frame" x="16" y="162" width="343" height="456"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TransferCellId" id="lYH-5R-h69" customClass="TransferCellController" customModule="ProjetSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYH-5R-h69" id="LHE-Bq-Ze0">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payeur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37e-af-dtL">
+                                                    <rect key="frame" x="15" y="11" width="81" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paye" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk0-LF-56b">
+                                                    <rect key="frame" x="131" y="10" width="81" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7v-Vd-imF">
+                                                    <rect key="frame" x="247" y="12" width="81" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Dk0-LF-56b" secondAttribute="bottom" constant="12.5" id="1IR-hO-wYl"/>
+                                                <constraint firstItem="u7v-Vd-imF" firstAttribute="top" secondItem="LHE-Bq-Ze0" secondAttribute="topMargin" constant="1" id="9W5-Vc-lsI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="37e-af-dtL" secondAttribute="bottom" constant="1" id="C3h-vt-4dZ"/>
+                                                <constraint firstItem="37e-af-dtL" firstAttribute="top" secondItem="LHE-Bq-Ze0" secondAttribute="topMargin" id="Hqr-nk-xoy"/>
+                                                <constraint firstItem="37e-af-dtL" firstAttribute="leading" secondItem="LHE-Bq-Ze0" secondAttribute="leadingMargin" id="Mqv-eM-x7l"/>
+                                                <constraint firstItem="Dk0-LF-56b" firstAttribute="leading" secondItem="LHE-Bq-Ze0" secondAttribute="leading" constant="131" id="Tix-Ab-JVy"/>
+                                                <constraint firstItem="u7v-Vd-imF" firstAttribute="bottom" secondItem="LHE-Bq-Ze0" secondAttribute="bottomMargin" id="Yul-SW-Lbc"/>
+                                                <constraint firstItem="u7v-Vd-imF" firstAttribute="leading" secondItem="Dk0-LF-56b" secondAttribute="trailing" constant="35" id="iGu-Gq-WVu"/>
+                                                <constraint firstItem="Dk0-LF-56b" firstAttribute="top" secondItem="LHE-Bq-Ze0" secondAttribute="top" constant="10" id="oPp-7P-NCq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dk0-LF-56b" secondAttribute="trailing" constant="131" id="q22-u3-UX5"/>
+                                                <constraint firstItem="Dk0-LF-56b" firstAttribute="leading" secondItem="37e-af-dtL" secondAttribute="trailing" constant="35" id="t5a-r7-XDC"/>
+                                                <constraint firstItem="u7v-Vd-imF" firstAttribute="trailing" secondItem="LHE-Bq-Ze0" secondAttribute="trailingMargin" id="ttD-zW-dZM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amount" destination="u7v-Vd-imF" id="xCe-N9-c73"/>
+                                            <outlet property="namePaid" destination="Dk0-LF-56b" id="dmo-G3-4eU"/>
+                                            <outlet property="namePayer" destination="37e-af-dtL" id="psd-ui-ath"/>
+                                            <outlet property="paid" destination="Dk0-LF-56b" id="dPS-5D-HXD"/>
+                                            <outlet property="payeur" destination="37e-af-dtL" id="hY0-qm-dpa"/>
+                                            <outlet property="transferAmount" destination="u7v-Vd-imF" id="eZ7-fX-995"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="C9w-Ok-OAl" id="d0v-n5-GvC"/>
+                                    <outlet property="delegate" destination="C9w-Ok-OAl" id="nPT-Yb-npX"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G83-nd-2Ma">
+                                <rect key="frame" x="155" y="83" width="65" height="30"/>
+                                <state key="normal" title="Payé&gt;"/>
+                                <connections>
+                                    <action selector="paye:" destination="C9w-Ok-OAl" eventType="touchUpInside" id="cbM-gu-L8M"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muc-V8-qXr">
+                                <rect key="frame" x="302" y="83" width="57" height="30"/>
+                                <state key="normal" title="Payeur&gt;"/>
+                                <connections>
+                                    <action selector="payeur:" destination="C9w-Ok-OAl" eventType="touchUpInside" id="YKC-Dw-hKB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuL-pg-pZ3">
+                                <rect key="frame" x="16" y="83" width="62" height="30"/>
+                                <state key="normal" title="Trie par&gt;"/>
+                                <connections>
+                                    <action selector="triePar:" destination="C9w-Ok-OAl" eventType="touchUpInside" id="1Cl-6q-vem"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IuL-pg-pZ3" firstAttribute="top" secondItem="y7b-vp-JHp" secondAttribute="top" constant="19" id="6Lb-v8-bPB"/>
+                            <constraint firstItem="G83-nd-2Ma" firstAttribute="leading" secondItem="y7b-vp-JHp" secondAttribute="leading" constant="155" id="847-Hn-vUI"/>
+                            <constraint firstItem="6Wd-n8-44y" firstAttribute="top" secondItem="muc-V8-qXr" secondAttribute="bottom" constant="49" id="D0l-dr-clP"/>
+                            <constraint firstItem="muc-V8-qXr" firstAttribute="top" secondItem="y7b-vp-JHp" secondAttribute="top" constant="19" id="KTg-38-Iuk"/>
+                            <constraint firstItem="6Wd-n8-44y" firstAttribute="leading" secondItem="y7b-vp-JHp" secondAttribute="leading" constant="16" id="Mw7-XU-zRA"/>
+                            <constraint firstItem="G83-nd-2Ma" firstAttribute="top" secondItem="y7b-vp-JHp" secondAttribute="top" constant="19" id="Q1l-jD-gnz"/>
+                            <constraint firstItem="G83-nd-2Ma" firstAttribute="leading" secondItem="IuL-pg-pZ3" secondAttribute="trailing" constant="77" id="RLy-dd-C3a"/>
+                            <constraint firstItem="y7b-vp-JHp" firstAttribute="trailing" secondItem="G83-nd-2Ma" secondAttribute="trailing" constant="155" id="VfY-BY-gFR"/>
+                            <constraint firstItem="6Wd-n8-44y" firstAttribute="top" secondItem="y7b-vp-JHp" secondAttribute="top" constant="98" id="bCc-y9-zsw"/>
+                            <constraint firstItem="6Wd-n8-44y" firstAttribute="top" secondItem="G83-nd-2Ma" secondAttribute="bottom" constant="49" id="bcv-3Y-TB6"/>
+                            <constraint firstItem="y7b-vp-JHp" firstAttribute="trailing" secondItem="6Wd-n8-44y" secondAttribute="trailing" constant="16" id="dX5-a5-x6k"/>
+                            <constraint firstItem="IuL-pg-pZ3" firstAttribute="leading" secondItem="y7b-vp-JHp" secondAttribute="leading" constant="16" id="oi5-Kc-YQV"/>
+                            <constraint firstItem="muc-V8-qXr" firstAttribute="leading" secondItem="G83-nd-2Ma" secondAttribute="trailing" constant="82" id="qzF-5K-LKO"/>
+                            <constraint firstItem="6Wd-n8-44y" firstAttribute="bottom" secondItem="y7b-vp-JHp" secondAttribute="bottom" id="s5n-Yu-IQX"/>
+                            <constraint firstItem="6Wd-n8-44y" firstAttribute="top" secondItem="IuL-pg-pZ3" secondAttribute="bottom" constant="49" id="v7J-o9-BRB"/>
+                            <constraint firstItem="y7b-vp-JHp" firstAttribute="trailing" secondItem="muc-V8-qXr" secondAttribute="trailing" constant="16" id="xew-q0-wsf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y7b-vp-JHp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Transferts" id="Qas-ig-Fpd"/>
+                    <connections>
+                        <outlet property="tableView" destination="6Wd-n8-44y" id="Aoz-sc-xYb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hfq-2M-MxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2838" y="162"/>
+            <point key="canvasLocation" x="2837.5999999999999" y="161.46926536731635"/>
         </scene>
         <!--Depenses-->
         <scene sceneID="U0h-Uq-0yj">
@@ -758,6 +862,6 @@
         <image name="defaultImage.png" width="570" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gTH-x0-2l2"/>
+        <segue reference="Sqi-W2-rw3"/>
     </inferredMetricsTieBreakers>
 </document>

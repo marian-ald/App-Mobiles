@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251CBE822501F2200967080 /* ExtensionUIView.swift */; };
+		02B1A3A5225256AE0092BA3B /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3A4225256AE0092BA3B /* TransfersViewController.swift */; };
+		02B1A3A9225259B40092BA3B /* TransfersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3A8225259B40092BA3B /* TransfersTableViewController.swift */; };
+		02B1A3B2225279490092BA3B /* TransferCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3B1225279490092BA3B /* TransferCellController.swift */; };
+		02B1A3B422527CA50092BA3B /* TransferSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3B322527CA50092BA3B /* TransferSetViewModel.swift */; };
+		02B1A3B622527D6A0092BA3B /* TransferDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3B522527D6A0092BA3B /* TransferDAO.swift */; };
+		02B1A3B822527FF50092BA3B /* TransferFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3B722527FF50092BA3B /* TransferFetchResultController.swift */; };
 		332DF9DF2250E47700FCAF29 /* AssociationDepensePayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */; };
 		332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */; };
 		332DF9E6225181C600FCAF29 /* PayerCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9E5225181C600FCAF29 /* PayerCellController.swift */; };
@@ -73,6 +79,12 @@
 
 /* Begin PBXFileReference section */
 		0251CBE822501F2200967080 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		02B1A3A4225256AE0092BA3B /* TransfersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
+		02B1A3A8225259B40092BA3B /* TransfersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersTableViewController.swift; sourceTree = "<group>"; };
+		02B1A3B1225279490092BA3B /* TransferCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCellController.swift; sourceTree = "<group>"; };
+		02B1A3B322527CA50092BA3B /* TransferSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferSetViewModel.swift; sourceTree = "<group>"; };
+		02B1A3B522527D6A0092BA3B /* TransferDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDAO.swift; sourceTree = "<group>"; };
+		02B1A3B722527FF50092BA3B /* TransferFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFetchResultController.swift; sourceTree = "<group>"; };
 		332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociationDepensePayer.swift; sourceTree = "<group>"; };
 		332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDepenseViewController.swift; sourceTree = "<group>"; };
 		332DF9E5225181C600FCAF29 /* PayerCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerCellController.swift; sourceTree = "<group>"; };
@@ -109,7 +121,7 @@
 		EB6D2ADC224A38CF002A8A0C /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
 		EB6D2ADE224A3A25002A8A0C /* VoyageDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDAO.swift; sourceTree = "<group>"; };
 		EB6D2AE1224A3C06002A8A0C /* VoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageFetchResultController.swift; sourceTree = "<group>"; };
-		EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoyageCellController.swift; path = ProjetSwift/Controllers/VoyageCellController.swift; sourceTree = SOURCE_ROOT; };
+		EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoyageCellController.swift; path = "ProjetSwift/New Group/TableCellControllers/VoyageCellController.swift"; sourceTree = SOURCE_ROOT; };
 		EB6D2AE7224A5DAB002A8A0C /* NewVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVoyageViewController.swift; sourceTree = "<group>"; };
 		EB6D2AE9224A78AB002A8A0C /* SingletonStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonStore.swift; sourceTree = "<group>"; };
 		EBDAB577224504BD00624F11 /* Voyage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
@@ -155,6 +167,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		02B1A3AA225264A60092BA3B /* TableCellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				02B1A3B1225279490092BA3B /* TransferCellController.swift */,
+				EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */,
+			);
+			path = TableCellControllers;
+			sourceTree = "<group>";
+		};
 		849B35A42248DB2C00C634F8 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +183,7 @@
 				849B35A92248DBD000C634F8 /* PersonCoreData.swift */,
 				849B35AD2248DE4D00C634F8 /* PersonDAO.swift */,
 				EB6D2ADE224A3A25002A8A0C /* VoyageDAO.swift */,
+				02B1A3B522527D6A0092BA3B /* TransferDAO.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -171,6 +193,7 @@
 			children = (
 				849B35B622490B9400C634F8 /* PersonSetViewModel.swift */,
 				EB6D2ADC224A38CF002A8A0C /* VoyageSetViewModel.swift */,
+				02B1A3B322527CA50092BA3B /* TransferSetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -186,6 +209,7 @@
 		D1A32745224BCD1F00646638 /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
+				02B1A3A4225256AE0092BA3B /* TransfersViewController.swift */,
 				EB2D99B02244E2C700A679A2 /* ViewController.swift */,
 				33AFAEE92251FCA700BECB93 /* DepenseMainController.swift */,
 				D1A32743224BCCE900646638 /* PersonListMainControllerViewController.swift */,
@@ -215,6 +239,7 @@
 		D1A32748224BDB6200646638 /* TableControllers */ = {
 			isa = PBXGroup;
 			children = (
+				02B1A3A8225259B40092BA3B /* TransfersTableViewController.swift */,
 				EBDAB592224548D700624F11 /* VoyagesTableViewController.swift */,
 				849B35BA22490C0D00C634F8 /* PersonsTableViewController.swift */,
 				33AFAEE72251EE8600BECB93 /* PayerTableViewController.swift */,
@@ -295,6 +320,7 @@
 				D1C1CEE7224E876F003C961A /* PersonsForVoyageFetchResultController.swift */,
 				849B35B122490AEE00C634F8 /* PersonFetchResultController.swift */,
 				EB6D2AE1224A3C06002A8A0C /* VoyageFetchResultController.swift */,
+				02B1A3B722527FF50092BA3B /* TransferFetchResultController.swift */,
 			);
 			path = FetchControllers;
 			sourceTree = "<group>";
@@ -321,8 +347,8 @@
 				D1A32746224BDB3900646638 /* DetailsControllers */,
 				D1A32745224BCD1F00646638 /* MainControllers */,
 				EB6D2AE0224A3BDA002A8A0C /* FetchControllers */,
-				EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */,
 				332DF9E5225181C600FCAF29 /* PayerCellController.swift */,
+				02B1A3AA225264A60092BA3B /* TableCellControllers */,
 			);
 			name = Controllers;
 			path = "New Group";
@@ -465,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B1A3B822527FF50092BA3B /* TransferFetchResultController.swift in Sources */,
 				849B35C8224937E500C634F8 /* NewPersonViewController.swift in Sources */,
 				D1A32744224BCCE900646638 /* PersonListMainControllerViewController.swift in Sources */,
 				EB6D2AEA224A78AB002A8A0C /* SingletonStore.swift in Sources */,
@@ -481,11 +508,13 @@
 				849B35AA2248DBD000C634F8 /* PersonCoreData.swift in Sources */,
 				EBDAB578224504BD00624F11 /* Voyage.swift in Sources */,
 				849B35C022492D8000C634F8 /* PersonPresenter.swift in Sources */,
+				02B1A3A9225259B40092BA3B /* TransfersTableViewController.swift in Sources */,
 				849B35B222490AEE00C634F8 /* PersonFetchResultController.swift in Sources */,
 				D1C1CEE8224E876F003C961A /* PersonsForVoyageFetchResultController.swift in Sources */,
 				EB6D2AE6224A594F002A8A0C /* VoyageCellController.swift in Sources */,
 				33AFAEEA2251FCA700BECB93 /* DepenseMainController.swift in Sources */,
 				EB2D99B72244E2C700A679A2 /* ProjetSwift.xcdatamodeld in Sources */,
+				02B1A3B422527CA50092BA3B /* TransferSetViewModel.swift in Sources */,
 				849B35BB22490C0D00C634F8 /* PersonsTableViewController.swift in Sources */,
 				EB6D2AE2224A3C06002A8A0C /* VoyageFetchResultController.swift in Sources */,
 				EB2D99B12244E2C700A679A2 /* ViewController.swift in Sources */,
@@ -497,7 +526,10 @@
 				332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */,
 				849B35B722490B9400C634F8 /* PersonSetViewModel.swift in Sources */,
 				EB6D2ADF224A3A25002A8A0C /* VoyageDAO.swift in Sources */,
+				02B1A3B2225279490092BA3B /* TransferCellController.swift in Sources */,
 				EBDAB593224548D700624F11 /* VoyagesTableViewController.swift in Sources */,
+				02B1A3A5225256AE0092BA3B /* TransfersViewController.swift in Sources */,
+				02B1A3B622527D6A0092BA3B /* TransferDAO.swift in Sources */,
 				849B35A62248DB6300C634F8 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
