@@ -117,6 +117,16 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                             newDepense.imageD = dataIm
                     }
                 }
+                
+                var allCells : [UITableViewCell] = self.payerTableView.visibleCells
+                for cell in allCells {
+                    if let cellD = cell as? PayerCellController {
+                        print("lololol new stuff")
+                        print(cellD.isBeneficiary?.isOn ?? "defaultS")
+                        print(cellD.personFullname?.text ?? "defaultN")
+                        print(cellD.amount?.text ?? "defaultA")
+                    }
+                }
             }
         }
     }

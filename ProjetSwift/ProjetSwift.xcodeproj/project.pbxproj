@@ -16,7 +16,6 @@
 		33AFAEEE22521ADF00BECB93 /* DepenseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFAEED22521ADF00BECB93 /* DepenseSetViewModel.swift */; };
 		33AFAEF022521E1800BECB93 /* DepenseFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFAEEF22521E1800BECB93 /* DepenseFetchResultController.swift */; };
 		33AFAEF222523DAD00BECB93 /* DepensesMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFAEF122523DAD00BECB93 /* DepensesMainController.swift */; };
-		33AFAEF4225245DB00BECB93 /* DepenseInformationCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFAEF3225245DB00BECB93 /* DepenseInformationCellController.swift */; };
 		849B35A62248DB6300C634F8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35A52248DB6300C634F8 /* CoreDataManager.swift */; };
 		849B35AA2248DBD000C634F8 /* PersonCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35A92248DBD000C634F8 /* PersonCoreData.swift */; };
 		849B35AE2248DE4D00C634F8 /* PersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35AD2248DE4D00C634F8 /* PersonDAO.swift */; };
@@ -85,7 +84,6 @@
 		33AFAEED22521ADF00BECB93 /* DepenseSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSetViewModel.swift; sourceTree = "<group>"; };
 		33AFAEEF22521E1800BECB93 /* DepenseFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseFetchResultController.swift; sourceTree = "<group>"; };
 		33AFAEF122523DAD00BECB93 /* DepensesMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesMainController.swift; sourceTree = "<group>"; };
-		33AFAEF3225245DB00BECB93 /* DepenseInformationCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseInformationCellController.swift; sourceTree = "<group>"; };
 		849B35A52248DB6300C634F8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		849B35A92248DBD000C634F8 /* PersonCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCoreData.swift; sourceTree = "<group>"; };
 		849B35AD2248DE4D00C634F8 /* PersonDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDAO.swift; sourceTree = "<group>"; };
@@ -334,7 +332,6 @@
 				EB6D2AE0224A3BDA002A8A0C /* FetchControllers */,
 				EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */,
 				332DF9E5225181C600FCAF29 /* PayerCellController.swift */,
-				33AFAEF3225245DB00BECB93 /* DepenseInformationCellController.swift */,
 			);
 			name = Controllers;
 			path = "New Group";
@@ -490,7 +487,6 @@
 				33AFAEF022521E1800BECB93 /* DepenseFetchResultController.swift in Sources */,
 				EB6D2AE8224A5DAB002A8A0C /* NewVoyageViewController.swift in Sources */,
 				EB6D2AD9224A2DD1002A8A0C /* Transfer.swift in Sources */,
-				33AFAEF4225245DB00BECB93 /* DepenseInformationCellController.swift in Sources */,
 				EBF64BC4224CB9B9007C1314 /* Person.swift in Sources */,
 				849B35AA2248DBD000C634F8 /* PersonCoreData.swift in Sources */,
 				33AFAEEC22521A4200BECB93 /* DepensesTableViewController.swift in Sources */,
