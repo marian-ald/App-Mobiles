@@ -11,12 +11,12 @@ import UIKit
 class DepensesTableViewController:NSObject, UITableViewDataSource, DepenseSetViewModelDelegate {
     var tableView   : UITableView
     var depensesViewModel : DepenseSetViewModel
+
     
-    
-    let fetchResultController : DepenseFetchResultController
+    let fetchResultController : DepenseForVoyageFetchController
     init(tableView: UITableView) {
         self.tableView        = tableView
-        self.fetchResultController = DepenseFetchResultController(view : tableView)
+        self.fetchResultController = DepenseForVoyageFetchController(view : tableView)
         self.depensesViewModel = DepenseSetViewModel(data:
             self.fetchResultController.depensesFetched)
         

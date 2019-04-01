@@ -30,6 +30,5 @@ extension Depense {
         self.init(context: CoreDataManager.context)
         self.nameD = nameDepense
         self.dateD = dateDepense
-        // self.imageD = imageDepense
     }
 }

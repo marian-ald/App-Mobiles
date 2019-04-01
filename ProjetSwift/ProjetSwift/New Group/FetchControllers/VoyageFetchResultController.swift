@@ -27,7 +27,9 @@ class VoyageFetchResultController: NSObject, NSFetchedResultsControllerDelegate 
         }
         catch let error as NSError{
             fatalError(error.description)
-        } }
+        }
+        
+    }
     //-------------------------------------------------------------------------------------------------
     // MARK: - FetchResultController
     lazy var voyagesFetched : NSFetchedResultsController<Voyage> = {

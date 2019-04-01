@@ -127,6 +127,7 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                         print(cellD.amount?.text ?? "defaultA")
                     }
                 }
+                CoreDataManager.save()
             }
         }
     }

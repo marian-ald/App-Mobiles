@@ -1,5 +1,5 @@
 //
-//  DepenseFetchResultController.swift
+//  DepenseForVoyageFetchController.swift
 //  ProjetSwift
 //
 //  Created by user152227 on 4/1/19.
@@ -9,8 +9,7 @@
 import UIKit
 import CoreData
 
-
-class DepenseFetchResultController: NSObject, NSFetchedResultsControllerDelegate{
+class DepenseForVoyageFetchController: NSObject, NSFetchedResultsControllerDelegate{
     
     let tableView  : UITableView
     
@@ -27,9 +26,25 @@ class DepenseFetchResultController: NSObject, NSFetchedResultsControllerDelegate
     //-------------------------------------------------------------------------------------------------
     // MARK: - FetchResultController
     lazy var depensesFetched : NSFetchedResultsController<Depense> = {
-        // prepare a request
-        let request : NSFetchRequest<Depense> = Depense.fetchRequest()
         
+        // first, to get all persons that are in the current voyage
+        let requestPersons : NSFetchRequest<Person> = Person.fetchRequest()
+        requestPersons.sortDescriptors = [NSSortDescriptor(key:#keyPath(Person.pfirstname),ascending:true)]
+
+        //let fetchPersonsResult = NSFetchedResults(fetchRequest: requestPersons, managedObjectContext:
+           // CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
+
+            /* work in progress
+        do{
+            var people = try fetchPersonsResultController.performFetch()
+            print(people)
+        } catch {}*/
+        
+        
+
+        // prepare a request for the depenses that belong to these persons
+        let request : NSFetchRequest<Depense> = Depense.fetchRequest()
+        request.predicate = NSPredicate(format: "paidBy.pfirstname == %@", SingletonStore.shared.currentVoyage!.name)
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Depense.nameDepense),ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext:
             CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)

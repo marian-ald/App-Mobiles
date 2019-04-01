@@ -16,7 +16,6 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
     
     let fetchResultController : VoyageFetchResultController
     
-    
     init(tableView: UITableView) {
         self.tableView        = tableView
         
