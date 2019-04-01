@@ -26,10 +26,10 @@ extension Depense {
         set { self.imageDepense = newValue }
     }
     
-    convenience init(nameDepense: String, dateDepense: Date, imageDepense: Data) {
+    convenience init(nameDepense: String, dateDepense: Date) {
         self.init(context: CoreDataManager.context)
         self.nameD = nameDepense
         self.dateD = dateDepense
-        self.imageD = imageDepense
+        // self.imageD = imageDepense
     }
 }

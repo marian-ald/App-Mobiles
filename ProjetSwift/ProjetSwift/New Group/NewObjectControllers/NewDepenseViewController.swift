@@ -12,16 +12,39 @@ import Foundation
 
 class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-    
+    /*	
     @IBOutlet var payers: UIView!
+    @IBOutlet var nonbeneficiaries: UIView!*/
     
-    @IBOutlet var nonbeneficiaries: UIView!
     @IBOutlet weak var newImageDepense: UIImageView!
     @IBOutlet weak var newNameDepense: UITextField!
     @IBOutlet weak var dateDepense: UITextField!
     
     private var datePicker: UIDatePicker?
     let imagePicker = UIImagePickerController()
+    
+    var payerTableViewController: PayerTableViewController!
+    @IBOutlet weak var payerTableView: UITableView!
+    // should do wih beneficiaries as well
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.payerTableViewController = PayerTableViewController(tableView: self.payerTableView)
+        
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewVoyageViewController.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(gestureRecognizer)
+        
+        dateDepense.inputView = datePicker
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     var newDepense : Depense?
     
@@ -49,24 +72,6 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         }
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        //tableViewController = PersonsTableViewController(tableView: self.tableView)
-        
-        datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
-        datePicker?.addTarget(self, action: #selector(NewVoyageViewController.dateChanged(datePicker:)), for: .valueChanged)
-        
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewVoyageViewController.viewTapped(gestureRecognizer:)))
-        view.addGestureRecognizer(gestureRecognizer)
-        
-         dateDepense.inputView = datePicker
-        
-    }
-    
     @objc func viewTapped (gestureRecognizer : UITapGestureRecognizer) {
         view.endEditing(true)
     }
@@ -88,45 +93,33 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        /*
+        
         if segue.identifier == "confirmedSave" {
             
-            if let nameVoyage: String  = self.newNameDepense.text, let depenseDate: String = self.depenseDate.text
+            if let nameDepense: String  = self.newNameDepense.text, let depenseDate: String = self.dateDepense.text
             {
                 
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd/MM/yyyy"
                 
-                let objStartDate = dateFormatter.date(from: startDate)
-                let objStopDate = dateFormatter.date(from: stopDate)
+                let objStartDate = dateFormatter.date(from: depenseDate)
                 
-                // Allocate the new trip object
-                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
+                // Allocate the new Depense object
+                let newDepense = Depense(nameDepense: nameDepense, dateDepense: objStartDate!)
                 
                 // If the user choose an image, add it in the current trip
-                if self.newImageVoyage != nil {
+                if self.newImageDepense != nil {
                     // Convert the image in jpeg format
-                    if  let data = self.newImageVoyage?.image?.jpegData(compressionQuality: 1.0) {
-                        SingletonStore.shared.currentVoyage?.image = data
+                    if  let dataIm = self.newImageDepense?.image?.jpegData(compressionQuality: 1.0) {
+                            newDepense.imageD = dataIm
                     }
                 }
             }
         }
         else{
             SingletonStore.shared.currentVoyage = nil
-        }*/
+        }
     }
-    
-    
-    // MARK: - TextFieldDelegate
-    /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-     if let text = textField.text{
-     if text != ""{
-     textField.resignFirstResponder()
-     return true
-     } }
-     return false
-     }*/
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("this was called yippie")
