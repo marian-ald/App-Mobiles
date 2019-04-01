@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AssociationDepensePayer" representedClassName="AssociationDepensePayer" syncable="YES" codeGenerationType="class">
+        <attribute name="firstnamePayer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastnamePayer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameDepense" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sumPaid" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Depense" representedClassName="Depense" syncable="YES" codeGenerationType="class">
+        <attribute name="dateDepense" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="imageDepense" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nameDepense" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="noBenefitBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="noBenefit" inverseEntity="Person" syncable="YES"/>
+        <relationship name="paidBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="paid" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
+        <attribute name="pfirstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pimage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="plastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pstartDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pstopDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="noBenefit" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="noBenefitBy" inverseEntity="Depense" syncable="YES"/>
+        <relationship name="paid" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="paidBy" inverseEntity="Depense" syncable="YES"/>
+        <relationship name="participate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyage" inverseName="contain" inverseEntity="Voyage" syncable="YES"/>
+        <relationship name="receiver" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transfer" inverseName="receivedBy" inverseEntity="Transfer" syncable="YES"/>
+        <relationship name="sender" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transfer" inverseName="sentBy" inverseEntity="Transfer" syncable="YES"/>
+    </entity>
+    <entity name="Transfer" representedClassName="Transfer" syncable="YES" codeGenerationType="class">
+        <attribute name="amountTransfer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateTransfer" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="receivedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="receiver" inverseEntity="Person" syncable="YES"/>
+        <relationship name="sentBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="sender" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Voyage" representedClassName="Voyage" syncable="YES" codeGenerationType="class">
+        <attribute name="vimage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="vname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vplace" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vstartDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="vstopDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="contain" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="participate" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="832.1953125" positionY="269.9921875" width="128" height="193"/>
+        <element name="Transfer" positionX="1259.62890625" positionY="364.7578125" width="128" height="118"/>
+        <element name="Voyage" positionX="1145.796875" positionY="106.05859375" width="128" height="135"/>
+        <element name="AssociationDepensePayer" positionX="688" positionY="158" width="128" height="103"/>
+        <element name="Depense" positionX="990" positionY="261" width="128" height="120"/>
+    </elements>
+</model>
