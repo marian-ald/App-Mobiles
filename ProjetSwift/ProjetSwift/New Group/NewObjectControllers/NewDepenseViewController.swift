@@ -23,13 +23,26 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
     private var datePicker: UIDatePicker?
     let imagePicker = UIImagePickerController()
     
+    
     var payerTableViewController: PayerTableViewController!
     @IBOutlet weak var payerTableView: UITableView!
     // should do wih beneficiaries as well
     
+    
+    @IBAction func confirmButton(_ sender: Any) {
+        
+        if self.newNameDepense.text == "" || self.dateDepense.text == "" {
+            print(" si eu ar trebui sa fac un pop up")
+        } else {
+            print("intru aici")
+            performSegue(withIdentifier: "confirmedNewDepense", sender: self)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         self.payerTableViewController = PayerTableViewController(tableView: self.payerTableView)
         
         datePicker = UIDatePicker()
@@ -62,16 +75,6 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func confirmButton(_ sender: Any) {
-        if self.newNameDepense.text == "" // || self.dateDepense.text == ""
-        {
-            print("ar trebui sa fac un pop up")
-        } else {
-            print("intru aici")
-            performSegue(withIdentifier: "confirmedSave", sender: self)
-        }
-    }
-    
     @objc func viewTapped (gestureRecognizer : UITapGestureRecognizer) {
         view.endEditing(true)
     }
@@ -91,14 +94,14 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "confirmedSave" {
+        if segue.identifier == "confirmedNewDepense" {
             
             if let nameDepense: String  = self.newNameDepense.text, let depenseDate: String = self.dateDepense.text
             {
-                
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd/MM/yyyy"
                 
@@ -114,15 +117,21 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                             newDepense.imageD = dataIm
                     }
                 }
+                
+                var allCells : [UITableViewCell] = self.payerTableView.visibleCells
+                for cell in allCells {
+                    if let cellD = cell as? PayerCellController {
+                        print("lololol new stuff")
+                        print(cellD.isBeneficiary?.isOn ?? "defaultS")
+                        print(cellD.personFullname?.text ?? "defaultN")
+                        print(cellD.amount?.text ?? "defaultA")
+                    }
+                }
             }
-        }
-        else{
-            SingletonStore.shared.currentVoyage = nil
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("this was called yippie")
         textField.resignFirstResponder()
         return true
     }

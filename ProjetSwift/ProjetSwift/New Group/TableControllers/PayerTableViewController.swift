@@ -35,6 +35,7 @@ class PayerTableViewController: NSObject, UITableViewDataSource, PersonSetViewMo
         }
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PayerCellId", for: indexPath)
+
             // Configure the cell...
             return configure(cell: cell, atIndexPath: indexPath)
         }
@@ -69,9 +70,11 @@ class PayerTableViewController: NSObject, UITableViewDataSource, PersonSetViewMo
         @discardableResult
         private func configure(cell: UITableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell{
             
-            if let person = self.personsViewModel.get(personAt: indexPath.row){
+            if let person = self.personsViewModel.get(personAt: indexPath.row), let cellP = cell as? PayerCellController {
+                print("A mers conversia")
                 // cell.textLabel?.text = self.presenter.text(ofPerson: person)
-                cell.textLabel?.text = person.fullname
+                //cell.textLabel?.text = person.fullname
+                cellP.personFullname?.text = person.fullname
             }
             
             return cell
