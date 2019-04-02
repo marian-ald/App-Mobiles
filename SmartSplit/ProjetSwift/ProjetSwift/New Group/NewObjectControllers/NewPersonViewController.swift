@@ -76,16 +76,30 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         
         // If the user has added fin/debout date, store it, else
         // the default values are those from the current voyage
-        if let startDate: String = self.dateDebut.text, let stopDate: String = self.dateFin.text{
+        let startDate: String = self.dateDebut.text!
+        let stopDate: String = self.dateFin.text!
+        
+        if startDate != "" {
                 
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy"
         
             objStartDate = dateFormatter.date(from: startDate)
-            objStopDate = dateFormatter.date(from: stopDate)
+            print("data noua")
         } else {
             objStartDate = (SingletonStore.shared.currentVoyage?.startDate)!
+            print("data crt voyage")
+        }
+        
+        if stopDate != "" {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+
+            objStopDate = dateFormatter.date(from: stopDate)
+            print("data noua")
+        } else {
             objStopDate = (SingletonStore.shared.currentVoyage?.stopDate)!
+            print("data crt voyage")
         }
         
         self.newPerson = Person(firstname: firstname, lastname: lastname, startDate : objStartDate!, stopDate : objStopDate!)
