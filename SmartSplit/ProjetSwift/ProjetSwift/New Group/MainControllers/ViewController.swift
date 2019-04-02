@@ -12,6 +12,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleOutlet: UILabel!
+    
     var tableViewController: VoyagesTableViewController!
     @IBOutlet weak var tableView: UITableView!
     
