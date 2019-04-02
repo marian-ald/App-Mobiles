@@ -35,11 +35,11 @@ class DetailsVoyageViewController: UIViewController {
         if let voyage = SingletonStore.shared.currentVoyage {
             self.voyageName.text = voyage.name
 
-            /*
+            
             if let image = UIImage(data: voyage.image!) {
                 self.voyageImage.image = image
 
-            }*/ //dadea crash aici //else {
+            } //dadea crash aici //else {
               //  self.voyageImage.image = UIImage(named: "defaultImage.png")
             //}
         } else{
