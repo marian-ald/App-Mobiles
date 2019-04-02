@@ -19,6 +19,9 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
     @IBOutlet weak var dateFin: UITextField!
     
     
+    @IBOutlet var popUpMissing: UIView!
+    @IBOutlet weak var popUpMessage: UILabel!
+    
     //var tableViewController: PersonsTableViewController!
     //@IBOutlet weak var tableView: UITableView!
 
@@ -31,7 +34,59 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
     
     //var newVoyage : Voyage?
     
-  
+    @IBAction func dismissPopUp(_ sender: Any) {
+        animateOut()
+    }
+    
+    func animateIn() {
+        self.view.addSubview(popUpMissing)
+        popUpMissing.center = self.view.center
+        
+        popUpMissing.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        popUpMissing.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            self.popUpMissing.alpha = 1
+            self.popUpMissing.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func animateOut() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.popUpMissing.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.popUpMissing.alpha = 0
+        }) { (success: Bool) in
+            self.popUpMissing.removeFromSuperview()
+        }
+        self.popUpMessage.text = ""
+    }
+
+    
+    @IBAction func confirmButton(_ sender: Any) {
+        var popUpMessage: String = "Ajoutez:\n"
+        var turnOnPopUp: Bool = false
+        
+        if self.newNameVoyage.text == "" {
+            popUpMessage += "> Nom du voyage\n"
+            turnOnPopUp = true
+        }
+        if self.dateDebut.text == "" {
+            popUpMessage += "> Date debut\n"
+            turnOnPopUp = true
+        }
+        if self.dateFin.text == "" {
+            popUpMessage += "> Date fin"
+            turnOnPopUp = true
+        }
+        if turnOnPopUp == true {
+            self.popUpMessage.text = popUpMessage
+            animateIn()
+        } else {
+            performSegue(withIdentifier: "confirmedSave", sender: self)
+        }
+    }
+
+    
     @IBAction func addImage(_ sender: Any) {
         print("adaug imagine")
         imagePicker.delegate = self
@@ -46,16 +101,6 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func confirmButton(_ sender: Any) {
-        if self.newNameVoyage.text == "" || self.dateDebut.text == "" || self.dateFin.text == "" {
-            print("ar trebui sa fac un pop up")
-        } else {
-            print("intru aici")
-            performSegue(withIdentifier: "confirmedSave", sender: self)
-        }
-    }
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +111,9 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
         //self.newNameVoyage.delegate = self
         //self.dateDebut.delegate = self
         //self.dateFin.delegate = self
+        
+        self.popUpMissing.layer.cornerRadius = 5
+        
         
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
