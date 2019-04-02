@@ -1,37 +1,35 @@
 //
-//  NewVoyageViewController.swift
+//  EditVoyageViewController.swift
 //  ProjetSwift
 //
-//  Created by Marian ALDESCU on 26/03/2019.
+//  Created by user151921 on 4/2/19.
 //  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
 
 import UIKit
-import Foundation
 
-
-class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class EditVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-    @IBOutlet weak var newImageVoyage: UIImageView? = nil
+    
     @IBOutlet weak var newNameVoyage: UITextField!
-    
+    @IBOutlet weak var newImageVoyage: UIImageView!
     @IBOutlet weak var dateDebut: UITextField!
     @IBOutlet weak var dateFin: UITextField!
     
-    
     //var tableViewController: PersonsTableViewController!
     //@IBOutlet weak var tableView: UITableView!
-
+    
     private var datePicker: UIDatePicker?
     private var startDateTrip: Date? = nil
     private var stopDateTrip: Date? = nil
+    
 
     
     let imagePicker = UIImagePickerController()
     
     //var newVoyage : Voyage?
     
-  
+    
     @IBAction func addImage(_ sender: Any) {
         print("adaug imagine")
         imagePicker.delegate = self
@@ -54,7 +52,7 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
             performSegue(withIdentifier: "confirmedSave", sender: self)
         }
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +64,22 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
         //self.newNameVoyage.delegate = self
         //self.dateDebut.delegate = self
         //self.dateFin.delegate = self
+        
+        /// Update the fields with de current voyage details
+        let currentVoyage = SingletonStore.shared.currentVoyage
+        /// The name of the current voyage
+        self.newNameVoyage.text = currentVoyage?.name
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        self.dateDebut.text = dateFormatter.string(from: (currentVoyage?.startDate)!)
+        self.dateFin.text = dateFormatter.string(from: (currentVoyage?.stopDate)!)
+
+        
+        if let image = UIImage(data: currentVoyage!.image!) {
+            self.newImageVoyage.image = image
+        }
         
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
@@ -109,7 +123,7 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
                 
                 let objStartDate = dateFormatter.date(from: startDate)
                 let objStopDate = dateFormatter.date(from: stopDate)
-
+                
                 // Allocate the new trip object
                 SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
                 /*
@@ -121,7 +135,7 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
                         SingletonStore.shared.currentVoyage?.image = data
                     }
                 }
- */
+                 */ 
             }
         }
         else{
@@ -146,4 +160,3 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
         return true
     }
 }
-

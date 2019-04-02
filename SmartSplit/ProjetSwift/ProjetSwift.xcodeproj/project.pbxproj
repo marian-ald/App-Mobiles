@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0250D5C5225351D600E8B64D /* EditVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */; };
 		0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251CBE822501F2200967080 /* ExtensionUIView.swift */; };
 		02B1A3BC2252C92D0092BA3B /* TransfersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */; };
 		02B1A3BE2252C94C0092BA3B /* TransferDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3BD2252C94C0092BA3B /* TransferDAO.swift */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVoyageViewController.swift; sourceTree = "<group>"; };
 		0251CBE822501F2200967080 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersTableViewController.swift; sourceTree = "<group>"; };
 		02B1A3BD2252C94C0092BA3B /* TransferDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferDAO.swift; sourceTree = "<group>"; };
@@ -168,6 +170,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0250D5C32253515C00E8B64D /* EditObjectsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */,
+			);
+			path = EditObjectsControllers;
+			sourceTree = "<group>";
+		};
 		0251CBE722501EF100967080 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +368,7 @@
 		EBDAB583224530DA00624F11 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0250D5C32253515C00E8B64D /* EditObjectsControllers */,
 				02B1A3C72252CA610092BA3B /* CellControllers */,
 				D1A32748224BDB6200646638 /* TableControllers */,
 				D1A32747224BDB5300646638 /* NewObjectControllers */,
@@ -536,6 +547,7 @@
 				849B35BB22490C0D00C634F8 /* PersonsTableViewController.swift in Sources */,
 				02B1A3C02252C9680092BA3B /* TransferSetViewModel.swift in Sources */,
 				EB6D2AE2224A3C06002A8A0C /* VoyageFetchResultController.swift in Sources */,
+				0250D5C5225351D600E8B64D /* EditVoyageViewController.swift in Sources */,
 				EB2D99B12244E2C700A679A2 /* ViewController.swift in Sources */,
 				33AFAEE82251EE8600BECB93 /* PayerTableViewController.swift in Sources */,
 				02B1A3C42252C9CE0092BA3B /* TransferFetchResultController.swift in Sources */,
