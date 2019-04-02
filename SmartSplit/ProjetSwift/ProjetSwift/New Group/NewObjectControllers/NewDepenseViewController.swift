@@ -121,12 +121,32 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                 var allCells : [UITableViewCell] = self.payerTableView.visibleCells
                 for cell in allCells {
                     if let cellD = cell as? PayerCellController {
-                        print("lololol new stuff")
+                        if let amountString = cellD.amount?.text, let personFullName = cellD.personFullname?.text {
+                            
+                            var fullNameArr = personFullName.components(separatedBy: " ")
+                            let firstName : String = fullNameArr[0]
+                            let lastName : String = fullNameArr[1]
+                            let person = PersonByNameFetchResultController(newfirstname: firstName, newlastname: lastName).personsFetched.fetchedObjects![0]
+                            print("persoana si suma----")
+                            print(firstName)
+                            print(amountString)
+                            print("----------------")
+                            newDepense.addToPaidBy(person) // testat, e bun
+                            if let sumPaid = Float(amountString){
+                                _ = AssociationDepensePayer(nameD: nameDepense, firstnameP: firstName, lastnameP: lastName, sum: sumPaid) //netestat
+                                if let ticked = cellD.isBeneficiary?.isOn {
+                                    if !ticked {
+                                        newDepense.addToNoBenefitBy(person) // netestat
+                                    }
+                                }
+                            }
+                        }
                         print(cellD.isBeneficiary?.isOn ?? "defaultS")
                         print(cellD.personFullname?.text ?? "defaultN")
                         print(cellD.amount?.text ?? "defaultA")
                     }
-                }
+                }		
+                CoreDataManager.save()
             }
         }
     }

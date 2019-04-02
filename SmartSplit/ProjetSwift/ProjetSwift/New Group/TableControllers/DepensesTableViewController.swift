@@ -13,10 +13,10 @@ class DepensesTableViewController:NSObject, UITableViewDataSource, DepenseSetVie
     var depensesViewModel : DepenseSetViewModel
     
     
-    let fetchResultController : DepenseFetchResultController
+    let fetchResultController : DepenseForVoyageFetchResultController
     init(tableView: UITableView) {
         self.tableView        = tableView
-        self.fetchResultController = DepenseFetchResultController(view : tableView)
+        self.fetchResultController = DepenseForVoyageFetchResultController(view : tableView)
         self.depensesViewModel = DepenseSetViewModel(data:
             self.fetchResultController.depensesFetched)
         
