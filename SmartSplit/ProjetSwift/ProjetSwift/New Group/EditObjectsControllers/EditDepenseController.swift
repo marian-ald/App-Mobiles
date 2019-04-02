@@ -1,20 +1,14 @@
 //
-//  NewDepenseViewController.swift
+//  EditDepenseController.swift
 //  ProjetSwift
 //
-//  Created by user152227 on 3/31/19.
+//  Created by user152227 on 4/2/19.
 //  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
 
 import UIKit
-import Foundation
 
-
-class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
-    
-    /*	
-    @IBOutlet var payers: UIView!
-    @IBOutlet var nonbeneficiaries: UIView!*/
+class EditDepenseController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     @IBOutlet weak var newImageDepense: UIImageView!
     @IBOutlet weak var newNameDepense: UITextField!
@@ -24,18 +18,17 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
     let imagePicker = UIImagePickerController()
     
     
-    var payerTableViewController: PayerTableViewController!
+    var payerTableViewController: AlreadyPaidTableViewController!
     @IBOutlet weak var payerTableView: UITableView!
-    // should do wih beneficiaries as well
     
     
-    @IBAction func confirmButton(_ sender: Any) {
+    @IBAction func saveButton(_ sender: Any) {
         
         if self.newNameDepense.text == "" || self.dateDepense.text == "" {
             print(" si eu ar trebui sa fac un pop up")
         } else {
             print("intru aici")
-            performSegue(withIdentifier: "confirmedNewDepense", sender: self)
+            performSegue(withIdentifier: "confirmChangeDepense", sender: self)
         }
     }
     
@@ -43,7 +36,7 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.payerTableViewController = PayerTableViewController(tableView: self.payerTableView)
+        self.payerTableViewController = AlreadyPaidTableViewController(tableView: self.payerTableView, depenseName: SingletonStore.shared.currentDepense!.nameD)
         
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
@@ -53,13 +46,16 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         view.addGestureRecognizer(gestureRecognizer)
         
         dateDepense.inputView = datePicker
+        self.newNameDepense?.text = SingletonStore.shared.currentDepense?.nameD
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        self.dateDepense?.text = dateFormatter.string(from: (SingletonStore.shared.currentDepense?.dateD)!)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    var newDepense : Depense?
     
     @IBAction func addImage(_ sender: Any) {
         print("adaug imagine")
@@ -98,27 +94,43 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "confirmedNewDepense" {
+        if segue.identifier == "confirmChangeDepense" {
+            
+            print("AM INTRAT IN MODIFICARI")
             
             if let nameDepense: String  = self.newNameDepense.text, let depenseDate: String = self.dateDepense.text
             {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd/MM/yyyy"
                 
-                let objStartDate = dateFormatter.date(from: depenseDate)
-                
-                // Allocate the new Depense object
-                let newDepense = Depense(nameDepense: nameDepense, dateDepense: objStartDate!)
+                // Find the old Depense object
+                let oldDepense : Depense = DepenseDAO.fetchByName(nameDepense: nameDepense)![0]
+                if let objStartDate = dateFormatter.date(from: depenseDate){
+                    oldDepense.dateD = objStartDate
+                }
                 
                 // If the user choose an image, add it in the current trip
                 if self.newImageDepense != nil {
                     // Convert the image in jpeg format
                     if  let dataIm = self.newImageDepense?.image?.jpegData(compressionQuality: 1.0) {
-                            newDepense.imageD = dataIm
+                        oldDepense.imageD = dataIm
                     }
                 }
                 
-                var allCells : [UITableViewCell] = self.payerTableView.visibleCells
+                if let persons = PersonDAO.fetchAll(){
+                    for person in persons {
+                        oldDepense.removeFromPaidBy(person)
+                        oldDepense.removeFromNoBenefitBy(person)
+                    }
+                }
+                
+                if let assocs = AssocDepensePersonDAO.fetchByDepenseName(nameDepense: (SingletonStore.shared.currentDepense?.nameD)!) {
+                    for assoc in assocs {
+                        AssocDepensePersonDAO.delete(assoc: assoc)
+                    }
+                }
+                
+                let allCells : [UITableViewCell] = self.payerTableView.visibleCells
                 for cell in allCells {
                     if let cellD = cell as? PayerCellController {
                         if let amountString = cellD.amount?.text, let personFullName = cellD.personFullname?.text {
@@ -131,12 +143,12 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                             print(firstName)
                             print(amountString)
                             print("----------------")
-                            newDepense.addToPaidBy(person) // testat, e bun
+                            oldDepense.addToPaidBy(person) // testat, e bun
                             if let sumPaid = Float(amountString){
-                                let newAssoc = AssociationDepensePayer(nameD: nameDepense, firstnameP: firstName, lastnameP: lastName, sum: sumPaid) //netestat
+                                _ = AssociationDepensePayer(nameD: nameDepense, firstnameP: firstName, lastnameP: lastName, sum: sumPaid) //netestat
                                 if let ticked = cellD.isBeneficiary?.isOn {
                                     if !ticked {
-                                        newDepense.addToNoBenefitBy(person) // netestat
+                                        oldDepense.addToNoBenefitBy(person) // netestat
                                     }
                                 }
                             }
@@ -145,7 +157,7 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                         print(cellD.personFullname?.text ?? "defaultN")
                         print(cellD.amount?.text ?? "defaultA")
                     }
-                }		
+                }
                 CoreDataManager.save()
             }
         }
