@@ -1,16 +1,16 @@
 //
-//  DepenseFetchResultController.swift
+//  DepenseForVoyageFetchResultController.swift
 //  ProjetSwift
 //
 //  Created by user152227 on 4/1/19.
 //  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
-	
+
 import UIKit
 import CoreData
 
 
-class DepenseFetchResultController: NSObject, NSFetchedResultsControllerDelegate{
+class DepenseForVoyageFetchResultController: NSObject, NSFetchedResultsControllerDelegate{
     
     let tableView  : UITableView
     
@@ -22,13 +22,47 @@ class DepenseFetchResultController: NSObject, NSFetchedResultsControllerDelegate
         }
         catch let error as NSError{
             fatalError(error.description)
-        } }
+        }
+        
+    }
     
     //-------------------------------------------------------------------------------------------------
     // MARK: - FetchResultController
     lazy var depensesFetched : NSFetchedResultsController<Depense> = {
+        
+        // i need the pfirstname and plastname of all participants of all current voyage
+        /*
+        let fetchRequest : NSFetchRequest<Person> = Person.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key:#keyPath(Person.pfirstname),ascending:true)]
+        
+        do{
+            let items = try CoreDataManager.context.execute(fetchRequest)
+            print(items.
+        }
+        catch{}*/
+        
+        let moc = CoreDataManager.context;
+        let personsFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
+        personsFetch.predicate = NSPredicate(format: "participate.vname == %@", SingletonStore.shared.currentVoyage!.name)
+        
+        var firstNamesOfParticipants : [String] = []
+        var lastNamesOfParticipants : [String] = []
+        
+        do {
+            let fetchedPersons = try moc.fetch(personsFetch) as! [Person]
+            for personResulted in fetchedPersons {
+                firstNamesOfParticipants.append(personResulted.firstname)
+                lastNamesOfParticipants.append(personResulted.lastname)
+            }
+        }
+        catch{
+            print("oopsie error!!")
+        }
+        
+        
         // prepare a request
         let request : NSFetchRequest<Depense> = Depense.fetchRequest()
+        request.predicate = NSPredicate(format: "any paidBy.pfirstname in %@ and any paidBy.plastname in %@", firstNamesOfParticipants, lastNamesOfParticipants) //asta va merge dupa ce voi si crea relatiile :)
         
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Depense.nameDepense),ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext:
@@ -62,4 +96,5 @@ class DepenseFetchResultController: NSObject, NSFetchedResultsControllerDelegate
             break
         } }
 }
+
 
