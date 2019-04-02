@@ -112,16 +112,15 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
 
                 // Allocate the new trip object
                 SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
-                /*
+                
                 // If the user choose an image, add it in the current trip
                 if self.newImageVoyage != nil {
                     // Convert the image in jpeg format
-                    //if  let data = self.newImageVoyage?.image?.jpegData(compressionQuality: 1.0) {
                     if let data = self.newImageVoyage?.image?.pngData() {
                         SingletonStore.shared.currentVoyage?.image = data
                     }
                 }
- */
+ 
             }
         }
         else{
