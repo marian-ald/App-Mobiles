@@ -61,12 +61,14 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     var newDepense : Depense?
     
+    
     @IBAction func addImage(_ sender: Any) {
         print("adaug imagine")
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum  // sau .photolibrary
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage? {
@@ -110,14 +112,15 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                 // Allocate the new Depense object
                 let newDepense = Depense(nameDepense: nameDepense, dateDepense: objStartDate!)
                 
-                // If the user choose an image, add it in the current trip
                 if self.newImageDepense != nil {
-                    // Convert the image in jpeg format
-                    if  let dataIm = self.newImageDepense?.image?.jpegData(compressionQuality: 1.0) {
-                            newDepense.imageD = dataIm
+                    // Convert the image in png format
+                    if let data = self.newImageDepense?.image?.pngData() {
+                        newDepense.imageD = data
                     }
                 }
                 
+                //newDepense.imageD =
+        
                 var allCells : [UITableViewCell] = self.payerTableView.visibleCells
                 for cell in allCells {
                     if let cellD = cell as? PayerCellController {
