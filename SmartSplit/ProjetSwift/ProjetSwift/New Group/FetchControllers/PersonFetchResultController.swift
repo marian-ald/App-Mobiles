@@ -10,24 +10,19 @@ import UIKit
 import CoreData
 
 
-class PersonFetchResultController: NSObject, NSFetchedResultsControllerDelegate{//}, PersonSetViewModelDelegate{
+class PersonFetchResultController: NSObject, NSFetchedResultsControllerDelegate{
     
     let tableView  : UITableView
-    //
-    //
-    
-    //let personsSet : PersonSetViewModel
-    
-    init(view : UITableView){//}, model : PersonSetViewModel){
+    init(view : UITableView){
         self.tableView  = view
-        // self.personsSet = model
         super.init()
         do{
             try self.personsFetched.performFetch()
         }
         catch let error as NSError{
             fatalError(error.description)
-        } }
+        }
+    }
     //-------------------------------------------------------------------------------------------------
     // MARK: - FetchResultController
     lazy var personsFetched : NSFetchedResultsController<Person> = {
@@ -41,7 +36,7 @@ class PersonFetchResultController: NSObject, NSFetchedResultsControllerDelegate{
             CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchResultController.delegate = self
         return fetchResultController
-    }()    
+    }()
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>){
         self.tableView.beginUpdates()

@@ -14,11 +14,7 @@ import CoreData
 class VoyageFetchResultController: NSObject, NSFetchedResultsControllerDelegate {
     
     let tableView  : UITableView
-    //
-    //
-    //let voyagesSet : VoyageSetViewModel
-    
-    init(view : UITableView){//}, model : VoyageSetViewModel){
+    init(view : UITableView){
         self.tableView  = view
         // self.voyagesSet = model
         super.init()
@@ -27,7 +23,8 @@ class VoyageFetchResultController: NSObject, NSFetchedResultsControllerDelegate 
         }
         catch let error as NSError{
             fatalError(error.description)
-        } }
+        }
+    }
     //-------------------------------------------------------------------------------------------------
     // MARK: - FetchResultController
     lazy var voyagesFetched : NSFetchedResultsController<Voyage> = {

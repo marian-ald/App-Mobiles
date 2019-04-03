@@ -18,8 +18,6 @@ class PersonsTableViewController: NSObject, UITableViewDataSource, PersonSetView
     let fetchResultController : PersonsForVoyageFetchResultController
     init(tableView: UITableView) {
         self.tableView        = tableView
-//        self.presenter        = SimplePersonPresenter()
-//       self.fetchResultController = PersonFetchResultController(view : tableView)
         self.fetchResultController = PersonsForVoyageFetchResultController(view : tableView)
         self.personsViewModel = PersonSetViewModel(data:
             self.fetchResultController.personsFetched)
