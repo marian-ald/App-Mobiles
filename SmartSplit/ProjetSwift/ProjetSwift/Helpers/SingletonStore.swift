@@ -11,6 +11,7 @@ import Foundation
 class SingletonStore {
     
     public var currentVoyage : Voyage?
+    public var currentDepense : Depense?
     
     static let shared = SingletonStore()
     

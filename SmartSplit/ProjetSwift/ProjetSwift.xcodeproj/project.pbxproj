@@ -23,6 +23,13 @@
 		33AFAEEE22521ADF00BECB93 /* DepenseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFAEED22521ADF00BECB93 /* DepenseSetViewModel.swift */; };
 		33AFAEF022521E1800BECB93 /* DepenseFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFAEEF22521E1800BECB93 /* DepenseFetchResultController.swift */; };
 		33AFAEF222523DAD00BECB93 /* DepensesMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFAEF122523DAD00BECB93 /* DepensesMainController.swift */; };
+		33B16CD02253AA4E0073D9F4 /* EditDepenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B16CCF2253AA4E0073D9F4 /* EditDepenseController.swift */; };
+		33B16CD22253ABDB0073D9F4 /* AlreadyPaidTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B16CD12253ABDB0073D9F4 /* AlreadyPaidTableViewController.swift */; };
+		33B16CD42253C2EB0073D9F4 /* Payer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B16CD32253C2EB0073D9F4 /* Payer.swift */; };
+		33B16CD62253C4880073D9F4 /* PayerSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B16CD52253C4880073D9F4 /* PayerSetViewModel.swift */; };
+		33B16CD82253C6BE0073D9F4 /* PayersForDepenseFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B16CD72253C6BE0073D9F4 /* PayersForDepenseFetchResultController.swift */; };
+		33B16CDA2254123F0073D9F4 /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B16CD92254123F0073D9F4 /* DepenseDAO.swift */; };
+		33B16CDC225418840073D9F4 /* AssocDepensePersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B16CDB225418840073D9F4 /* AssocDepensePersonDAO.swift */; };
 		33EB12B1225358DA004F51C3 /* DepenseForVoyageFetchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EB12B0225358DA004F51C3 /* DepenseForVoyageFetchController.swift */; };
 		33EB12B3225373D7004F51C3 /* PersonByNameFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EB12B2225373D7004F51C3 /* PersonByNameFetchResultController.swift */; };
 		849B35A62248DB6300C634F8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B35A52248DB6300C634F8 /* CoreDataManager.swift */; };
@@ -100,6 +107,13 @@
 		33AFAEED22521ADF00BECB93 /* DepenseSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSetViewModel.swift; sourceTree = "<group>"; };
 		33AFAEEF22521E1800BECB93 /* DepenseFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseFetchResultController.swift; sourceTree = "<group>"; };
 		33AFAEF122523DAD00BECB93 /* DepensesMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesMainController.swift; sourceTree = "<group>"; };
+		33B16CCF2253AA4E0073D9F4 /* EditDepenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDepenseController.swift; sourceTree = "<group>"; };
+		33B16CD12253ABDB0073D9F4 /* AlreadyPaidTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlreadyPaidTableViewController.swift; sourceTree = "<group>"; };
+		33B16CD32253C2EB0073D9F4 /* Payer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payer.swift; sourceTree = "<group>"; };
+		33B16CD52253C4880073D9F4 /* PayerSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerSetViewModel.swift; sourceTree = "<group>"; };
+		33B16CD72253C6BE0073D9F4 /* PayersForDepenseFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayersForDepenseFetchResultController.swift; sourceTree = "<group>"; };
+		33B16CD92254123F0073D9F4 /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
+		33B16CDB225418840073D9F4 /* AssocDepensePersonDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssocDepensePersonDAO.swift; sourceTree = "<group>"; };
 		33EB12B0225358DA004F51C3 /* DepenseForVoyageFetchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseForVoyageFetchController.swift; sourceTree = "<group>"; };
 		33EB12B2225373D7004F51C3 /* PersonByNameFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonByNameFetchResultController.swift; sourceTree = "<group>"; };
 		849B35A52248DB6300C634F8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -174,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */,
+				33B16CCF2253AA4E0073D9F4 /* EditDepenseController.swift */,
 			);
 			path = EditObjectsControllers;
 			sourceTree = "<group>";
@@ -204,6 +219,8 @@
 				02B1A3BD2252C94C0092BA3B /* TransferDAO.swift */,
 				849B35A92248DBD000C634F8 /* PersonCoreData.swift */,
 				849B35AD2248DE4D00C634F8 /* PersonDAO.swift */,
+				33B16CDB225418840073D9F4 /* AssocDepensePersonDAO.swift */,
+				33B16CD92254123F0073D9F4 /* DepenseDAO.swift */,
 				EB6D2ADE224A3A25002A8A0C /* VoyageDAO.swift */,
 			);
 			path = Persistence;
@@ -216,6 +233,7 @@
 				849B35B622490B9400C634F8 /* PersonSetViewModel.swift */,
 				EB6D2ADC224A38CF002A8A0C /* VoyageSetViewModel.swift */,
 				33AFAEED22521ADF00BECB93 /* DepenseSetViewModel.swift */,
+				33B16CD52253C4880073D9F4 /* PayerSetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -266,6 +284,7 @@
 				849B35BA22490C0D00C634F8 /* PersonsTableViewController.swift */,
 				33AFAEEB22521A4200BECB93 /* DepensesTableViewController.swift */,
 				33AFAEE72251EE8600BECB93 /* PayerTableViewController.swift */,
+				33B16CD12253ABDB0073D9F4 /* AlreadyPaidTableViewController.swift */,
 			);
 			path = TableControllers;
 			sourceTree = "<group>";
@@ -347,6 +366,7 @@
 				33EB12B0225358DA004F51C3 /* DepenseForVoyageFetchController.swift */,
 				EB6D2AE1224A3C06002A8A0C /* VoyageFetchResultController.swift */,
 				33EB12B2225373D7004F51C3 /* PersonByNameFetchResultController.swift */,
+				33B16CD72253C6BE0073D9F4 /* PayersForDepenseFetchResultController.swift */,
 			);
 			path = FetchControllers;
 			sourceTree = "<group>";
@@ -361,6 +381,7 @@
 				EBDAB57B224506C200624F11 /* Depense.swift */,
 				EB6D2ADA224A3640002A8A0C /* VoyageSet.swift */,
 				332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */,
+				33B16CD32253C2EB0073D9F4 /* Payer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -523,7 +544,10 @@
 				EB6D2ADB224A3640002A8A0C /* VoyageSet.swift in Sources */,
 				EB6D2ADD224A38CF002A8A0C /* VoyageSetViewModel.swift in Sources */,
 				332DF9DF2250E47700FCAF29 /* AssociationDepensePayer.swift in Sources */,
+				33B16CD22253ABDB0073D9F4 /* AlreadyPaidTableViewController.swift in Sources */,
 				02B1A3C62252C9E60092BA3B /* TransfersViewController.swift in Sources */,
+				33B16CD42253C2EB0073D9F4 /* Payer.swift in Sources */,
+				33B16CDC225418840073D9F4 /* AssocDepensePersonDAO.swift in Sources */,
 				EBDAB59522454AB900624F11 /* DetailsVoyageViewController.swift in Sources */,
 				33EB12B1225358DA004F51C3 /* DepenseForVoyageFetchController.swift in Sources */,
 				0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */,
@@ -538,8 +562,10 @@
 				33AFAEEC22521A4200BECB93 /* DepensesTableViewController.swift in Sources */,
 				33AFAEF222523DAD00BECB93 /* DepensesMainController.swift in Sources */,
 				EBDAB578224504BD00624F11 /* Voyage.swift in Sources */,
+				33B16CDA2254123F0073D9F4 /* DepenseDAO.swift in Sources */,
 				33AFAEEE22521ADF00BECB93 /* DepenseSetViewModel.swift in Sources */,
 				849B35C022492D8000C634F8 /* PersonPresenter.swift in Sources */,
+				33B16CD62253C4880073D9F4 /* PayerSetViewModel.swift in Sources */,
 				849B35B222490AEE00C634F8 /* PersonFetchResultController.swift in Sources */,
 				D1C1CEE8224E876F003C961A /* PersonsForVoyageFetchResultController.swift in Sources */,
 				EB6D2AE6224A594F002A8A0C /* VoyageCellController.swift in Sources */,
@@ -552,6 +578,7 @@
 				33AFAEE82251EE8600BECB93 /* PayerTableViewController.swift in Sources */,
 				02B1A3C42252C9CE0092BA3B /* TransferFetchResultController.swift in Sources */,
 				EBDAB57C224506C200624F11 /* Depense.swift in Sources */,
+				33B16CD82253C6BE0073D9F4 /* PayersForDepenseFetchResultController.swift in Sources */,
 				02B1A3C22252C9AC0092BA3B /* TransferCellController.swift in Sources */,
 				EB2D99AF2244E2C700A679A2 /* AppDelegate.swift in Sources */,
 				332DF9E6225181C600FCAF29 /* PayerCellController.swift in Sources */,
@@ -559,6 +586,7 @@
 				332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */,
 				849B35B722490B9400C634F8 /* PersonSetViewModel.swift in Sources */,
 				EB6D2ADF224A3A25002A8A0C /* VoyageDAO.swift in Sources */,
+				33B16CD02253AA4E0073D9F4 /* EditDepenseController.swift in Sources */,
 				EBDAB593224548D700624F11 /* VoyagesTableViewController.swift in Sources */,
 				02B1A3BE2252C94C0092BA3B /* TransferDAO.swift in Sources */,
 				33EB12B3225373D7004F51C3 /* PersonByNameFetchResultController.swift in Sources */,

@@ -23,5 +23,13 @@ class DepensesMainController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showEditDepenseFromList" {
+            if let indexPath = self.tableView.indexPathForSelectedRow{
+                SingletonStore.shared.currentDepense = self.tableViewController.depensesViewModel.get(depenseAt: indexPath.row)
+            }
+        }
+    }
 
 }
