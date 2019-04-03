@@ -25,6 +25,10 @@ extension AssociationDepensePayer {
         set { self.lastnamePayer = newValue }
     }
     
+    var fullnameP : String {
+        get { return self.firstnameP + " " + self.lastnameP ?? "" }
+    }
+    
     var sum : Float {
         get { return self.sumPaid }
         set { self.sumPaid = newValue }

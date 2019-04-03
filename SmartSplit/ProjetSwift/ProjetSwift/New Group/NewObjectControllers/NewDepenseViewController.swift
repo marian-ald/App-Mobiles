@@ -12,9 +12,9 @@ import Foundation
 
 class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-    /*	
-    @IBOutlet var payers: UIView!
-    @IBOutlet var nonbeneficiaries: UIView!*/
+    /*
+     @IBOutlet var payers: UIView!
+     @IBOutlet var nonbeneficiaries: UIView!*/
     
     @IBOutlet weak var newImageDepense: UIImageView!
     @IBOutlet weak var newNameDepense: UITextField!
@@ -120,7 +120,7 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                 }
                 
                 //newDepense.imageD =
-        
+                
                 var allCells : [UITableViewCell] = self.payerTableView.visibleCells
                 for cell in allCells {
                     if let cellD = cell as? PayerCellController {
@@ -135,20 +135,25 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                             print(amountString)
                             print("----------------")
                             newDepense.addToPaidBy(person) // testat, e bun
+                            
+                            if !(cellD.isBeneficiary?.isOn ?? true) {
+                                print("I added")
+                                print(person.fullname)
+                                print("to no benefit")
+                                print(newDepense.nameD)
+                                newDepense.addToNoBenefitBy(person) // netestat
+                            }
+                            
                             if let sumPaid = Float(amountString){
                                 let newAssoc = AssociationDepensePayer(nameD: nameDepense, firstnameP: firstName, lastnameP: lastName, sum: sumPaid) //netestat
-                                if let ticked = cellD.isBeneficiary?.isOn {
-                                    if !ticked {
-                                        newDepense.addToNoBenefitBy(person) // netestat
-                                    }
-                                }
+                                
                             }
                         }
                         print(cellD.isBeneficiary?.isOn ?? "defaultS")
                         print(cellD.personFullname?.text ?? "defaultN")
                         print(cellD.amount?.text ?? "defaultA")
                     }
-                }		
+                }
                 CoreDataManager.save()
             }
         }
@@ -159,5 +164,6 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
         return true
     }
 }
+
 
 

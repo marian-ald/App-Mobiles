@@ -55,6 +55,18 @@ class PersonDAO {
         }
     }
     
+    static func fetchNonBeneficiariesForADepense(forDepenseName nameDepense: String) -> [Person]? {
+        print("I searched for a depense with :")
+        print(nameDepense)
+        self.request.predicate = NSPredicate(format: "any noBenefit.nameDepense == %@", nameDepense)
+        do{
+            return try CoreDataManager.context.fetch(self.request)
+        }
+        catch let error as NSError{
+            fatalError(error.description)
+        }
+    }
+    
     /*
     
     static func count(forFirstname firstname: String) -> Int{

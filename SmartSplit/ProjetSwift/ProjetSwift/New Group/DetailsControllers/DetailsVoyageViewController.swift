@@ -11,7 +11,10 @@ import UIKit
 class DetailsVoyageViewController: UIViewController {
 
     //var presenter: PersonPresenter!
+    var balanceTableViewController : BalanceTableViewController!
     
+    @IBOutlet weak var tableView: UITableView!
+ 
     @IBOutlet weak var voyageName: UILabel!
     //@IBOutlet weak var voyageImage: UIImageView!
     
@@ -32,6 +35,7 @@ class DetailsVoyageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.balanceTableViewController = BalanceTableViewController(tableView: self.tableView)
         if let voyage = SingletonStore.shared.currentVoyage {
             self.voyageName.text = voyage.name
 
