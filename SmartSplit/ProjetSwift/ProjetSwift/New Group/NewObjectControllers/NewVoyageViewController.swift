@@ -35,8 +35,11 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
     //var newVoyage : Voyage?
     
     @IBAction func dismissPopUp(_ sender: Any) {
-        animateOut()
+        //animateOut()
+        PopUp.shared.animateOut(subView: self.popUpMissing)
+        self.popUpMessage.text = ""
     }
+    
     
     func animateIn() {
         self.view.addSubview(popUpMissing)
@@ -58,10 +61,8 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
         }) { (success: Bool) in
             self.popUpMissing.removeFromSuperview()
         }
-        self.popUpMessage.text = ""
     }
 
-    
     @IBAction func confirmButton(_ sender: Any) {
         var popUpMessage: String = "Ajoutez:\n"
         var turnOnPopUp: Bool = false
@@ -80,19 +81,20 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
         }
         if turnOnPopUp == true {
             self.popUpMessage.text = popUpMessage
-            animateIn()
+            //animateIn()
+            PopUp.shared.animateIn(subView: popUpMissing, view: self.view)
         } else {
             performSegue(withIdentifier: "confirmedSave", sender: self)
         }
     }
 
-    
     @IBAction func addImage(_ sender: Any) {
         print("adaug imagine")
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum  // sau .photolibrary
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage? {

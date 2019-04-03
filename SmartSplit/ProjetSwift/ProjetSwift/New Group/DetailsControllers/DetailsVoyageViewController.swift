@@ -36,10 +36,10 @@ class DetailsVoyageViewController: UIViewController {
             self.voyageName.text = voyage.name
 
             
-            if let image = UIImage(data: voyage.image!) {
-                self.voyageImage.image = image
+            //if let image = UIImage(data: voyage.image!) {
+            //    self.voyageImage.image = image
 
-            } //dadea crash aici //else {
+            //} //dadea crash aici //else {
               //  self.voyageImage.image = UIImage(named: "defaultImage.png")
             //}
         } else{

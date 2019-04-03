@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetViewModelDelegate {
 
@@ -37,11 +38,51 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         // #warning Incomplete implementation, return the number of rows
         return self.voyagesViewModel.count
     }
+    
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0,width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VoyageCellId", for: indexPath) as! VoyageCellController
         // Configure the cell...
-        cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.name
-        
+        if let voyage = self.voyagesViewModel.get(voyageAt: indexPath.item) {
+        //cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.name
+            
+//            if let image = UIImage(data: voyage.image!) {
+                
+//                cell.voyageImage.image = resizeImage(image: image, targetSize: CGSize(width: 60.0, height: 60.0))
+                
+                //cell.voyageImage.transform = CGAffineTransform(scaleX: 1, y: -1)
+//            }
+            cell.nameVoyage.text = voyage.name
+            cell.voyageImage.setRounded()
+            
+            //cell.layer.borderWidth = 15.0
+            //cell.layer.borderColor = UIColor.white.cgColor
+        }
         return configure(cell: cell, atIndexPath: indexPath)
     }
     //-------------------------------------------------------------------------------------------------
@@ -76,7 +117,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
     private func configure(cell: UITableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell{
         if let voyage = self.voyagesViewModel.get(voyageAt: indexPath.row){
             // cell.textLabel?.text = self.presenter.text(ofVoyage: voyage)
-            cell.textLabel?.text = voyage.name + "new App"
+            //cell.textLabel?.text = voyage.name + "new App"
         }
         return cell
         
