@@ -20,6 +20,4 @@ class SingletonStore {
     
     private init() {
     }
-    
-    
 }
