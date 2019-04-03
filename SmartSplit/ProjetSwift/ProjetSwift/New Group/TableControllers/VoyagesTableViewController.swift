@@ -71,12 +71,12 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         if let voyage = self.voyagesViewModel.get(voyageAt: indexPath.item) {
         //cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.name
             
-            if let image = UIImage(data: voyage.image!) {
+//            if let image = UIImage(data: voyage.image!) {
                 
-                cell.voyageImage.image = resizeImage(image: image, targetSize: CGSize(width: 60.0, height: 60.0))
+//                cell.voyageImage.image = resizeImage(image: image, targetSize: CGSize(width: 60.0, height: 60.0))
                 
                 //cell.voyageImage.transform = CGAffineTransform(scaleX: 1, y: -1)
-            }
+//            }
             cell.nameVoyage.text = voyage.name
             cell.voyageImage.setRounded()
             

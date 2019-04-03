@@ -259,27 +259,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY9-x3-T5X">
-                                <rect key="frame" x="152" y="270" width="54" height="55"/>
+                                <rect key="frame" x="160" y="592" width="54" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show participants" image="users.png"/>
                                 <connections>
-                                    <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="668-Qc-uui"/>
                                     <segue destination="yZx-WQ-jh5" kind="show" identifier="showParticipantsFromListTo" id="ola-au-FKh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-K4-MQs">
-                                <rect key="frame" x="16" y="270" width="56" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Expense" image="shopping.png"/>
-                                <connections>
-                                    <action selector="addExpense:" destination="0xF-7E-XKI" eventType="touchUpInside" id="wNb-L5-t8Z"/>
-                                    <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="naT-8j-1Hw"/>
-                                    <segue destination="tAX-R0-Mwe" kind="show" id="CfR-8i-VBY"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-ow-fCR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-ow-fCR">
                                 <rect key="frame" x="169" y="124" width="165" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -311,21 +299,32 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-fN-vCj">
-                                <rect key="frame" x="302" y="270" width="57" height="53"/>
+                                <rect key="frame" x="302" y="188" width="57" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit" image="pencil_edit.png"/>
                                 <connections>
-                                    <action selector="editTrip:" destination="0xF-7E-XKI" eventType="touchUpInside" id="sgc-jS-JzE"/>
-                                    <segue destination="twQ-ez-jEs" kind="show" id="Ab9-5b-Qiu"/>
+                                    <segue destination="twQ-ez-jEs" kind="show" id="ASn-fU-dhT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-K4-MQs">
+                                <rect key="frame" x="185" y="179" width="68" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Expense" image="shopping.png"/>
+                                <connections>
+                                    <segue destination="tAX-R0-Mwe" kind="show" id="CfR-8i-VBY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="qkw-ow-fCR" secondAttribute="bottom" constant="522" id="8Dg-iA-UKn"/>
                             <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="v2D-6B-Dgr" secondAttribute="bottom" constant="559" id="8mm-2f-PzX"/>
+                            <constraint firstItem="qkw-ow-fCR" firstAttribute="top" secondItem="v2D-6B-Dgr" secondAttribute="bottom" constant="16" id="EZX-xf-24A"/>
                             <constraint firstItem="v2D-6B-Dgr" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" id="VX4-VS-Y3e"/>
                             <constraint firstItem="v2D-6B-Dgr" firstAttribute="trailing" secondItem="mux-ej-0Vm" secondAttribute="trailing" id="fPL-pS-mpv"/>
                             <constraint firstItem="v2D-6B-Dgr" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" id="iWA-8c-OX9"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="qkw-ow-fCR" secondAttribute="trailing" constant="41" id="re0-t6-KZe"/>
+                            <constraint firstItem="qkw-ow-fCR" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="169" id="vuA-j4-Boy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mux-ej-0Vm"/>
                     </view>
@@ -1110,7 +1109,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
-                                    <action selector="confirmButton:" destination="twQ-ez-jEs" eventType="touchUpInside" id="uxO-MO-iUN"/>
                                     <action selector="deleteVoyage:" destination="twQ-ez-jEs" eventType="touchUpInside" id="9O5-eR-5v8"/>
                                 </connections>
                             </button>

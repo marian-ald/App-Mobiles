@@ -55,6 +55,7 @@ class EditVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     @IBAction func deleteVoyage(_ sender: Any) {
         print("sterg voyage")
+        
     }
     
     override func viewDidLoad() {
