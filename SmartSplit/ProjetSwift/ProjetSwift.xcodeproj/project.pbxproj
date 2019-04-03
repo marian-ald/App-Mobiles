@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020FDD4522548AAC002D1014 /* AssocDepensePayerFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020FDD4422548AAC002D1014 /* AssocDepensePayerFetchResultController.swift */; };
-		020FDD4722548D9D002D1014 /* AssocDepensePayerSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020FDD4622548D9D002D1014 /* AssocDepensePayerSetViewModel.swift */; };
 		0250D5C5225351D600E8B64D /* EditVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */; };
 		0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251CBE822501F2200967080 /* ExtensionUIView.swift */; };
 		02B1A3BC2252C92D0092BA3B /* TransfersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */; };
@@ -96,8 +94,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		020FDD4422548AAC002D1014 /* AssocDepensePayerFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssocDepensePayerFetchResultController.swift; sourceTree = "<group>"; };
-		020FDD4622548D9D002D1014 /* AssocDepensePayerSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssocDepensePayerSetViewModel.swift; sourceTree = "<group>"; };
 		0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVoyageViewController.swift; sourceTree = "<group>"; };
 		0251CBE822501F2200967080 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersTableViewController.swift; sourceTree = "<group>"; };
@@ -244,7 +240,6 @@
 				849B35B622490B9400C634F8 /* PersonSetViewModel.swift */,
 				EB6D2ADC224A38CF002A8A0C /* VoyageSetViewModel.swift */,
 				33AFAEED22521ADF00BECB93 /* DepenseSetViewModel.swift */,
-				020FDD4622548D9D002D1014 /* AssocDepensePayerSetViewModel.swift */,
 				33B16CD52253C4880073D9F4 /* PayerSetViewModel.swift */,
 			);
 			path = ViewModels;
@@ -379,7 +374,6 @@
 				33AFAEEF22521E1800BECB93 /* DepenseFetchResultController.swift */,
 				33EB12B0225358DA004F51C3 /* DepenseForVoyageFetchController.swift */,
 				EB6D2AE1224A3C06002A8A0C /* VoyageFetchResultController.swift */,
-				020FDD4422548AAC002D1014 /* AssocDepensePayerFetchResultController.swift */,
 				33EB12B2225373D7004F51C3 /* PersonByNameFetchResultController.swift */,
 				33B16CD72253C6BE0073D9F4 /* PayersForDepenseFetchResultController.swift */,
 			);
@@ -575,11 +569,9 @@
 				02B1A3BC2252C92D0092BA3B /* TransfersTableViewController.swift in Sources */,
 				EB6D2AD9224A2DD1002A8A0C /* Transfer.swift in Sources */,
 				EBF64BC4224CB9B9007C1314 /* Person.swift in Sources */,
-				020FDD4522548AAC002D1014 /* AssocDepensePayerFetchResultController.swift in Sources */,
 				849B35AA2248DBD000C634F8 /* PersonCoreData.swift in Sources */,
 				33AFAEEC22521A4200BECB93 /* DepensesTableViewController.swift in Sources */,
 				33AFAEF222523DAD00BECB93 /* DepensesMainController.swift in Sources */,
-				020FDD4722548D9D002D1014 /* AssocDepensePayerSetViewModel.swift in Sources */,
 				EBDAB578224504BD00624F11 /* Voyage.swift in Sources */,
 				33B16CDA2254123F0073D9F4 /* DepenseDAO.swift in Sources */,
 				33AFAEEE22521ADF00BECB93 /* DepenseSetViewModel.swift in Sources */,
