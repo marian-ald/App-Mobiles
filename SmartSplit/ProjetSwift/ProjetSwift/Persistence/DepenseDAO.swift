@@ -40,6 +40,5 @@ class DepenseDAO {
         catch{
             return nil
         }
-    }
-    
+    }    
 }

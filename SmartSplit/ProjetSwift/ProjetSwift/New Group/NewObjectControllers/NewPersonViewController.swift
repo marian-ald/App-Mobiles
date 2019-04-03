@@ -113,8 +113,7 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
                 let myVoy = v[0]
                 if let p = newPerson{
                     print(myVoy.name)
-                    myVoy.addToContain(p)
-    
+                    myVoy.addToContain(p)    
                 }
             }
         //}

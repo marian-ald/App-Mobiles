@@ -263,14 +263,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY9-x3-T5X">
-                                <rect key="frame" x="134" y="228" width="124" height="16"/>
-                                <state key="normal" title="Show participants"/>
-                                <connections>
-                                    <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="668-Qc-uui"/>
-                                    <segue destination="yZx-WQ-jh5" kind="show" identifier="showParticipantsFromListTo" id="ola-au-FKh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-K4-MQs">
                                 <rect key="frame" x="16" y="228" width="90" height="17"/>
                                 <state key="normal" title="Add Expense"/>
@@ -280,9 +272,8 @@
                                     <segue destination="tAX-R0-Mwe" kind="show" id="CfR-8i-VBY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-ow-fCR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-ow-fCR">
                                 <rect key="frame" x="202" y="108" width="165" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -298,46 +289,103 @@
                                     <segue destination="twQ-ez-jEs" kind="show" id="Ab9-5b-Qiu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9M-Ls-YIA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9M-Ls-YIA">
                                 <rect key="frame" x="202" y="617" width="147" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Historique"/>
                                 <connections>
                                     <segue destination="BIo-OS-qrd" kind="show" identifier="seeDepenses" id="cnt-M2-Dge"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCO-S7-hq6">
-                                <rect key="frame" x="32" y="617" width="147" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCO-S7-hq6">
+                                <rect key="frame" x="18" y="617" width="161" height="30"/>
                                 <state key="normal" title="Bilan"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UW2-IT-GLX">
+                                <rect key="frame" x="18" y="285" width="331" height="286"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="balanceCellId" id="vOR-l9-2Mk" customClass="BalanceCellController" customModule="ProjetSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="331" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vOR-l9-2Mk" id="Ffr-lA-0jv">
+                                            <rect key="frame" x="0.0" y="0.0" width="331" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egb-cw-asj">
+                                                    <rect key="frame" x="15" y="12" width="121" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBL-Ae-1Ia">
+                                                    <rect key="frame" x="144" y="12" width="172" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fullNamePayer" destination="egb-cw-asj" id="uiK-SZ-Kuv"/>
+                                            <outlet property="sumDifference" destination="oBL-Ae-1Ia" id="XNp-Y1-KG2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY9-x3-T5X">
+                                <rect key="frame" x="134" y="221" width="124" height="30"/>
+                                <state key="normal" title="Show participants"/>
+                                <connections>
+                                    <action selector="showTripParticipants:" destination="0xF-7E-XKI" eventType="touchUpInside" id="668-Qc-uui"/>
+                                    <segue destination="yZx-WQ-jh5" kind="show" identifier="showParticipantsFromListTo" id="ola-au-FKh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Iee-FG-O3M" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="16" id="0Bk-Rq-KzQ"/>
-                            <constraint firstItem="BgR-K4-MQs" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="0sV-6l-7kD"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="ZY9-x3-T5X" secondAttribute="bottom" constant="423" id="8SS-yO-8s7"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="SJg-fN-vCj" secondAttribute="bottom" constant="422" id="9hS-qU-6me"/>
-                            <constraint firstItem="BgR-K4-MQs" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="16" id="AFk-jg-cuv"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="117" id="EJb-ah-vak"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="BgR-K4-MQs" secondAttribute="bottom" constant="422" id="FGL-AP-eUz"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="h13-lO-0I5" secondAttribute="trailing" constant="134" id="H72-kK-ByV"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="SJg-fN-vCj" secondAttribute="trailing" constant="26" id="K64-Jo-aYL"/>
-                            <constraint firstItem="SJg-fN-vCj" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="OA9-7Q-21k"/>
-                            <constraint firstItem="SJg-fN-vCj" firstAttribute="leading" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="61" id="RvI-ct-KXy"/>
-                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="WEW-J0-qDk"/>
-                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="Iee-FG-O3M" secondAttribute="trailing" constant="196" id="XiN-YK-WVG"/>
-                            <constraint firstItem="h13-lO-0I5" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="7" id="ghe-3H-XRo"/>
-                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="136" id="guj-bh-Hpk"/>
-                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="l9C-kA-8Hx"/>
-                            <constraint firstItem="h13-lO-0I5" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="pd6-2S-aWC"/>
-                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="leading" secondItem="BgR-K4-MQs" secondAttribute="trailing" constant="28" id="xum-34-K0w"/>
-                            <constraint firstItem="Iee-FG-O3M" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="8" id="xzm-DY-eCU"/>
-                            <constraint firstItem="BgR-K4-MQs" firstAttribute="top" secondItem="Iee-FG-O3M" secondAttribute="bottom" constant="22" id="zLw-2X-a4Q"/>
+                            <constraint firstItem="h13-lO-0I5" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="1nu-cJ-wzB"/>
+                            <constraint firstItem="UW2-IT-GLX" firstAttribute="top" secondItem="ZY9-x3-T5X" secondAttribute="bottom" constant="34" id="3YY-OZ-zOh"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="qkw-ow-fCR" secondAttribute="bottom" constant="92" id="3kv-DS-xOf"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="y9M-Ls-YIA" secondAttribute="bottom" constant="20" id="3mG-TD-i5d"/>
+                            <constraint firstItem="SJg-fN-vCj" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="5jr-4V-DeP"/>
+                            <constraint firstItem="SJg-fN-vCj" firstAttribute="leading" secondItem="ZY9-x3-T5X" secondAttribute="trailing" constant="61" id="6a1-FJ-FyO"/>
+                            <constraint firstItem="h13-lO-0I5" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="7" id="9O9-Lc-mCR"/>
+                            <constraint firstItem="UW2-IT-GLX" firstAttribute="top" secondItem="BgR-K4-MQs" secondAttribute="bottom" constant="40" id="9qo-2r-vJB"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="qkw-ow-fCR" secondAttribute="trailing" constant="8" id="DFM-ZP-6q7"/>
+                            <constraint firstItem="y9M-Ls-YIA" firstAttribute="top" secondItem="UW2-IT-GLX" secondAttribute="bottom" constant="46" id="EaK-uw-bPx"/>
+                            <constraint firstItem="y9M-Ls-YIA" firstAttribute="leading" secondItem="nCO-S7-hq6" secondAttribute="trailing" constant="23" id="FsZ-c4-YyH"/>
+                            <constraint firstItem="Iee-FG-O3M" firstAttribute="top" secondItem="h13-lO-0I5" secondAttribute="bottom" constant="8" id="JsU-Z7-c8n"/>
+                            <constraint firstItem="nCO-S7-hq6" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="18" id="K5i-fT-tnL"/>
+                            <constraint firstItem="y9M-Ls-YIA" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="553" id="KFV-lK-mYr"/>
+                            <constraint firstItem="qkw-ow-fCR" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="44" id="MB7-dJ-eCg"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="y9M-Ls-YIA" secondAttribute="trailing" constant="26" id="Nh5-Qu-v8U"/>
+                            <constraint firstItem="SJg-fN-vCj" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="319" id="OJS-YU-PeT"/>
+                            <constraint firstItem="UW2-IT-GLX" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="221" id="SDv-5C-qu2"/>
+                            <constraint firstItem="Iee-FG-O3M" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="36" id="SKh-Rb-0rS"/>
+                            <constraint firstItem="BgR-K4-MQs" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="16" id="SgD-9o-b1V"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="157" id="Suf-oj-FGO"/>
+                            <constraint firstItem="nCO-S7-hq6" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="553" id="XSW-Sp-cFy"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="nCO-S7-hq6" secondAttribute="trailing" constant="196" id="aeN-ef-1aw"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="h13-lO-0I5" secondAttribute="trailing" constant="134" id="bQ1-ce-EQP"/>
+                            <constraint firstItem="BgR-K4-MQs" firstAttribute="top" secondItem="mux-ej-0Vm" secondAttribute="top" constant="164" id="bfc-Pd-RKh"/>
+                            <constraint firstItem="UW2-IT-GLX" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="18" id="cVU-yW-1eo"/>
+                            <constraint firstItem="qkw-ow-fCR" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="202" id="dt1-gY-UFo"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="SJg-fN-vCj" secondAttribute="trailing" constant="26" id="fZa-JT-Pa7"/>
+                            <constraint firstItem="UW2-IT-GLX" firstAttribute="top" secondItem="SJg-fN-vCj" secondAttribute="bottom" constant="40" id="irh-zk-LfW"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="top" secondItem="Iee-FG-O3M" secondAttribute="bottom" constant="15" id="lh4-HJ-krm"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="trailing" secondItem="UW2-IT-GLX" secondAttribute="trailing" constant="26" id="qHG-yX-Smd"/>
+                            <constraint firstItem="Iee-FG-O3M" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="16" id="qct-no-c0C"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="leading" secondItem="BgR-K4-MQs" secondAttribute="trailing" constant="28" id="vqU-EC-gZB"/>
+                            <constraint firstItem="mux-ej-0Vm" firstAttribute="bottom" secondItem="nCO-S7-hq6" secondAttribute="bottom" constant="20" id="w3f-wn-CaS"/>
+                            <constraint firstItem="ZY9-x3-T5X" firstAttribute="leading" secondItem="mux-ej-0Vm" secondAttribute="leading" constant="134" id="wgb-XE-maa"/>
+                            <constraint firstItem="qkw-ow-fCR" firstAttribute="leading" secondItem="Iee-FG-O3M" secondAttribute="trailing" constant="23" id="xPd-Nd-a9K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mux-ej-0Vm"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="UW2-IT-GLX" id="YzX-R3-E4D"/>
                         <outlet property="voyageImage" destination="Iee-FG-O3M" id="9Xa-bW-3Nf"/>
                         <outlet property="voyageName" destination="qkw-ow-fCR" id="Ove-BT-wLb"/>
                     </connections>

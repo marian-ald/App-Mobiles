@@ -46,7 +46,19 @@ class PersonDAO {
     static func fetchByVoyage(forVoyageName vname : String) -> [Person]? {
         print("I searched for a voyage with :")
         print(vname)
-        self.request.predicate = NSPredicate(format: "voyage.vname == %@")
+        self.request.predicate = NSPredicate(format: "participate.vname == %@")
+        do{
+            return try CoreDataManager.context.fetch(self.request)
+        }
+        catch let error as NSError{
+            fatalError(error.description)
+        }
+    }
+    
+    static func fetchNonBeneficiariesForADepense(forDepenseName dname : String) -> [Person]? {
+        print("I searched for a depense with :")
+        print(dname)
+        self.request.predicate = NSPredicate(format: "any noBenefit.nameDepense == %@", dname)
         do{
             return try CoreDataManager.context.fetch(self.request)
         }

@@ -33,6 +33,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.voyagesViewModel.count
@@ -44,8 +45,43 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         
         return configure(cell: cell, atIndexPath: indexPath)
     }
-    //-------------------------------------------------------------------------------------------------
-    // MARK: - VoyageSetViewModelDelegate
+
+    // Swipe actions
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        print("Is this callllllleeeeddd ????")
+        let edit = editAction(at: indexPath)
+        let delete = deleteAction(at: indexPath)
+        
+        return UISwipeActionsConfiguration(actions: [edit, delete])
+    }
+    
+    func editAction(at indexPath: IndexPath) -> UIContextualAction {
+        // grab the voyage and edit it
+        let action = UIContextualAction(style: .normal, title: "Edit"){(action, view, completion)in
+            let voyage = self.voyagesViewModel.get(voyageAt: indexPath.row)
+            print("Numele selectat la swipeEdit")
+            print(voyage?.name)
+            
+            completion(true)
+        }
+        action.backgroundColor = .blue
+        return action
+    }
+    
+    func deleteAction(at indexPath: IndexPath) -> UIContextualAction {
+        
+        let action = UIContextualAction(style: .normal, title: "Delete"){ (action, view, completion) in
+            let voyage = self.voyagesViewModel.get(voyageAt: indexPath.row)
+            // self.voyagesViewModel.delete(voyage) // not yet, trb sa verific ca ia ce trebuie
+            print("Numele selectat la swipeDel")
+            print(voyage?.name)
+            
+            completion(true)
+        }
+        action.backgroundColor = .red
+        return action
+    }
+    
     //-------------------------------------------------------------------------------------------------
     // MARK: - VoyageSetViewModelDelegate
     /// called when set globally changes

@@ -135,13 +135,18 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
                             print(amountString)
                             print("----------------")
                             newDepense.addToPaidBy(person) // testat, e bun
+                            
+                            if !(cellD.isBeneficiary?.isOn ?? true) {
+                                print("I added")
+                                print(person.fullname)
+                                print("to no benefit")
+                                print(newDepense.nameD)
+                                newDepense.addToNoBenefitBy(person) // netestat
+                            }
+                            
                             if let sumPaid = Float(amountString){
                                 let newAssoc = AssociationDepensePayer(nameD: nameDepense, firstnameP: firstName, lastnameP: lastName, sum: sumPaid) //netestat
-                                if let ticked = cellD.isBeneficiary?.isOn {
-                                    if !ticked {
-                                        newDepense.addToNoBenefitBy(person) // netestat
-                                    }
-                                }
+                                
                             }
                         }
                         print(cellD.isBeneficiary?.isOn ?? "defaultS")

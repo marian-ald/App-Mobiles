@@ -42,4 +42,18 @@ class AssocDepensePersonDAO: NSObject {
         }
     }
     
+    static func fetchByPayerName(fullnamePayer : String) -> [AssociationDepensePayer]? {
+        let nameComps = fullnamePayer.components(separatedBy: " ")
+        let firstname = nameComps[0]
+        let lastname = nameComps[1]
+
+        self.request.predicate = NSPredicate(format: "firstnamePayer == %@ and lastnamePayer == %@", firstname, lastname)
+        do{
+            return try CoreDataManager.context.fetch(self.request)
+        }
+        catch let error as NSError{
+            fatalError(error.description)
+        }
+    }
+    
 }

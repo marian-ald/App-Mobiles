@@ -18,14 +18,7 @@ class PayersForDepenseFetchResultController: NSObject, NSFetchedResultsControlle
     init(view : UITableView, depenseName : String){
         self.tableView  = view
         self.depenseName = depenseName
-        super.init()
-        /*do{
-            try self.payersFetched
-        }
-        catch let error as NSError{
-            fatalError(error.description)
-        }*/
-        
+        super.init()        
     }
     
     //-------------------------------------------------------------------------------------------------
