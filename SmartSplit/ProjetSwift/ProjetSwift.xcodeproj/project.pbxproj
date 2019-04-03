@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020FDD4522548AAC002D1014 /* AssocDepensePayerFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020FDD4422548AAC002D1014 /* AssocDepensePayerFetchResultController.swift */; };
+		020FDD4722548D9D002D1014 /* AssocDepensePayerSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020FDD4622548D9D002D1014 /* AssocDepensePayerSetViewModel.swift */; };
 		0250D5C5225351D600E8B64D /* EditVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */; };
 		0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251CBE822501F2200967080 /* ExtensionUIView.swift */; };
 		02B1A3BC2252C92D0092BA3B /* TransfersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */; };
@@ -15,6 +17,9 @@
 		02B1A3C22252C9AC0092BA3B /* TransferCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3C12252C9AC0092BA3B /* TransferCellController.swift */; };
 		02B1A3C42252C9CE0092BA3B /* TransferFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3C32252C9CE0092BA3B /* TransferFetchResultController.swift */; };
 		02B1A3C62252C9E60092BA3B /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3C52252C9E60092BA3B /* TransfersViewController.swift */; };
+		02FEDECB2253F15F0007801C /* BilanVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEDECA2253F15F0007801C /* BilanVoyageViewController.swift */; };
+		02FEDECD2253F2A20007801C /* BilanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEDECC2253F2A20007801C /* BilanTableViewController.swift */; };
+		02FEDECF2253F9770007801C /* BilanCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEDECE2253F9770007801C /* BilanCellController.swift */; };
 		332DF9DF2250E47700FCAF29 /* AssociationDepensePayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */; };
 		332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */; };
 		332DF9E6225181C600FCAF29 /* PayerCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332DF9E5225181C600FCAF29 /* PayerCellController.swift */; };
@@ -91,6 +96,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020FDD4422548AAC002D1014 /* AssocDepensePayerFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssocDepensePayerFetchResultController.swift; sourceTree = "<group>"; };
+		020FDD4622548D9D002D1014 /* AssocDepensePayerSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssocDepensePayerSetViewModel.swift; sourceTree = "<group>"; };
 		0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVoyageViewController.swift; sourceTree = "<group>"; };
 		0251CBE822501F2200967080 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersTableViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +106,9 @@
 		02B1A3C12252C9AC0092BA3B /* TransferCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferCellController.swift; sourceTree = "<group>"; };
 		02B1A3C32252C9CE0092BA3B /* TransferFetchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferFetchResultController.swift; sourceTree = "<group>"; };
 		02B1A3C52252C9E60092BA3B /* TransfersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
+		02FEDECA2253F15F0007801C /* BilanVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanVoyageViewController.swift; sourceTree = "<group>"; };
+		02FEDECC2253F2A20007801C /* BilanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewController.swift; sourceTree = "<group>"; };
+		02FEDECE2253F9770007801C /* BilanCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanCellController.swift; sourceTree = "<group>"; };
 		332DF9DE2250E47700FCAF29 /* AssociationDepensePayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociationDepensePayer.swift; sourceTree = "<group>"; };
 		332DF9E02250E92000FCAF29 /* NewDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDepenseViewController.swift; sourceTree = "<group>"; };
 		332DF9E5225181C600FCAF29 /* PayerCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerCellController.swift; sourceTree = "<group>"; };
@@ -206,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				332DF9E5225181C600FCAF29 /* PayerCellController.swift */,
+				02FEDECE2253F9770007801C /* BilanCellController.swift */,
 				02B1A3C12252C9AC0092BA3B /* TransferCellController.swift */,
 				EB6D2AE5224A594F002A8A0C /* VoyageCellController.swift */,
 			);
@@ -233,6 +244,7 @@
 				849B35B622490B9400C634F8 /* PersonSetViewModel.swift */,
 				EB6D2ADC224A38CF002A8A0C /* VoyageSetViewModel.swift */,
 				33AFAEED22521ADF00BECB93 /* DepenseSetViewModel.swift */,
+				020FDD4622548D9D002D1014 /* AssocDepensePayerSetViewModel.swift */,
 				33B16CD52253C4880073D9F4 /* PayerSetViewModel.swift */,
 			);
 			path = ViewModels;
@@ -249,6 +261,7 @@
 		D1A32745224BCD1F00646638 /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
+				02FEDECA2253F15F0007801C /* BilanVoyageViewController.swift */,
 				02B1A3C52252C9E60092BA3B /* TransfersViewController.swift */,
 				EB2D99B02244E2C700A679A2 /* ViewController.swift */,
 				D1A32743224BCCE900646638 /* PersonListMainControllerViewController.swift */,
@@ -279,6 +292,7 @@
 		D1A32748224BDB6200646638 /* TableControllers */ = {
 			isa = PBXGroup;
 			children = (
+				02FEDECC2253F2A20007801C /* BilanTableViewController.swift */,
 				02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */,
 				EBDAB592224548D700624F11 /* VoyagesTableViewController.swift */,
 				849B35BA22490C0D00C634F8 /* PersonsTableViewController.swift */,
@@ -365,6 +379,7 @@
 				33AFAEEF22521E1800BECB93 /* DepenseFetchResultController.swift */,
 				33EB12B0225358DA004F51C3 /* DepenseForVoyageFetchController.swift */,
 				EB6D2AE1224A3C06002A8A0C /* VoyageFetchResultController.swift */,
+				020FDD4422548AAC002D1014 /* AssocDepensePayerFetchResultController.swift */,
 				33EB12B2225373D7004F51C3 /* PersonByNameFetchResultController.swift */,
 				33B16CD72253C6BE0073D9F4 /* PayersForDepenseFetchResultController.swift */,
 			);
@@ -542,10 +557,12 @@
 				D1A32744224BCCE900646638 /* PersonListMainControllerViewController.swift in Sources */,
 				EB6D2AEA224A78AB002A8A0C /* SingletonStore.swift in Sources */,
 				EB6D2ADB224A3640002A8A0C /* VoyageSet.swift in Sources */,
+				02FEDECB2253F15F0007801C /* BilanVoyageViewController.swift in Sources */,
 				EB6D2ADD224A38CF002A8A0C /* VoyageSetViewModel.swift in Sources */,
 				332DF9DF2250E47700FCAF29 /* AssociationDepensePayer.swift in Sources */,
 				33B16CD22253ABDB0073D9F4 /* AlreadyPaidTableViewController.swift in Sources */,
 				02B1A3C62252C9E60092BA3B /* TransfersViewController.swift in Sources */,
+				02FEDECF2253F9770007801C /* BilanCellController.swift in Sources */,
 				33B16CD42253C2EB0073D9F4 /* Payer.swift in Sources */,
 				33B16CDC225418840073D9F4 /* AssocDepensePersonDAO.swift in Sources */,
 				EBDAB59522454AB900624F11 /* DetailsVoyageViewController.swift in Sources */,
@@ -558,9 +575,11 @@
 				02B1A3BC2252C92D0092BA3B /* TransfersTableViewController.swift in Sources */,
 				EB6D2AD9224A2DD1002A8A0C /* Transfer.swift in Sources */,
 				EBF64BC4224CB9B9007C1314 /* Person.swift in Sources */,
+				020FDD4522548AAC002D1014 /* AssocDepensePayerFetchResultController.swift in Sources */,
 				849B35AA2248DBD000C634F8 /* PersonCoreData.swift in Sources */,
 				33AFAEEC22521A4200BECB93 /* DepensesTableViewController.swift in Sources */,
 				33AFAEF222523DAD00BECB93 /* DepensesMainController.swift in Sources */,
+				020FDD4722548D9D002D1014 /* AssocDepensePayerSetViewModel.swift in Sources */,
 				EBDAB578224504BD00624F11 /* Voyage.swift in Sources */,
 				33B16CDA2254123F0073D9F4 /* DepenseDAO.swift in Sources */,
 				33AFAEEE22521ADF00BECB93 /* DepenseSetViewModel.swift in Sources */,
@@ -581,6 +600,7 @@
 				33B16CD82253C6BE0073D9F4 /* PayersForDepenseFetchResultController.swift in Sources */,
 				02B1A3C22252C9AC0092BA3B /* TransferCellController.swift in Sources */,
 				EB2D99AF2244E2C700A679A2 /* AppDelegate.swift in Sources */,
+				02FEDECD2253F2A20007801C /* BilanTableViewController.swift in Sources */,
 				332DF9E6225181C600FCAF29 /* PayerCellController.swift in Sources */,
 				EBF64BC6224CB9E6007C1314 /* PersonSet.swift in Sources */,
 				332DF9E12250E92000FCAF29 /* NewDepenseViewController.swift in Sources */,
