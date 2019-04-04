@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewPersonViewController: UIViewController, UITextFieldDelegate  {
+class NewPersonViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     
     @IBOutlet weak var personImage: UIImageView!
@@ -23,6 +23,7 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
     private var startDateTrip: Date? = nil
     private var stopDateTrip: Date? = nil
 
+    let imagePicker = UIImagePickerController()
     
     var newPerson : Person?
     
@@ -48,6 +49,20 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
     
     @objc func viewTapped (gestureRecognizer : UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+    
+    @IBAction func addImage(_ sender: Any) {
+        print("adaug imagine")
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum  // sau .photolibrary
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage? {
+            self.personImage?.image = image
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func dateChanged(datePicker: UIDatePicker) {
@@ -103,6 +118,13 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         }
         
         self.newPerson = Person(firstname: firstname, lastname: lastname, startDate : objStartDate!, stopDate : objStopDate!)
+        
+        if self.personImage != nil {
+            // Convert the image in jpeg format
+            if let data = self.personImage?.image?.pngData() {
+                self.newPerson?.pimage = data
+            }
+        }
         
         print("new person is : ")
         print(newPerson)
