@@ -19,7 +19,7 @@ class NewDepenseViewController: UIViewController, UITextFieldDelegate, UIImagePi
     @IBOutlet weak var newImageDepense: UIImageView!
     @IBOutlet weak var newNameDepense: UITextField!
     @IBOutlet weak var dateDepense: UITextField!
-    
+ 
     private var datePicker: UIDatePicker?
     let imagePicker = UIImagePickerController()
     

@@ -44,12 +44,12 @@ class DetailsVoyageViewController: UIViewController {
             dateFormatter.dateFormat = "dd/MM/yyyy"
             
             self.voyageDate.text = dateFormatter.string(from: voyage.startDate) + " - " + dateFormatter.string(from: voyage.stopDate)
-            
-            if let image = UIImage(data: voyage.image!) {
-                self.voyageImage.image = image
+            if voyage.image != nil {
+                if let image = UIImage(data: voyage.image!) {
+                    self.voyageImage.image = image
 
-            } //dadea crash aici //else {
-              //  self.voyageImage.image = UIImage(named: "defaultImage.png")
+                } //dadea crash aici //else {
+            }      //  self.voyageImage.image = UIImage(named: "defaultImage.png")
             //}
         } else{
             self.voyageName.text = "default"

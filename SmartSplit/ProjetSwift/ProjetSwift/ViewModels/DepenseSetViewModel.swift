@@ -50,7 +50,6 @@ class DepenseSetViewModel{
     public func add(depense: Depense){
         if let indexPath = self.depensesFetched.indexPath(forObject: depense){
             self.delegate?.depenseAdded(at: indexPath)
-            
         } }
     public var count : Int {
         return self.depensesFetched.fetchedObjects?.count ?? 0

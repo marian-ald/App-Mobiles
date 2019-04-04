@@ -47,6 +47,16 @@ class EditDepenseController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         dateDepense.inputView = datePicker
         self.newNameDepense?.text = SingletonStore.shared.currentDepense?.nameD
+        
+        let depenseImage = SingletonStore.shared.currentDepense?.imageD
+        if depenseImage != nil {
+            if let image = UIImage(data: depenseImage!) {
+                self.newImageDepense.image = image
+                
+            } //dadea crash aici //else {
+        }      //  self.voyageImage.image = UIImage(named: "defaultImage.png")
+
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         self.dateDepense?.text = dateFormatter.string(from: (SingletonStore.shared.currentDepense?.dateD)!)
