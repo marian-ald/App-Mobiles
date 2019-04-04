@@ -39,29 +39,7 @@ class NewVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePic
         PopUp.shared.animateOut(subView: self.popUpMissing)
         self.popUpMessage.text = ""
     }
-    
-    
-    func animateIn() {
-        self.view.addSubview(popUpMissing)
-        popUpMissing.center = self.view.center
-        
-        popUpMissing.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-        popUpMissing.alpha = 0
-        
-        UIView.animate(withDuration: 0.4) {
-            self.popUpMissing.alpha = 1
-            self.popUpMissing.transform = CGAffineTransform.identity
-        }
-    }
-    
-    func animateOut() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.popUpMissing.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-            self.popUpMissing.alpha = 0
-        }) { (success: Bool) in
-            self.popUpMissing.removeFromSuperview()
-        }
-    }
+
 
     @IBAction func confirmButton(_ sender: Any) {
         var popUpMessage: String = "Ajoutez:\n"
