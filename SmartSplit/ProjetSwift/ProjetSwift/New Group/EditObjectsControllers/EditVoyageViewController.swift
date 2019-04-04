@@ -75,7 +75,14 @@ class EditVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePi
                         }
                     }
                     oldVoyage.removeFromContain(person)
+                    let assocsOpt = AssocDepensePersonDAO.fetchAll()
+                    if let assocs = assocsOpt {
+                        for assoc in assocs {
+                            AssocDepensePersonDAO.delete(assoc: assoc)
+                        }
+                    }
                     PersonDAO.delete(person: person)
+                    
                 }
             }
             
