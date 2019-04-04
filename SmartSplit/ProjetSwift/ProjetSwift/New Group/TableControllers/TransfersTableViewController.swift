@@ -10,7 +10,6 @@ import UIKit
 
 class TransfersTableViewController: NSObject, UITableViewDataSource, TransferSetViewModelDelegate {
 
-    
     var transferViewModel : TransferSetViewModel
     var tableView   : UITableView
     
@@ -21,7 +20,7 @@ class TransfersTableViewController: NSObject, UITableViewDataSource, TransferSet
         self.tableView        = tableView
         
         self.fetchResultController = TransferFetchResultController(view : tableView)
-        self.transferViewModel = TransferSetViewModel(data: self.fetchResultController.transfersFetched)
+        self.transferViewModel = self.fetchResultController.transfersFetched()
         
         super.init()
         self.tableView.dataSource      = self
@@ -38,15 +37,7 @@ class TransfersTableViewController: NSObject, UITableViewDataSource, TransferSet
         return self.transferViewModel.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TransferCellId", for: indexPath) as! TransferCellController
-        // Configure the cell...
-      //>>>>  cell.nameTransfer.text = self.transfersViewModel.get(transferAt: indexPath.item)?.name
-        cell.namePayer.text = self.transferViewModel.get(transferAt: indexPath.item)?.sentBy?.fullname
-        cell.namePayer.text = self.transferViewModel.get(transferAt: indexPath.item)?.receivedBy?.fullname
-        
-        let amountTransfer = self.transferViewModel.get(transferAt: indexPath.item)?.amountTransfer
-        cell.transferAmount.text = "\(String(describing: amountTransfer))"
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransferCellId", for: indexPath) as! BilanCellController
         return configure(cell: cell, atIndexPath: indexPath)
     }
     //-------------------------------------------------------------------------------------------------
@@ -79,9 +70,12 @@ class TransfersTableViewController: NSObject, UITableViewDataSource, TransferSet
     // MARK: - convenience methods
     @discardableResult
     private func configure(cell: UITableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell{
-        if let transfer = self.transferViewModel.get(transferAt: indexPath.row){
-            // cell.textLabel?.text = self.presenter.text(ofTransfer: transfer)
-         //>>>>   cell.textLabel?.text = transfer.name + "new App"
+        if let cellT = cell as? TransferCellController {
+            
+            let transfer = self.transferViewModel.get(elementAt: indexPath.row)
+            
+            // aici pun valori
+           
         }
         return cell
         

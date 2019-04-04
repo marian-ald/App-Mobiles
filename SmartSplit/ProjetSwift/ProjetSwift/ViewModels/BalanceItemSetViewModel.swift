@@ -91,4 +91,17 @@ class BalanceItemSetViewModel {
             }
         }
     }
+    
+    public func deleteByFullname(fullname: String){
+        for i in 0...balanceItemsFetched.count - 1 {
+            if balanceItemsFetched[i].0 == fullname {
+                balanceItemsFetched.remove(at: i)
+                break
+            }
+        }
+    }
+    
+    public func deleteByIndex(elementAt i: Int) {
+        balanceItemsFetched.remove(at: i)
+    }
 }

@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 class TransferDAO {
-    
+ /*
     static let request : NSFetchRequest<Transfer> = Transfer.fetchRequest()
     
     static func save(){
@@ -169,4 +169,5 @@ class TransferDAO {
      } }
      */
      */
+ */
 }

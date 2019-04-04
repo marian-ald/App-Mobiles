@@ -22,15 +22,6 @@
         <relationship name="noBenefit" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="noBenefitBy" inverseEntity="Depense" syncable="YES"/>
         <relationship name="paid" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="paidBy" inverseEntity="Depense" syncable="YES"/>
         <relationship name="participate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyage" inverseName="contain" inverseEntity="Voyage" syncable="YES"/>
-        <relationship name="receiver" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transfer" inverseName="receivedBy" inverseEntity="Transfer" syncable="YES"/>
-        <relationship name="sender" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transfer" inverseName="sentBy" inverseEntity="Transfer" syncable="YES"/>
-    </entity>
-    <entity name="Transfer" representedClassName="Transfer" syncable="YES" codeGenerationType="class">
-        <attribute name="amountTransfer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="dateTransfer" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="receivedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="receiver" inverseEntity="Person" syncable="YES"/>
-        <relationship name="sentBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="sender" inverseEntity="Person" syncable="YES"/>
     </entity>
     <entity name="Voyage" representedClassName="Voyage" syncable="YES" codeGenerationType="class">
         <attribute name="vimage" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -41,10 +32,9 @@
         <relationship name="contain" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="participate" inverseEntity="Person" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Person" positionX="832.1953125" positionY="269.9921875" width="128" height="193"/>
-        <element name="Transfer" positionX="1259.62890625" positionY="364.7578125" width="128" height="118"/>
-        <element name="Voyage" positionX="1145.796875" positionY="106.05859375" width="128" height="135"/>
         <element name="AssociationDepensePayer" positionX="688" positionY="158" width="128" height="103"/>
         <element name="Depense" positionX="990" positionY="261" width="128" height="120"/>
+        <element name="Person" positionX="832.1953125" positionY="269.9921875" width="128" height="163"/>
+        <element name="Voyage" positionX="1145.796875" positionY="106.05859375" width="128" height="135"/>
     </elements>
 </model>
