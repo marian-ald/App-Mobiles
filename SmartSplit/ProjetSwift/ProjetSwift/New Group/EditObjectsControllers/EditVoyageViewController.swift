@@ -24,6 +24,7 @@ class EditVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePi
     private var stopDateTrip: Date? = nil
     
 
+    @IBOutlet var popUpDelete: UIView!
     
     let imagePicker = UIImagePickerController()
     
@@ -53,13 +54,56 @@ class EditVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePi
         }
     }
     
-    @IBAction func deleteVoyage(_ sender: Any) {
-        print("sterg voyage")
+    @IBAction func confirmDelete(_ sender: Any) {
+        print("confirm delete")
+        PopUp.shared.animateOut(subView: self.popUpDelete)
+        //print(SingletonStore.shared.currentVoyage?.name)
         
+        if let nameVoyage = self.newNameVoyage.text {
+            // Find the old Depense object
+            let oldVoyage : Voyage = VoyageDAO.fetchByName(name: nameVoyage)![0]
+            
+            if let persons = PersonDAO.fetchAll(){
+                for person in persons {
+                    //oldDepense.removeFromPaidBy(person)
+                    //oldDepense.removeFromNoBenefitBy(person)
+                    if let depenses = DepenseDAO.fetchAll() {
+                        for depense in depenses {
+                            person.removeFromPaid(depense)
+                            person.removeFromNoBenefit(depense)
+                        }
+                    }
+                    oldVoyage.removeFromContain(person)
+                    
+                }
+            }
+            
+            let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            CoreDataManager.context.delete(oldVoyage)
+            /*
+            if let assocs = AssocDepensePersonDAO.fetchByDepenseName(nameDepense: (SingletonStore.shared.currentDepense?.nameD)!) {
+                for assoc in assocs {
+                    AssocDepensePersonDAO.delete(assoc: assoc)
+                }
+            }
+            */
+        }
+        performSegue(withIdentifier: "confirmedSave", sender: self)
+    }
+    
+    @IBAction func cancelDelete(_ sender: Any) {
+         print("cancel delete")
+        PopUp.shared.animateOut(subView: self.popUpDelete)
+    }
+    
+    @IBAction func deleteVoyage(_ sender: Any) {
+        PopUp.shared.animateIn(subView: popUpDelete, view: self.view)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.popUpDelete.layer.cornerRadius = 5
         
         // Do any additional setup after loading the view.
         //tableViewController = PersonsTableViewController(tableView: self.tableView)
@@ -129,7 +173,7 @@ class EditVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePi
                 let objStopDate = dateFormatter.date(from: stopDate)
                 
                 // Allocate the new trip object
-                SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
+                //SingletonStore.shared.currentVoyage = Voyage(nameVoyage: nameVoyage, startDate: objStartDate!, stopDate: objStopDate!, place: "newPlace")
                 /*
                 // If the user choose an image, add it in the current trip
                 if self.newImageVoyage != nil {
