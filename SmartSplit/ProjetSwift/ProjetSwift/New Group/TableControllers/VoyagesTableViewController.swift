@@ -65,20 +65,24 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         return newImage!
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 70
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VoyageCellId", for: indexPath) as! VoyageCellController
         // Configure the cell...
         if let voyage = self.voyagesViewModel.get(voyageAt: indexPath.item) {
         //cell.nameVoyage.text = self.voyagesViewModel.get(voyageAt: indexPath.item)?.name
             
-//            if let image = UIImage(data: voyage.image!) {
-                
-//                cell.voyageImage.image = resizeImage(image: image, targetSize: CGSize(width: 60.0, height: 60.0))
-                
+            if let image = UIImage(data: voyage.image!) {
+                //cell.voyageImage.image = image
+                cell.voyageImage.image = resizeImage(image: image, targetSize: CGSize(width: 60.0, height: 60.0))
+
                 //cell.voyageImage.transform = CGAffineTransform(scaleX: 1, y: -1)
-//            }
+            }
             cell.nameVoyage.text = voyage.name
-            cell.voyageImage.setRounded()
+            //cell.voyageImage.setRounded()
             
             //cell.layer.borderWidth = 15.0
             //cell.layer.borderColor = UIColor.white.cgColor

@@ -16,6 +16,7 @@ class DetailsVoyageViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
  
     @IBOutlet weak var voyageName: UILabel!
+    @IBOutlet weak var voyageDate: UILabel!
     //@IBOutlet weak var voyageImage: UIImageView!
     
     @IBOutlet weak var voyageImage: UIImageView!
@@ -38,12 +39,16 @@ class DetailsVoyageViewController: UIViewController {
         self.balanceTableViewController = BalanceTableViewController(tableView: self.tableView)
         if let voyage = SingletonStore.shared.currentVoyage {
             self.voyageName.text = voyage.name
-
             
-            //if let image = UIImage(data: voyage.image!) {
-            //    self.voyageImage.image = image
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            
+            self.voyageDate.text = dateFormatter.string(from: voyage.startDate) + " - " + dateFormatter.string(from: voyage.stopDate)
+            
+            if let image = UIImage(data: voyage.image!) {
+                self.voyageImage.image = image
 
-            //} //dadea crash aici //else {
+            } //dadea crash aici //else {
               //  self.voyageImage.image = UIImage(named: "defaultImage.png")
             //}
         } else{
