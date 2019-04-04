@@ -420,8 +420,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-cm-BII">
+                                <rect key="frame" x="322" y="617" width="37" height="41"/>
+                                <state key="normal" title="Add participant" image="plus-3.png"/>
+                                <connections>
+                                    <segue destination="sJL-0e-iKQ" kind="show" identifier="addNewParticipantFromOldVoyage" id="Sqi-W2-rw3"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2AI-99-KSJ">
-                                <rect key="frame" x="16" y="145" width="343" height="502"/>
+                                <rect key="frame" x="16" y="117" width="343" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonCellId" id="wbm-5r-VIl">
@@ -438,40 +445,32 @@
                                     <outlet property="delegate" destination="yZx-WQ-jh5" id="LA6-cB-dey"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiB-Cs-vPp">
-                                <rect key="frame" x="112" y="64" width="150" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-cm-BII">
-                                <rect key="frame" x="321" y="107" width="38" height="30"/>
-                                <state key="normal" title="Add participant" image="plus-2.png"/>
-                                <connections>
-                                    <segue destination="sJL-0e-iKQ" kind="show" identifier="addNewParticipantFromOldVoyage" id="Sqi-W2-rw3"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0M-h8-RZU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Participants" id="TQI-cv-4IU"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JJq-eX-SfH" firstAttribute="trailing" secondItem="NiB-Cs-vPp" secondAttribute="trailing" constant="113" id="0fY-1I-NzS"/>
-                            <constraint firstItem="2AI-99-KSJ" firstAttribute="top" secondItem="sAd-cm-BII" secondAttribute="bottom" constant="8" id="6LY-EM-ACQ"/>
-                            <constraint firstItem="NiB-Cs-vPp" firstAttribute="leading" secondItem="JJq-eX-SfH" secondAttribute="leading" constant="112" id="BnA-x6-2cf"/>
-                            <constraint firstItem="sAd-cm-BII" firstAttribute="top" secondItem="NiB-Cs-vPp" secondAttribute="bottom" constant="8" id="F9V-zh-cA0"/>
-                            <constraint firstItem="sAd-cm-BII" firstAttribute="top" secondItem="JJq-eX-SfH" secondAttribute="top" constant="43" id="Rxb-4s-69T"/>
-                            <constraint firstItem="sAd-cm-BII" firstAttribute="leading" secondItem="JJq-eX-SfH" secondAttribute="leading" constant="321" id="TVw-Mb-xGj"/>
+                            <constraint firstItem="H0M-h8-RZU" firstAttribute="leading" secondItem="JJq-eX-SfH" secondAttribute="leading" id="0wd-Db-yWR"/>
+                            <constraint firstItem="H0M-h8-RZU" firstAttribute="top" secondItem="JJq-eX-SfH" secondAttribute="top" id="28J-FU-VIE"/>
+                            <constraint firstItem="JJq-eX-SfH" firstAttribute="trailing" secondItem="sAd-cm-BII" secondAttribute="trailing" constant="16" id="9fr-29-rdT"/>
+                            <constraint firstItem="2AI-99-KSJ" firstAttribute="top" secondItem="H0M-h8-RZU" secondAttribute="bottom" constant="9" id="NLl-I7-MT0"/>
+                            <constraint firstItem="JJq-eX-SfH" firstAttribute="bottom" secondItem="2AI-99-KSJ" secondAttribute="bottom" constant="67" id="Nxt-he-3Fd"/>
+                            <constraint firstItem="JJq-eX-SfH" firstAttribute="bottom" secondItem="sAd-cm-BII" secondAttribute="bottom" constant="9" id="Rrs-WC-Az1"/>
                             <constraint firstItem="JJq-eX-SfH" firstAttribute="trailing" secondItem="2AI-99-KSJ" secondAttribute="trailing" constant="16" id="V6m-aV-t8g"/>
-                            <constraint firstItem="JJq-eX-SfH" firstAttribute="bottom" secondItem="2AI-99-KSJ" secondAttribute="bottom" constant="20" id="ezY-Uq-Puj"/>
-                            <constraint firstItem="JJq-eX-SfH" firstAttribute="trailing" secondItem="sAd-cm-BII" secondAttribute="trailing" constant="16" id="iWX-jc-CkV"/>
-                            <constraint firstItem="2AI-99-KSJ" firstAttribute="top" secondItem="JJq-eX-SfH" secondAttribute="top" constant="81" id="tqh-5A-dVI"/>
-                            <constraint firstItem="2AI-99-KSJ" firstAttribute="leading" secondItem="JJq-eX-SfH" secondAttribute="leading" constant="16" id="xc7-la-FVY"/>
-                            <constraint firstItem="NiB-Cs-vPp" firstAttribute="top" secondItem="JJq-eX-SfH" secondAttribute="top" id="y5N-4m-q5c"/>
+                            <constraint firstItem="JJq-eX-SfH" firstAttribute="bottom" secondItem="H0M-h8-RZU" secondAttribute="bottom" constant="559" id="VaJ-Uy-e8O"/>
+                            <constraint firstItem="sAd-cm-BII" firstAttribute="leading" secondItem="JJq-eX-SfH" secondAttribute="leading" constant="322" id="XQH-cI-S3U"/>
+                            <constraint firstItem="sAd-cm-BII" firstAttribute="top" secondItem="2AI-99-KSJ" secondAttribute="bottom" constant="17" id="owU-jD-L0m"/>
+                            <constraint firstItem="2AI-99-KSJ" firstAttribute="leading" secondItem="JJq-eX-SfH" secondAttribute="leading" constant="16" id="uwE-ld-fcA"/>
+                            <constraint firstItem="H0M-h8-RZU" firstAttribute="trailing" secondItem="JJq-eX-SfH" secondAttribute="trailing" id="wnF-hy-9F2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JJq-eX-SfH"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="2AI-99-KSJ" id="Rtz-y0-mac"/>
-                        <outlet property="titleLabel" destination="NiB-Cs-vPp" id="SzD-Cf-2PV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVu-5p-AzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -507,7 +506,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom du participant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0if-xb-oJf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0if-xb-oJf">
                                 <rect key="frame" x="131" y="141" width="228" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -525,7 +524,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prenom du participant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-GJ-Cjz">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-GJ-Cjz">
                                 <rect key="frame" x="131" y="190" width="228" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1364,7 +1363,7 @@
         <image name="icons8-delete-bin-64.png" width="64" height="64"/>
         <image name="icons8-pencil-filled-50.png" width="50" height="50"/>
         <image name="icons8-shopping-64.png" width="64" height="64"/>
-        <image name="plus-2.png" width="64" height="64"/>
+        <image name="plus-3.png" width="32" height="32"/>
         <image name="scale-2.png" width="64" height="64"/>
         <image name="team-2.png" width="64" height="64"/>
     </resources>
