@@ -71,16 +71,17 @@ class EditVoyageViewController: UIViewController, UITextFieldDelegate, UIImagePi
                         for depense in depenses {
                             person.removeFromPaid(depense)
                             person.removeFromNoBenefit(depense)
+                            DepenseDAO.delete(depense: depense)
                         }
                     }
                     oldVoyage.removeFromContain(person)
-                    
+                    PersonDAO.delete(person: person)
                 }
             }
             
             let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
             
-            CoreDataManager.context.delete(oldVoyage)
+            VoyageDAO.delete(voyage: oldVoyage)
             /*
             if let assocs = AssocDepensePersonDAO.fetchByDepenseName(nameDepense: (SingletonStore.shared.currentDepense?.nameD)!) {
                 for assoc in assocs {
