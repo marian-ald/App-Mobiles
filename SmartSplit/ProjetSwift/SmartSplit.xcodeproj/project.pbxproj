@@ -555,7 +555,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EB2D99A62244E2C700A679A2 /* Build configuration list for PBXProject "ProjetSwift" */;
+			buildConfigurationList = EB2D99A62244E2C700A679A2 /* Build configuration list for PBXProject "SmartSplit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -978,7 +978,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB2D99A62244E2C700A679A2 /* Build configuration list for PBXProject "ProjetSwift" */ = {
+		EB2D99A62244E2C700A679A2 /* Build configuration list for PBXProject "SmartSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB2D99D42244E2C900A679A2 /* Debug */,
