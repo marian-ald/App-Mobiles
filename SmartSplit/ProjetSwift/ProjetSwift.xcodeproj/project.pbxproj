@@ -78,6 +78,7 @@
 		EB4F7D8E2256101400B54688 /* icons8-checked-48.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4F7D8D2256101200B54688 /* icons8-checked-48.png */; };
 		EB4F7D902256361D00B54688 /* plus-2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4F7D8F2256361100B54688 /* plus-2.png */; };
 		EB4F7D922256386100B54688 /* plus-3.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4F7D912256385C00B54688 /* plus-3.png */; };
+		EB4F7D9422563D8100B54688 /* camera-3.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4F7D9322563D8000B54688 /* camera-3.png */; };
 		EB6D2AD9224A2DD1002A8A0C /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2AD8224A2DD1002A8A0C /* Transfer.swift */; };
 		EB6D2ADB224A3640002A8A0C /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2ADA224A3640002A8A0C /* VoyageSet.swift */; };
 		EB6D2ADD224A38CF002A8A0C /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D2ADC224A38CF002A8A0C /* VoyageSetViewModel.swift */; };
@@ -190,6 +191,7 @@
 		EB4F7D8D2256101200B54688 /* icons8-checked-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-checked-48.png"; sourceTree = "<group>"; };
 		EB4F7D8F2256361100B54688 /* plus-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-2.png"; sourceTree = "<group>"; };
 		EB4F7D912256385C00B54688 /* plus-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-3.png"; sourceTree = "<group>"; };
+		EB4F7D9322563D8000B54688 /* camera-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-3.png"; sourceTree = "<group>"; };
 		EB6D2AD8224A2DD1002A8A0C /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		EB6D2ADA224A3640002A8A0C /* VoyageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSet.swift; sourceTree = "<group>"; };
 		EB6D2ADC224A38CF002A8A0C /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 		EB2D99DF2244EE9A00A679A2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EB4F7D9322563D8000B54688 /* camera-3.png */,
 				EB4F7D912256385C00B54688 /* plus-3.png */,
 				EB4F7D8F2256361100B54688 /* plus-2.png */,
 				EB4F7D8D2256101200B54688 /* icons8-checked-48.png */,
@@ -590,6 +593,7 @@
 				EB46A8E322552B70007ACB8C /* history.png in Resources */,
 				EB4F7D8A22560E9000B54688 /* icons8-cancel-48.png in Resources */,
 				EB2D99B92244E2C900A679A2 /* Assets.xcassets in Resources */,
+				EB4F7D9422563D8100B54688 /* camera-3.png in Resources */,
 				EB4F7D882256085200B54688 /* icons8-pencil-filled-50.png in Resources */,
 				EB4F7D842256068400B54688 /* icons8-shopping-64.png in Resources */,
 				EB2D99B42244E2C700A679A2 /* Main.storyboard in Resources */,
