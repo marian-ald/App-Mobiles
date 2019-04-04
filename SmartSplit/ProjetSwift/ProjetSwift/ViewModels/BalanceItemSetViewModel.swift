@@ -72,36 +72,44 @@ class BalanceItemSetViewModel {
     }
     
     public func put(fullname: String, value: Float){
-        for i in 0...balanceItemsFetched.count - 1 {
-            if balanceItemsFetched[i].0 == fullname {
-                let newValue = value + balanceItemsFetched[i].1
-                balanceItemsFetched.remove(at: i)
-                balanceItemsFetched.append((fullname, newValue))
+        if balanceItemsFetched.count > 0 {
+            for i in 0..<balanceItemsFetched.count {
+                if balanceItemsFetched[i].0 == fullname {
+                    let newValue = value + balanceItemsFetched[i].1
+                    balanceItemsFetched.remove(at: i)
+                    balanceItemsFetched.append((fullname, newValue))
+                }
             }
         }
     }
     
     public func addToPerson(fullname: String, value: Float){
-        for i in 0...balanceItemsFetched.count - 1 {
-            if balanceItemsFetched[i].0 == fullname {
-                let newValue = value + balanceItemsFetched[i].1
-                balanceItemsFetched.remove(at: i)
-                balanceItemsFetched.append((fullname, newValue))
-                break
+        if balanceItemsFetched.count > 0 {
+            for i in 0..<balanceItemsFetched.count {
+                if balanceItemsFetched[i].0 == fullname {
+                    let newValue = value + balanceItemsFetched[i].1
+                    balanceItemsFetched.remove(at: i)
+                    balanceItemsFetched.append((fullname, newValue))
+                    break
+                }
             }
         }
     }
     
     public func deleteByFullname(fullname: String){
-        for i in 0...balanceItemsFetched.count - 1 {
-            if balanceItemsFetched[i].0 == fullname {
-                balanceItemsFetched.remove(at: i)
-                break
+        if balanceItemsFetched.count > 0 {
+            for i in 0..<balanceItemsFetched.count {
+                if balanceItemsFetched[i].0 == fullname {
+                    balanceItemsFetched.remove(at: i)
+                    break
+                }
             }
         }
     }
     
     public func deleteByIndex(elementAt i: Int) {
-        balanceItemsFetched.remove(at: i)
+        if i < balanceItemsFetched.count {
+            balanceItemsFetched.remove(at: i)
+        }
     }
 }
