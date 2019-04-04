@@ -2,79 +2,66 @@
 //  TransferSetViewModel.swift
 //  ProjetSwift
 //
-//  Created by user151921 on 4/1/19.
+//  Created by user152227 on 4/3/19.
 //  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
 
 import Foundation
-import UIKit
-import CoreData
 
-
-//----------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------
-// MARK: -
-/// Delegate to simulate reactive programming to change of transfer set
 protocol TransferSetViewModelDelegate {
     
     // MARK: -
     /// called when set globally changes
     func dataSetChanged()
-    /// called when a transfer is deleted from set
+    /// called when a Transfer is deleted from set
     ///
     /// - Parameter indexPath: (section,row) of deletion
-    /// func transferDeleted(at indexPath: IndexPath)
-    /// called when a transfer  is updated in set
+    func transferDeleted(at indexPath: IndexPath)
+    
+    /// called when a Transfer is updated in set
     ///
     /// - Parameter indexPath: (section, row) of updating
     func transferUpdated(at indexPath: IndexPath)
-    /// called when a transfer is added to set
+    
+    /// called when a Transfer is added to set
     ///
     /// - Parameter indexPath: (section,row) of add
     func transferAdded(at indexPath: IndexPath)
 }
 
-
-//----------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------
-// MARK: -
-
-class TransferSetViewModel{
+class TransferSetViewModel {
     
-    // MARK: -
     var delegate : TransferSetViewModelDelegate? = nil
     
-    var transfersFetched : NSFetchedResultsController<Transfer>
+    var transfersFetched : [Transfer]
     
-    init(data: NSFetchedResultsController<Transfer>){
+    init(){
+        transfersFetched = []
+    }
+    
+    init( data: [Transfer] ){
         self.transfersFetched = data
     }
     
-//    func get(TransferWithName name: String) -> [Transfer]?{
-//        return TransferDAO.fetchByName(name: name)
-//    }
-    
     //-------------------------------------------------------------------------------------------------
     // MARK: View Model functions
-    /// add a new transfer in set of Transfers
+    /// add a new transfer in set of transfers
     ///
     /// - Parameter transfer: Transfer to be added
     
-    public func add(transfer: Transfer){
-        if let indexPath = self.transfersFetched.indexPath(forObject: transfer){
-            self.delegate?.transferAdded(at: indexPath)
-        //    SingletonStore.shared.currentVoyage = voyage
-        }
+    public func add(fullnameSender : String, fullnameReceiver : String, sum : Float){
+        self.transfersFetched.append(Transfer(fullnameSender: fullnameSender, fullnameReceiver: fullnameReceiver, sum: sum))
     }
+    
     
     public var count : Int {
-        return self.transfersFetched.fetchedObjects?.count ?? 0
+        return self.transfersFetched.count
     }
     
-    public func get(transferAt index: Int) -> Transfer?{
-        return self.transfersFetched.object(at: IndexPath(row: index, section: 0))
-    }
     
+    public func get(elementAt i: Int) -> Transfer {
+        return self.transfersFetched[i]
+    }
     
 }
 

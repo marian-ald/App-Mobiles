@@ -8,12 +8,30 @@
 
 import Foundation
 
-extension Transfer {
-
-    convenience init(amountTransfer: Float, isDone : Bool) {
-        self.init(context: CoreDataManager.context)
-        self.amountTransfer = amountTransfer
-        self.isDone = isDone
+class Transfer {
+    private var fullnameS : String
+    private var fullnameR : String
+    private var sumT : Float
+    
+    var fullnameSender : String{
+        get { return self.fullnameS }
+        set { self.fullnameS = newValue }
+    }
+    
+    var fullnameReceiver : String {
+        get { return self.fullnameR }
+        set { self.fullnameS = newValue }
+    }
+    
+    var sum : Float {
+        get { return self.sumT }
+        set { self.sumT = newValue }
+    }
+    
+    init(fullnameSender : String, fullnameReceiver: String, sum: Float) {
+        self.fullnameS = fullnameSender
+        self.fullnameR = fullnameReceiver
+        self.sumT = sum
     }
 }
 

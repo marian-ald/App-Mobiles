@@ -22,29 +22,69 @@ class TransferFetchResultController: NSObject, NSFetchedResultsControllerDelegat
         self.tableView  = view
         // self.transfersSet = model
         super.init()
-        do{
+        /*do{
             try self.transfersFetched.performFetch()
         }
         catch let error as NSError{
             fatalError(error.description)
-        } }
+        }*/
+        
+    }
+    
     //-------------------------------------------------------------------------------------------------
     // MARK: - FetchResultController
-    lazy var transfersFetched : NSFetchedResultsController<Transfer> = {
-        // prepare a request
-        let request : NSFetchRequest<Transfer> = Transfer.fetchRequest()
-///>>>>        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Transfer.vname), ascending:true)]
+    func transfersFetched() -> TransferSetViewModel {
+        var transfersSuggested : TransferSetViewModel = TransferSetViewModel()
         
-        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Transfer.sentBy), ascending:true),
-                                   NSSortDescriptor(key:#keyPath(Transfer.receivedBy), ascending:true)]
+        // Now let's compute transfers necessary
+        print("Git here in TF1")
+        var balancesController = BalanceFetchResultController(view: tableView)
+        var balances = balancesController.balancesFetched()
         
+        var positiveBalances = BalanceItemSetViewModel()
+        var negativeBalances = BalanceItemSetViewModel()
+        print("Git here in TF2")
+        for i in 0..<balances.count {
+            var bl = balances.getByIndex(elementAt: i)
+            if let bll = bl {
+                if bll.1 >= Float(0) {
+                    positiveBalances.add(fullname: bll.0, sum: bll.1)
+                }
+                else {
+                    negativeBalances.add(fullname: bll.0, sum: bll.1)
+                }
+            }
+        }
         
-        let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext:
-            CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
-        
-        fetchResultController.delegate = self
-        return fetchResultController
-    }()
+        while(positiveBalances.count > 0 && negativeBalances.count > 0) {
+            let balanceP = positiveBalances.getByIndex(elementAt: 0)
+            let balanceN = negativeBalances.getByIndex(elementAt: 0)
+            
+            if (balanceP?.1)! > (-(balanceN?.1)!) {
+                positiveBalances.addToPerson(fullname: balanceP!.0, value: (balanceN?.1)! )
+                negativeBalances.deleteByIndex(elementAt: 0)
+                transfersSuggested.add(fullnameSender: (balanceN?.0)!, fullnameReceiver: (balanceP?.0)!, sum: -(balanceN?.1)!)
+            }
+            else {
+                if (balanceP?.1)! < (-(balanceN?.1)!) {
+                negativeBalances.addToPerson(fullname: balanceN!.0, value: (balanceP?.1)! )
+                negativeBalances.deleteByIndex(elementAt: 0)
+                transfersSuggested.add(fullnameSender: (balanceP?.0)!, fullnameReceiver: (balanceN?.0)!, sum: -(balanceP?.1)!)
+                }
+                
+                else {
+                    transfersSuggested.add(fullnameSender: (balanceN?.0)!, fullnameReceiver: (balanceP?.0)!, sum: -(balanceN?.1)!)
+                    negativeBalances.deleteByIndex(elementAt: 0)
+                    positiveBalances.deleteByIndex(elementAt: 0)
+                    
+                }
+                
+            }
+        }
+        print("Trraaaansfers suggested")
+        print(transfersSuggested)
+        return transfersSuggested
+    }
     
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>){
