@@ -499,11 +499,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Uh-cz-3tL">
+                                <rect key="frame" x="16" y="94" width="32" height="33"/>
+                                <state key="normal" title="b" image="camera-3.png"/>
+                                <connections>
+                                    <action selector="addImage:" destination="sJL-0e-iKQ" eventType="touchUpInside" id="My9-6Y-kNI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GM3-Ad-q5J" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="280" id="2nL-eV-Kwe"/>
                             <constraint firstItem="vze-k4-v7h" firstAttribute="top" secondItem="Wkg-Sd-9D2" secondAttribute="top" constant="250" id="2tJ-5h-rDW"/>
+                            <constraint firstItem="Stt-kf-0zd" firstAttribute="top" secondItem="7Uh-cz-3tL" secondAttribute="bottom" constant="14" id="3xS-bG-Wp4"/>
                             <constraint firstItem="0if-xb-oJf" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="131" id="673-mb-kHV"/>
                             <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="HiV-GJ-Cjz" secondAttribute="trailing" constant="16" id="6RO-e8-Z9q"/>
                             <constraint firstItem="LUz-PQ-rpe" firstAttribute="top" secondItem="RJS-nT-zRA" secondAttribute="bottom" constant="44" id="6to-ej-h4Q"/>
@@ -535,9 +543,12 @@
                             <constraint firstItem="Stt-kf-0zd" firstAttribute="top" secondItem="Wkg-Sd-9D2" secondAttribute="top" constant="77" id="hDW-9B-HM1"/>
                             <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="LR5-4P-LH5" secondAttribute="trailing" constant="16" id="jmF-CH-G5D"/>
                             <constraint firstItem="vze-k4-v7h" firstAttribute="leading" secondItem="LUz-PQ-rpe" secondAttribute="trailing" constant="50.5" id="lrF-Zw-UTO"/>
+                            <constraint firstItem="7Uh-cz-3tL" firstAttribute="top" secondItem="Wkg-Sd-9D2" secondAttribute="top" constant="30" id="nte-cJ-ThE"/>
                             <constraint firstItem="GM3-Ad-q5J" firstAttribute="top" secondItem="Wkg-Sd-9D2" secondAttribute="top" constant="535" id="oT2-Lx-QR7"/>
                             <constraint firstItem="WV5-fk-bJT" firstAttribute="top" secondItem="Wkg-Sd-9D2" secondAttribute="top" constant="7" id="qog-C6-dYZ"/>
                             <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="WV5-fk-bJT" secondAttribute="trailing" constant="122" id="spw-6O-KXn"/>
+                            <constraint firstItem="7Uh-cz-3tL" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="16" id="ttt-1m-thr"/>
+                            <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="7Uh-cz-3tL" secondAttribute="trailing" constant="327" id="z5w-V6-F6w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wkg-Sd-9D2"/>
                     </view>
@@ -552,7 +563,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2H-zn-ZGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZFr-ee-kEW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="-900"/>
+            <point key="canvasLocation" x="1980" y="-900.00000000000011"/>
         </scene>
         <!--Transferts-->
         <scene sceneID="OLh-Nk-6VH">
@@ -1387,6 +1398,7 @@
     </scenes>
     <resources>
         <image name="balance.png" width="512" height="512"/>
+        <image name="camera-3.png" width="32" height="32"/>
         <image name="defaultImage.png" width="570" height="321"/>
         <image name="history.png" width="512" height="512"/>
         <image name="pencil_edit.png" width="512" height="512"/>

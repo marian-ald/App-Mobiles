@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02498416225597D700698929 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 02498415225597D600698929 /* image.png */; };
+		024984182255991200698929 /* camera-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 024984172255991100698929 /* camera-3.png */; };
 		0250D5C5225351D600E8B64D /* EditVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */; };
 		0251CBE922501F2200967080 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251CBE822501F2200967080 /* ExtensionUIView.swift */; };
 		02B1A3BC2252C92D0092BA3B /* TransfersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */; };
@@ -106,6 +108,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02498415225597D600698929 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		024984172255991100698929 /* camera-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-3.png"; sourceTree = "<group>"; };
 		0250D5C4225351D600E8B64D /* EditVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVoyageViewController.swift; sourceTree = "<group>"; };
 		0251CBE822501F2200967080 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		02B1A3BB2252C92D0092BA3B /* TransfersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransfersTableViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +392,8 @@
 		EB2D99DF2244EE9A00A679A2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				024984172255991100698929 /* camera-3.png */,
+				02498415225597D600698929 /* image.png */,
 				EB46A8E022552B6F007ACB8C /* balance.png */,
 				EB46A8E122552B6F007ACB8C /* history.png */,
 				EB46A8DE22552527007ACB8C /* bin.png */,
@@ -554,6 +560,7 @@
 				EB46A8D922552067007ACB8C /* pencil_edit.png in Resources */,
 				EB2D99BC2244E2C900A679A2 /* LaunchScreen.storyboard in Resources */,
 				EB46A8E322552B70007ACB8C /* history.png in Resources */,
+				024984182255991200698929 /* camera-3.png in Resources */,
 				EB2D99B92244E2C900A679A2 /* Assets.xcassets in Resources */,
 				EB46A8E222552B70007ACB8C /* balance.png in Resources */,
 				EB2D99B42244E2C700A679A2 /* Main.storyboard in Resources */,
@@ -561,6 +568,7 @@
 				EB46A8DB22552260007ACB8C /* users.png in Resources */,
 				EB2D99E12244EEC800A679A2 /* add.png in Resources */,
 				EB46A8DD22552392007ACB8C /* shopping.png in Resources */,
+				02498416225597D700698929 /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
