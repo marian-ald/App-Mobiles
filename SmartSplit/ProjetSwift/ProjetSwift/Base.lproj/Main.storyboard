@@ -537,15 +537,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2h-dD-zcK">
-                                <rect key="frame" x="16" y="104" width="45" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2h-dD-zcK">
+                                <rect key="frame" x="16" y="103" width="34" height="32"/>
+                                <state key="normal" title="Button" image="camera-3.png"/>
+                                <connections>
+                                    <action selector="addImage:" destination="sJL-0e-iKQ" eventType="touchUpInside" id="Ueh-k4-2Iq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vze-k4-v7h" firstAttribute="top" secondItem="Wkg-Sd-9D2" secondAttribute="top" constant="250" id="2tJ-5h-rDW"/>
+                            <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="x2h-dD-zcK" secondAttribute="trailing" constant="325" id="4hm-Ry-IOm"/>
                             <constraint firstItem="0if-xb-oJf" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="131" id="673-mb-kHV"/>
                             <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="HiV-GJ-Cjz" secondAttribute="trailing" constant="16" id="6RO-e8-Z9q"/>
                             <constraint firstItem="LUz-PQ-rpe" firstAttribute="top" secondItem="RJS-nT-zRA" secondAttribute="bottom" constant="44" id="6to-ej-h4Q"/>
@@ -560,10 +563,12 @@
                             <constraint firstItem="RJS-nT-zRA" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="16" id="Lu1-9G-jId"/>
                             <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="0if-xb-oJf" secondAttribute="trailing" constant="16" id="Lvx-Vi-4Vn"/>
                             <constraint firstItem="LUz-PQ-rpe" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="16" id="Ncx-bc-KoF"/>
+                            <constraint firstItem="Stt-kf-0zd" firstAttribute="top" secondItem="x2h-dD-zcK" secondAttribute="bottom" constant="6" id="ObG-7R-PUp"/>
                             <constraint firstItem="0if-xb-oJf" firstAttribute="top" secondItem="WV5-fk-bJT" secondAttribute="bottom" constant="49" id="Ooi-Wq-xQc"/>
                             <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="vze-k4-v7h" secondAttribute="trailing" constant="16" id="RcS-qG-f3c"/>
                             <constraint firstItem="Wkg-Sd-9D2" firstAttribute="bottom" secondItem="vze-k4-v7h" secondAttribute="bottom" constant="323" id="S7z-Jy-TSL"/>
                             <constraint firstItem="HiV-GJ-Cjz" firstAttribute="top" secondItem="0if-xb-oJf" secondAttribute="bottom" constant="19" id="TqR-uy-WnJ"/>
+                            <constraint firstItem="x2h-dD-zcK" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="16" id="UUi-XR-otQ"/>
                             <constraint firstItem="vze-k4-v7h" firstAttribute="top" secondItem="LR5-4P-LH5" secondAttribute="bottom" constant="30" id="Wh2-rA-xHl"/>
                             <constraint firstItem="RJS-nT-zRA" firstAttribute="top" secondItem="Stt-kf-0zd" secondAttribute="bottom" constant="31" id="Xsp-Le-nxV"/>
                             <constraint firstItem="WV5-fk-bJT" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="121" id="Y82-YM-l0p"/>
@@ -581,6 +586,7 @@
                             <constraint firstItem="WV5-fk-bJT" firstAttribute="top" secondItem="Wkg-Sd-9D2" secondAttribute="top" constant="7" id="qog-C6-dYZ"/>
                             <constraint firstItem="Wkg-Sd-9D2" firstAttribute="trailing" secondItem="WV5-fk-bJT" secondAttribute="trailing" constant="122" id="spw-6O-KXn"/>
                             <constraint firstItem="GM3-Ad-q5J" firstAttribute="leading" secondItem="Wkg-Sd-9D2" secondAttribute="leading" constant="317" id="vqn-Uc-h0G"/>
+                            <constraint firstItem="x2h-dD-zcK" firstAttribute="top" secondItem="Wkg-Sd-9D2" secondAttribute="top" constant="39" id="z7M-pG-Squ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wkg-Sd-9D2"/>
                     </view>
@@ -1362,6 +1368,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera-3.png" width="32" height="32"/>
         <image name="counterclockwise.png" width="64" height="64"/>
         <image name="defaultImage.png" width="570" height="321"/>
         <image name="icons8-checked-48.png" width="48" height="48"/>

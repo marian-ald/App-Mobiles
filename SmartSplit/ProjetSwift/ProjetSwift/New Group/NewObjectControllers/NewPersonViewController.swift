@@ -5,10 +5,9 @@
 //  Created by admin on 25/03/2019.
 //  Copyright © 2019 Marian ALDESCU. All rights reserved.
 //
-
 import UIKit
 
-class NewPersonViewController: UIViewController, UITextFieldDelegate  {
+class NewPersonViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     
     @IBOutlet weak var personImage: UIImageView!
@@ -22,7 +21,8 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
     private var datePicker: UIDatePicker?
     private var startDateTrip: Date? = nil
     private var stopDateTrip: Date? = nil
-
+    
+    let imagePicker = UIImagePickerController()
     
     var newPerson : Person?
     
@@ -48,6 +48,20 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
     
     @objc func viewTapped (gestureRecognizer : UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+
+    @IBAction func addImage(_ sender: Any) {
+        print("adaug imagine")
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum  // sau .photolibrary
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage? {
+            self.personImage?.image = image
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func dateChanged(datePicker: UIDatePicker) {
@@ -80,10 +94,10 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         let stopDate: String = self.dateFin.text!
         
         if startDate != "" {
-                
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy"
-        
+            
             objStartDate = dateFormatter.date(from: startDate)
             print("data noua")
         } else {
@@ -94,7 +108,7 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         if stopDate != "" {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy"
-
+            
             objStopDate = dateFormatter.date(from: stopDate)
             print("data noua")
         } else {
@@ -104,20 +118,27 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
         
         self.newPerson = Person(firstname: firstname, lastname: lastname, startDate : objStartDate!, stopDate : objStopDate!)
         
+        if self.personImage != nil {
+            // Convert the image in jpeg format
+            if let data = self.personImage?.image?.pngData() {
+                self.newPerson?.pimage = data
+            }
+        }
+        
         print("new person is : ")
         print(newPerson)
         print("my current voyage is : ")
         print(SingletonStore.shared.currentVoyage?.name)
-            
-            if let v  = VoyageDAO.fetchByName(name: SingletonStore.shared.currentVoyage?.name ?? ""){
-                let myVoy = v[0]
-                if let p = newPerson{
-                    print(myVoy.name)
-                    myVoy.addToContain(p)
-    
-                }
+        
+        if let v  = VoyageDAO.fetchByName(name: SingletonStore.shared.currentVoyage?.name ?? ""){
+            let myVoy = v[0]
+            if let p = newPerson{
+                print(myVoy.name)
+                myVoy.addToContain(p)
+                
             }
-        //}
+        }
+            //}
         else{
             self.newPerson = nil
         }
@@ -125,13 +146,13 @@ class NewPersonViewController: UIViewController, UITextFieldDelegate  {
     }
     // MARK: - TextFieldDelegate
     /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text{
-            if text != ""{
-                textField.resignFirstResponder()
-                return true
-            } }
-        return false
-    }*/
+     if let text = textField.text{
+     if text != ""{
+     textField.resignFirstResponder()
+     return true
+     } }
+     return false
+     }*/
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("THIS WAS CQALEED OR NOT ????")
