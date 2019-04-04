@@ -518,6 +518,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM3-Ad-q5J">
+                                <rect key="frame" x="317" y="616" width="49" height="43"/>
+                                <state key="normal" title="Confirm" image="icons8-checked-48.png"/>
+                                <connections>
+                                    <segue destination="ZFr-ee-kEW" kind="unwind" unwindAction="unwindToThisViewWithSender:" id="5g1-N0-H2q"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vze-k4-v7h">
                                 <rect key="frame" x="131" y="314" width="228" height="30"/>
                                 <nil key="textColor"/>
@@ -530,12 +537,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM3-Ad-q5J">
-                                <rect key="frame" x="317" y="616" width="49" height="43"/>
-                                <state key="normal" title="Confirm" image="icons8-checked-48.png"/>
-                                <connections>
-                                    <segue destination="ZFr-ee-kEW" kind="unwind" unwindAction="unwindToThisViewWithSender:" id="5g1-N0-H2q"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2h-dD-zcK">
+                                <rect key="frame" x="16" y="104" width="45" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
